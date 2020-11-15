@@ -83,7 +83,7 @@
 					</div>
 					<div class="por-dse clearfix">
 						<ul>
-							<li><span>Tên KH:<strong>:</strong></span> chỗ này hiển thị tên khách hàng</li>
+							<li><span>Tên KH<strong>:</strong></span> chỗ này hiển thị tên khách hàng</li>
 							<li><span>Email<strong>:</strong></span>  chỗ này hiển thị EMAIL khách hàng</li>
 							<li><span>Số ĐT<strong>:</strong></span>  chỗ này hiển thị SDT khách hàng</li>
 						</ul>

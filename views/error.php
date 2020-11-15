@@ -42,7 +42,7 @@
 		<div class="error-content">
 			<img src="public/img/error.png" alt="" />
 			<h4 style="color:red;">Error 404 - CÓ GÌ ĐÓ KHÔNG ĐÚNG</h4>
-			<p>Xin lỗi vì sự bất tiện này, có thể không có thông tin về sản phẩm này,..</p>
+			<p>Xin lỗi vì sự bất tiện này, <?php echo $database_error; ?></p>
 			
 			<a href="?act=home">Trở về trang chủ</a>
 		</div>

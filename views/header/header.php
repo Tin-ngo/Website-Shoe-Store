@@ -5,60 +5,62 @@
 
 
 
-                  <div class="col-sm-4">
-                       
-
-                         <div id="txt2"> 
-                            &emsp; &emsp; &emsp; Luôn Mở cửa
-
-                        </div>
-                         <div>
-                             	<i class="fa fa-phone"></i> +2 95 01 88 821
-                             	&ensp;
-                             	<i class="fa fa-envelope"></i> info@domain.com
+                  <div class="col-sm-6">
+                       <div class="dropdown" style="float:left;">
+                         <button class="dropbtnn">Dịch Vụ Khách Hàng
+                          <i class="fa fa-caret-down"></i>
+                         </button>
+                         <div class="dropdown-content" style="left:0;">
+                         <a href="?action=gioithieu">Giới thiệu cửa hàng</a>
+                         <a href="#lienhe">Thông tin liên hệ</a>
+                         <a href="#">Gửi phản hồi</a>
                          </div>
-
-                    </div>
-
-
-                    <div class="col-sm-4">
-                        
-                        <div class="btn-group">
-                           
-                        <img src="public/image/logo.png" alt="logo">
-                        
-
-                        <div id="txt1">
-
-                          &emsp;SHOE STORE 
-
-
-                                <div id="txt1_1"> 
-                             	&emsp;&emsp;&emsp;UY TÍN - CHẤT LƯỢNG - THỜI THƯỢNG
-                                </div>
-                         
-                        </div>
-
-                        </div>
-
-                    </div>
+                       </div>
+                       <span class="kedoc">|</span>
+                       Open 24/7 : Mail: abc@gmail.com &emsp; Phone: 0123456789
+                     </div>
 
 
 
-                      <div class="col-sm-4">
+                      <div class="col-sm-6">
                         <div class="shop-menu pull-right">
-                            <ul class="nav navbar-nav nav1">
+                            <ul class="nav navbar-nav">
 
-                            <li><a id="a1" href="?action=giohang"> <i class="fa fa-shopping-cart" title="Giỏ Hàng Của Bạn"></i>&emsp;</a></li>
-
-                            <li>
-                               <div class="dropdown22">
-                                <i class="fa fa-user img_user" title="Tài Khoản"></i>
+                         <!-- đăng ký -->
+                              <li>
+                               <div class="dropdown221">
+                               
+                                  <i class="fa fa-plus img_user" title="Tài Khoản">
+                                    <a href="?action=dangnhap" class="dangkya">&emsp;Đăng ký &ensp; </a></i>
+                               
                                   <div class="dropdown-content22"> 
                                     <!-- <a class="aacount" href="#"><center><span>Đăng nhập</span></center></a>-->
                                      <ul>
-                                        <?php  if(isset($_SESSION['login'])){ ?>
-                                        <li><b>Chào <?=$_SESSION['login']['Ho']?> <?=$_SESSION['login']['Ten']?></b></li>
+                                        <?php  if(isset($_SESSION['dangnhap'])){ ?>
+                                        <li><b>Chào <?=$_SESSION['dangnhap']['Ho']?> <?=$_SESSION['dangnhap']['Ten']?></b></li>
+                                        <li><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
+                                        <li><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
+                                      <?php
+                                        if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                                        <li><a href="admin/?mod=login">Trang quản lý</a></li>
+                                     <?php }}else{ ?>
+                                        <li><center><b class="hd_kh">Khách hàng<br><br></b></center></li>
+                                        <li><a class="aacount" href="?action=dangnhap"><center><span>Đăng nhập</span></center></a></li>
+                                      <?php } ?>
+                                    </ul>
+                                  </div>
+                            </div>
+                            </li>
+
+                      <!-- đăng nhập -->
+                            <li>
+                               <div class="dropdown22">
+                                <i class="fa fa-user img_user" title="Tài Khoản">&emsp;Đăng nhập</i>
+                                  <div class="dropdown-content22"> 
+                                    <!-- <a class="aacount" href="#"><center><span>Đăng nhập</span></center></a>-->
+                                     <ul>
+                                        <?php  if(isset($_SESSION['dangnhap'])){ ?>
+                                        <li><b>Chào <?=$_SESSION['dangnhap']['Ho']?> <?=$_SESSION['dangnhap']['Ten']?></b></li>
                                         <li><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
                                         <li><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                                       <?php
@@ -95,19 +97,28 @@
                        
                         <div class="mainmenuu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="?action=trangchu" class="active">Trang Chủ</a></li>
-                                <li class="dropdown"><a href="?action=cuahang">Cửa Hàng</a></li> 
-                                <li class="dropdown"><a href="?action=gioithieu">Giới Thiệu</a></li> 
 
-                                <li><a href="#lienhe">Liên Hệ</a></li>
+                               
+                                <li><a href="?action=trangchu" class="active">
+                                  <div class="btn-group">
+                                        <img src="public/image/logo.png" alt="logo" title="về trang chủ">
+                                 </div>
+                                </a></li>
+                                <li class="dropdown"><a href="?action=cuahang">Giày thể thao</a></li> 
+                                <li class="dropdown"><a href="?action=">Giày công sở</a></li> 
+                                <li class="dropdown"><a href="?action=">Giày học sinh</a></li> 
+                                <li class="dropdown"><a href="?action=">Giày da bò</a></li> 
+                                <li class="dropdown"><a href="?action=">Giày thời trang</a></li> 
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="search_box pull-right">
-
+                            
                             <input type="text" placeholder="Search"/>&ensp;
                             <a href="#"><i class="fa fa-search" id="i1"></i></a>
+
+                            <a id="a1" href="?action=giohang"> <i class="fa fa-shopping-cart" title="Giỏ Hàng Của Bạn"></i>&emsp;</a>
 
                         </div>
                     </div>

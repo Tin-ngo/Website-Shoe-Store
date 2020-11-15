@@ -1,7 +1,7 @@
 
-<footer>
-	
 
+	
+<!--
 
 <div class="footer-top">
             <div class="container">
@@ -10,6 +10,9 @@
                 </div>
             </div>
         </div>
+
+-->
+
 
 
  <div class="footer_end">       
@@ -114,17 +117,17 @@
                 <div class="row">
 
                 	<div id="div1">
-                    <p class="pull-left">Copyright © 2020 SHOE STORE Inc. All rights reserved.</p>
+                    <p class="pull-left"><span class="copyright">Copyright © 2020 SHOE STORE Inc. All rights reserved.</span></p>
                 </div>
 
 
                     <div class="social-icons pull-right div2">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook color"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter color"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin color"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble color"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus color"></i></a></li>
                             </ul>
                         </div>
                     
@@ -137,6 +140,4 @@
             </div>
         </div>
 
-
-
-	</footer>
+</div>

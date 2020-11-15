@@ -1,7 +1,6 @@
 
 <!-- slide chạy tự động -->
 
-
 <section id="slider"><!--slider-->
 
         <div class="container">
@@ -21,7 +20,7 @@
                                     <h1><span>SHOE</span> STORE</h1>
                                     <h2>UY TÍN - CHẤT LƯỢNG - THỜI THƯỢNG</h2>
                                    
-                                    <p><a href="#makm"> Mã Khuyến mãi trong từng sản phẩm </a></p>
+                                    
 
                                      <a href="?action=chitietmathang">
                                     <button type="button" class="btn btn-secondary get">
@@ -75,10 +74,10 @@
                         </div>
                         
                         <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
+                            <i class="fa fa-angle-left muiten"></i>
                         </a>
                         <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
+                            <i class="fa fa-angle-right muiten"></i>
                         </a>
                     </div>
                     
@@ -86,5 +85,6 @@
             </div>
         </div>
     </section><!--/slider-->
+
 
 

@@ -133,14 +133,36 @@
 
 
                          <div class="roww"> 
-                          <div class="col-xs-12 col-sm-12 col-md-4 well well-sm col-md-offset-4 onee"> 
+                          <div class="onee" style="background-color: lightgray;"> 
                            <legend><a>
                             <i class="glyphicon glyphicon-globe"></i></a> Đăng ký thành viên!
                            </legend> 
-                           <!--     <form action="http://hocwebgiare.com" method="post" class="form" role="form"> -->
+
                            <form action="dangkysubmit.php" method="POST" class="form" role="form"> 
-  
-   
+                        
+                          <div class="col-sm-4">
+                            <input class="form-control" type="text" name="" placeholder="Họ">
+
+                            <input class="form-control" type="text" name="" placeholder="Tên">
+                              <div class="pull-left" style="color:gray;font-size: 15px;">
+                              Giới tính:
+                            <input type="radio" name="gioitinh" value="nam"> Nam
+                             <input type="radio" name="gioitinh" value="nu"> Nữ
+                           </div>
+                          </div>
+
+
+                          <div class="col-sm-4">
+
+
+                             <input class="form-control" type="text" name="" placeholder="địa chỉ">
+                             <input class="form-control" type="text" name="" placeholder="Email">
+
+                           <input class="form-control" type="text" name="" placeholder="Số điện thoại">
+                           
+                          </div>
+
+                          <div class="col-sm-4">
 
                             <!--  <input class="form-control" name="youremail" placeholder="Email" type="email">   -->
                              <input class="form-control" type="text" name="username" placeholder="Tên đăng nhập">
@@ -148,15 +170,9 @@
                             <!-- <input class="form-control" name="password" placeholder="Mật khẩu" type="password">   -->
                             <input class="form-control" type="password" name="password" placeholder="Mật khẩu">
 
-
-                            <input class="form-control" type="password" name="email" placeholder="Email">
-
-
-
-
                             <!--  <input class="form-control" name="retypepassword" placeholder="Nhập lại mật khẩu" type="password">  --> 
                             <input class="form-control" type="password" name="repassword" placeholder="Nhập lại mật khẩu">
-
+                          </div>
    
 
     

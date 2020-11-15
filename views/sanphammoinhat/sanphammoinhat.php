@@ -1,5 +1,9 @@
 <div class="recommended_items"><!--recommended_items-->
-                        <h2 class="title text-center">SẢN PHẨM MỚI NHẤT</h2>
+   <div class="container spnb">
+                        <h2 class="title text-left" id="makm">SẢN PHẨM MỚI NHẤT
+                            <a href="#" class="pull-right" id="textid">Xem tất cả >></a>
+                        </h2>
+   
                         
                         <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 

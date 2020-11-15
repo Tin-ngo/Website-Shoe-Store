@@ -60,11 +60,11 @@
                             <div class="quick-thumb">
                                 <ul class="product-slider">
                             
-                                        <li class="active"><a data-toggle="tab" href="#sin-1"> <img src="public/image/one.png" alt="quick view" /> </a></li>
+                                        <li class="active float"><a data-toggle="tab" href="#sin-1"> <img src="public/image/one.png" alt="quick view" /> </a></li>
                                  
-                                        <li><a data-toggle="tab" href="#sin-2"> <img src="public/image/one.png" alt="small image" /> </a></li>
+                                        <li class="float"><a data-toggle="tab" href="#sin-2"> <img src="public/image/one.png" alt="small image" /> </a></li>
                                    
-                                        <li><a data-toggle="tab" href="#sin-3"> <img src="public/image/one.png" alt="small image" /> </a></li>
+                                        <li class="float"><a data-toggle="tab" href="#sin-3"> <img src="public/image/one.png" alt="small image" /> </a></li>
                                    
                                 </ul>
                             </div>
@@ -104,9 +104,9 @@
                     <div class="reviews padding60 margin-top">
                         <ul class="reviews-tab clearfix" id="info">
                          
-                                <li class="active"><a data-toggle="tab" href="#moreinfo">Đặc điểm</a></li>
+                                <li class="active float"><a data-toggle="tab" href="#moreinfo">Đặc điểm</a></li>
                            
-                            <li><a data-toggle="tab" href="#reviews">Đánh giá</a></li>
+                            <li class="float"><a data-toggle="tab" href="#reviews">Đánh giá</a></li>
                         </ul>
                         <div class="tab-content">
                          
@@ -162,13 +162,13 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="input-mail">
-                                                    <span>Subject</span>
+                                                    <span>Nhập email của bạn:</span>
                                                     <input  type="text" name="subject">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12">
                                                 <div class="custom-mess">
-                                                <textarea  name="contents" placeholder="Contents"></textarea>
+                                                <textarea  name="contents" placeholder="Nội dung góp ý"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12">

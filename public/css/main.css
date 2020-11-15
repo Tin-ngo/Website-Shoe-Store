@@ -10,7 +10,7 @@ body {
   font-family: 'Roboto', sans-serif;
   position: relative;
   font-weight:400px;
-   background-image: url('../../public/image/page-bg.png');
+   background-image: url('../../public/image/background.jpg');
 }
 
 
@@ -19,8 +19,11 @@ body {
 
 
 .row_header{
-
-  background-color: Gainsboro;
+ /* background-image: url('../../public/image/bg-menu.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  */
+  background-color: #333333;
   margin: auto;
   padding: 10px;
 
@@ -29,19 +32,20 @@ body {
 .btn-group img{
   height: 70px;
   border-radius: 100px;
-  margin-left: 50px;
   float: left;
-  padding: 10px;" ;
+  margin-top: -20px;
+  margin-left: -20px;
 }
 div#txt1{
   font-family: Impact Charcoal;
   float: left; 
   font-weight: bold; 
-  font-size: 30px;
-   margin-top: 10px;
+  font-size: 20px;
+   margin-top: -20px;
+   margin-left: -20px;
 }
 div#txt1_1{
-  font-size: 10px;
+  font-size: 7px;
 }
 div#txt2{
   font-size: 15px;
@@ -51,13 +55,11 @@ div#txt2{
    color:red;
    margin-bottom: 10px;
 }
-.nav1{
-margin-right: 50px; 
-margin-top: 15px;
-}
 
 a#a1{
-background-color: Gainsboro;
+background-color:;
+border-radius: 20px;
+margin-left: 30px;
 }
 
 #i1{
@@ -74,10 +76,10 @@ background-color: Gainsboro;
   margin-top: -10px;
 }
 
-img.img_user{
-  height: 36px;
-  border-radius: 20px;
-  margin-top: -5px;
+.img_user{
+  padding: 10px;
+  color: white;
+  background-color: gray;
 }
 .fa-shopping-cart{
 font-size: 25px;
@@ -88,7 +90,7 @@ font-size: 25px;
 }
 
 .footer_end{
-  background-color: lightgray;
+  background-color: darkgray;
 }
 
 
@@ -168,7 +170,24 @@ div.cuahang{
   position: relative;
   display: inline-block;
   padding-top: 10px;
-  padding-right: 60px;
+}
+.dropdown221{
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+}
+ 
+ .dropdown221 i a.dangkya{
+ background-color: gray;
+ color:white;
+ }
+  .dropdown221 i a.dangkya:hover{
+ background-color: gray;
+ color:red;
+ }
+
+.dropdown22 a{
+  background-color: black;
 }
 
 .dropdown-content22 {
@@ -202,7 +221,7 @@ a.aacount:hover{
 img.girl {
   margin-left:;
   border-radius: 100px;
-  min-height: 200px;
+  min-height: 300px;
   max-height: 300px;
   min-width: 300px;
 }
@@ -221,12 +240,200 @@ div.chongia{
    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);margin-top: 30px;
 }
 div.chongia2{
-   padding: 20px;
+   padding: 30px;
 }
 
 div.chongia2 form{
     margin-left: 20px;
 }
+footer{
+  padding-top: 30px;
+}
+li.float{
+   float: left;
+}
+
+.dropbtnn {
+  background-color: #333333;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: gray;
+}
+
+
+.kedoc{
+  font-size: 30px;
+  color:white;
+}
+span.copyright{
+  color:white;
+}
+i.color{
+  color:white;
+}
+
+
+/* hover */
+
+
+.zoom {
+  background-color: green;
+  transition: transform .2s;
+  width: 290px;
+  height: 250px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.62);
+  border-radius: 20px;
+}
+
+.zoom:hover {
+  -ms-transform: scale(0.1); /* IE 9 */
+  -webkit-transform: scale(0.1); /* Safari 3-8 */
+  transform: scale(0.9); 
+  background-color: orange;
+}
+
+.divhover{
+  padding: 30px;
+}
+
+.imghover1{
+  height: 250px;
+  width: 290px;
+}
+
+
+
+/*      */
+div.features_items h2 a{
+  font-size: 15px;
+}
+
+
+/* hover khuyễn mãi */
+
+
+div.khuyenmai{
+  background-color: rgba(0, 0, 0, 0.62);
+  height: 500px;
+}
+.khuyenmai h2{
+  padding-top: 200px;
+}
+
+div.spnb{
+  padding-top: 50px;
+}
+
+
+/* menu dọc */
+
+.dropbtn {
+  background-color: #f22e2e;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 0px;
+}
+
+.dropdown-content a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+}
+
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+
+
+
+
+
+.form{
+  width: 70%;
+  margin: auto;
+}
+.roww{
+  width: 90%;
+}
+div#box{
+  background-color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -623,7 +830,7 @@ ul.sub-menu {
 }
 
 .companyinfo h2 {
-  color: #B4B1AB;
+  color: white;
   font-family: abel;
   font-size: 27px;
   text-transform: uppercase;
@@ -730,6 +937,7 @@ ul.sub-menu {
 
 .footer-widget {
   margin-bottom: 68px;
+  padding-top: 30px;
 }
 
 .footer-widget .container {
@@ -808,7 +1016,7 @@ ul.sub-menu {
 }
 
 .footer-bottom {
-  background: darkgray;
+  background: #4c4c4c;
   padding-top: 10px;
 }
 
@@ -835,8 +1043,20 @@ ul.sub-menu {
   padding-bottom: 45px;
   padding-top: 45px;
   box-shadow: 5px 10px 20px darkgray inset;
+   background-color: rgba(82, 82, 82, 0.16);
 
 }
+
+.muiten{
+  font-size: 50px;
+  color:red;
+  font-weight: bold;
+}
+
+.banner{
+  height: 
+}
+
 
 .carousel-indicators li {
   background: #C4C4BE;
@@ -908,11 +1128,11 @@ ul.sub-menu {
 }
 
 .cn2{
-  padding-top: 50px;
+  padding-top: 20px;
   background-color:;
 }
 .c_cn2{
-padding:0px;
+padding-top:50px;
 }
 
 hr.new4 {
@@ -1134,16 +1354,14 @@ h2.title:before{
 
 
 h2.title {
-  background-color: Gainsboro;
-  box-shadow: 5px 5px 5px #666;
+  box-shadow: 5px 5px 5px gray;
   color: #FE980F;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
   margin: 0 15px;
-  text-transform: uppercase;
   margin-bottom: 30px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .product-image-wrapper{

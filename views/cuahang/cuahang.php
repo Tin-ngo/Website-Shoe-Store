@@ -153,58 +153,107 @@
 
 
 
-                    <div class="chongia">
-                        <div class="chongia2">
-                        <form action=" ">
-                           Giá
-                           <br>
-                          <p>Chọn Giá Thành Bạn Muốn:</p>
-                          <input type="radio" id="age1" name="age" value="30">
-                          <label for="age1">0 - 3.000.000 vnd</label><br>
-                          <input type="radio" id="age2" name="age" value="60">
-                          <label for="age2">3.000.000 - 10.000.000 vnd</label><br>  
-                          <input type="radio" id="age3" name="age" value="100">
-                          <label for="age3">10.000.000 - 20.000.000 vnd</label><br><br>
-                          <input type="submit" value="Tìm Kiếm">
-                        </form>
-                    </div>
-                    </div>
 
-                    <br>
-                    <br>
+        <div class="chongia">
+            <div class="chongia2">
 
-                    <div class="chongia">
-                        <div class="chongia2">
-                   <form>
-                        Nhà sản xuất hàng đầu
-             
-                <table border="1">
+               <div class="dropdown" style="float:left;">
+                 <button class="dropbtn">Màu</button>
+                 <div class="dropdown-content" style="left:0;">
+                 <table>
+                     <tr>
+                        <td><a href="#" class="acolor" style="background-color: red;"></a></td>
+                        <td><a href="#" style="background-color: black;"></a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#" style="background-color: gray"></a></td>
+                        <td><a href="#" style="background-color: yellow"></a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#" style="background-color: green"></a></td>
+                        <td><a href="#" style="background-color: blue"></a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#" style="background-color: brown"></a></td>
+                        <td><a href="#" style="background-color: orange"></a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#" style="background-color: white"></a></td>
+                        <td><a href="#" style="background-color: pink"></a></td>
+                     </tr>
+                 </table>
+                 </div>
+               </div>
+                <div class="dropdown" style="margin-left: 9px;">
+                 <button class="dropbtn">Size</button>
+                 <div class="dropdown-content" style="left:-50px;">
 
-                    <tr>
-                        <td>
+                 <table>
+                     <tr>
+                        <td><a href="#" style="width: 0;">25</a></td>
+                        <td><a href="#" style="width: 0;">26</a></td>
+                        <td><a href="#" style="width: 0;">27</a></td>
+                        <td><a href="#" style="width: 0;">28</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#" style="width: 0;">29</a></td>
+                        <td><a href="#" style="width: 0;">30</a></td>
+                        <td><a href="#" style="width: 0;">31</a></td>
+                        <td><a href="#" style="width: 0;">32</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#" style="width: 0;">33</a></td>
+                        <td><a href="#" style="width: 0;">34</a></td>
+                        <td><a href="#" style="width: 0;">35</a></td>
+                        <td><a href="#" style="width: 0;">36</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#" style="width: 0;">37</a></td>
+                        <td><a href="#" style="width: 0;">38</a></td>
+                        <td><a href="#" style="width: 0;">39</a></td>
+                        <td><a href="#" style="width: 0;">40</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#" style="width: 0;">41</a></td>
+                        <td><a href="#" style="width: 0;">42</a></td>
+                        <td><a href="#" style="width: 0;">43</a></td>
+                        <td><a href="#" style="width: 0;">44</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#" style="width: 0;">45</a></td>
+                     </tr>
+                 </table>
 
-                            <div class="col-sm-6">
-                                <a href="#">Nike</a>
-                             </div>
-                         </td>
+                 </div>
+               </div>
+               <div class="dropdown" style="float:right;">
+                <button class="dropbtn">Giá</button>
+                 <div class="dropdown-content" style="padding: 5px;">
 
-                         <td>
+                 <input type="radio" id="age1" name="age" value="30">
+                 <label for="age1">100.000 - 300.000 vnd</label><br>
+                 <input type="radio" id="age2" name="age" value="60">
+                 <label for="age2">300.000 - 500.000 vnd</label><br>  
+                 <input type="radio" id="age3" name="age" value="100">
+                 <label for="age3">500.000 - 700.000 vnd</label><br>
+                 <input type="radio" id="age3" name="age" value="100">
+                 <label for="age3">700.000 - 1000.000vnd</label><br>
+                 <input type="radio" id="age3" name="age" value="100">
+                 <label for="age3">1000.000 vnd trở lên</label><br>
+                 <center>
+                 <input type="submit" value="Tìm Kiếm">
+                 </center>
 
-                            <div class="col-sm-6">
-                               <a href="#">Sandal</a>
-                             </div>
-                         </td>
-                    </tr>
+                 </div>
+               </div>
 
-
-                </table>
-
-            </form>
         </div>
 
                     </div>
 
 
+            <br>
+            <br>
 
                     
    </div>  <!-- div thứ 3 -->
@@ -228,13 +277,13 @@
                                             <img src="images/home/product1.jpg" alt="" />
                                             <h2>$56</h2>
                                             <p></p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
                                                 <h2>$56</h2>
                                                 <p>Mã giảm giá để đây</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                         </div>
                                 </div>
@@ -250,13 +299,13 @@
                                         <img src="images/home/product2.jpg" alt="" />
                                         <h2>$56</h2>
                                         <p> </p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                     <div class="product-overlay">
                                         <div class="overlay-content">
                                             <h2>$56</h2>
                                             <p>Mã giảm giá để đây</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -272,13 +321,13 @@
                                         <img src="images/home/product3.jpg" alt="" />
                                         <h2>$56</h2>
                                         <p></p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                     <div class="product-overlay">
                                         <div class="overlay-content">
                                             <h2>$56</h2>
                                             <p>Mã giảm giá để đây</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -294,13 +343,13 @@
                                         <img src="images/home/product4.jpg" alt="" />
                                         <h2>$56</h2>
                                         <p></p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                     <div class="product-overlay">
                                         <div class="overlay-content">
                                             <h2>$56</h2>
                                             <p>Mã giảm giá để đây</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                     </div>
                                     <img src="images/home/new.png" class="new" alt="" />
@@ -317,13 +366,13 @@
                                         <img src="images/home/product5.jpg" alt="" />
                                         <h2>$56</h2>
                                         <p> </p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                     <div class="product-overlay">
                                         <div class="overlay-content">
                                             <h2>$56</h2>
                                             <p>Mã giảm giá để đây</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                     </div>
                                     <img src="images/home/sale.png" class="new" alt="" />
@@ -341,13 +390,13 @@
                                         <img src="images/home/product6.jpg" alt="" />
                                         <h2>$56</h2>
                                         <p> </p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                     <div class="product-overlay">
                                         <div class="overlay-content">
                                             <h2>$56</h2>
                                             <p>Mã giảm giá để đây</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                     </div>
                                 </div>

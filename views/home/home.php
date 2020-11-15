@@ -1,14 +1,48 @@
+
+<div class="divhover">
+
+<div class="col-sm-3">
+    <div class="zoom">
+        <center><span style="font-size: 20px;">Giày Công sở</span></center>
+        <img class="imghover1" src="public/image/giay1.jpg" alt="">
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="zoom">
+       <center><span style="font-size: 20px;"> Giày Học sinh</span></center>
+        <img class="imghover1" src="public/image/giay1.jpg" alt="">
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="zoom">
+       <center><span style="font-size: 20px;"> Giày da bò</span></center>
+        <img class="imghover1" src="public/image/giay1.jpg" alt="">
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="zoom">
+        <center><span style="font-size: 20px;">Giày thời trang</span></center>
+        <img class="imghover1" src="public/image/giay1.jpg" alt="">
+    </div>
+</div>
+
+</div>
+
+
+
 <div class="container cn2">
 <div class="row">
 
                
 
-                     <div class="col-sm-12 padding-right c_cn2">
+                     <div class="col-sm-12 c_cn2">
                    <!-- hiển thị sản phẩm -->
 
                     <div class="features_items"><!--features_items-->
                        
-                        <h2 class="title text-center" id="makm">SẢN PHẨM NỔI BẬT</h2>
+                        <h2 class="title text-left" id="makm">SẢN PHẨM NỔI BẬT
+                            <a href="#" class="pull-right" id="textid">Xem tất cả >></a>
+                        </h2>
                         <!-- SP1 -->
                         <div class="col-sm-4">
                             <div class="product-image-wrapper">
@@ -157,3 +191,14 @@
 
 
 </div>   <!-- div row -->
+</div> <!-- div container -->
+
+
+
+ <div class="khuyenmai">
+    <div class="col-sm-12">
+           <h2>Khuyến Mãi Hấp Dẫn Lên Đến 30%</h2>
+          <center><button type="button" class="btn btn-outline-primary"><a href="#">Mua Ngay</a></button> </center>
+    </div>
+
+ </div>
