@@ -26,11 +26,36 @@
             $data = $this->nguoidung_model->find($id);
             require_once('views_admin/index.php');
         }
-    }
+
+        public function edit()
+        {
+            $id = isset($_GET['id']) ? $_GET['id'] : 1;
+            $data = $this->nguoidung_model->find($id);
+            require_once('views_admin/index.php');
+        }
+
+       public function update()
+       {
+             $ho = filter_input(INPUT_POST, 'ho');
+             $ten =filter_input(INPUT_POST, 'ten');
+             $email =filter_input(INPUT_POST, 'email');
+             $diachi =filter_input(INPUT_POST, 'diachi');
+             $gioitinh =filter_input(INPUT_POST, 'gioitinh');
+             $sodienthoai =filter_input(INPUT_POST, 'sodienthoai');
+             $tendangnhap =filter_input(INPUT_POST, 'tendangnhap');
+             $matkhau =filter_input(INPUT_POST, 'matkhau');
+
+            $idUser = filter_input(INPUT_POST, 'id');
+
+            $this->nguoidung_model->update($idUser, $ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau);
 
 
+         
+         }
+       }
 
-
-
+       
     
+
+
 ?>

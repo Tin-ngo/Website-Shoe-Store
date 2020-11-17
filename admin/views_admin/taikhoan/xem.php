@@ -9,6 +9,7 @@
         <table border="1" cellpadding="5">
           <tr>
             <td><h4>idUser </h4></td>
+             <!-- có thể thay = $data['idUser'] là php echo "hello". $data['idUser']; -->
             <td><h4> &emsp;<?= $data['idUser'];   ?>  </h4></td>
           </tr>
           <tr>

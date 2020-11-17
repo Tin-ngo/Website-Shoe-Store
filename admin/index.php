@@ -10,7 +10,6 @@
             require_once('controller_admin/quanlytaikhoan.php');
             $controller_taikhoanobj = new nguoidungcontroller();
             $controller_taikhoanobj->list();
-            require_once('controller_admin/quanlytaikhoan.php');
             break;
         case 'sanpham':
             require_once('controller_admin/quanlysanpham.php');
@@ -30,23 +29,28 @@
         case 'khuyenmai':
             require_once('controller_admin/quanlykhuyenmai.php');
             break;
-
-
-
         case 'xemnguoidung':
            require_once('controller_admin/quanlytaikhoan.php');
             $controller_taikhoanobj = new nguoidungcontroller();
             $controller_taikhoanobj->details();
+            break; 
+        case 'edit':    // UPDATE giao diện
             require_once('controller_admin/quanlytaikhoan.php');
+            $controller_taikhoanobj = new nguoidungcontroller();
+            $controller_taikhoanobj->edit();
+            break;
+ 
+
+        case 'sua_xl':   //UPDATE xử lý
+            require_once('controller_admin/quanlytaikhoan.php');
+            $controller_taikhoanobj = new nguoidungcontroller();
+            $controller_taikhoanobj->update();
             break;
 
 
 
-            
-        case 'suanguoidung':
-            require_once('controller_admin/taikhoan/sua.php');
-            break;
-        case 'them':
+
+        case 'them':   // chỗ này chưa là nên sai
             require_once('controller_admin/taikhoan/them.php');
             break;
         

@@ -37,10 +37,10 @@
                   <td><?= $row['diachi'] ?></td>
                   <td>
                       <!-- để ý dấu bằng trong href -->
-                      <a href="?action=xemnguoidung&id=<?= $row['idUser'] ?>" type="button" class="btn btn-success">Xem</a>
-                      <a href="?action=suanguoidung" type="button" class="btn btn-warning">Sửa</a>
-                      <a href="#" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">
-                        Xóa</a>
+                      <a href="?action=xemnguoidung&id=<?= $row['idUser'] ?>" type="button" class="btn btn-light">Chi tiết</a>
+                      <a href="?action=edit&id=<?= $row['idUser'] ?>" type="button" class="btn  btn-light">Sửa</a>
+                      <a href="#" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger"title="Xóa người dùng">
+                        <i class="fa fa-user-times"></i></a>
                   </td> 
               </tr>
               <?php } ?>

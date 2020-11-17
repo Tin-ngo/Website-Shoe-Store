@@ -29,12 +29,17 @@
         case 'xemnguoidung':
             require_once('taikhoan/xem.php');
             break;
-        case 'suanguoidung':
-            require_once('taikhoan/sua.php');
-            break;
         case 'them':
             require_once('taikhoan/them.php');
             break;
+
+        case 'edit':
+            require_once('taikhoan/sua.php');
+            break;
+
+//        case 'suanguoidung':  //thay doi
+  //          require_once('taikhoan/sua.php');
+    //        break;
     	
     	default:
     		# code...
