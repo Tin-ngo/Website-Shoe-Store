@@ -269,21 +269,22 @@
                     <div class="features_items"><!--features_items-->
                        
                         <h2 class="title text-center">SẢN PHẨM NỔI BẬT</h2>
-                        <!-- SP1 -->
+                        
+                        <?php foreach ($data_sanphamcuahang as $value) { ?>
                         <div class="col-sm-4">
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                         <div class="productinfo text-center">
-                                            <img src="images/home/product1.jpg" alt="" />
-                                            <h2>$56</h2>
+                                            <img src="./admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" class="girlcuahang img-responsive" height='230'/>
+                                            <h2><?php echo $value['tenSP'] ?></h2>
                                             <p></p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
                                                 <h2>$56</h2>
                                                 <p>Mã giảm giá để đây</p>
-                                                <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
                                             </div>
                                         </div>
                                 </div>
@@ -291,118 +292,9 @@
                             </div>
                         </div>
 
-                        <!-- SP2 -->
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product2.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p> </p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>Mã giảm giá để đây</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                        <!-- SP3 -->
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product3.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p></p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>Mã giảm giá để đây</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                        <!-- SP4 -->
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product4.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p></p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>Mã giảm giá để đây</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                    </div>
-                                    <img src="images/home/new.png" class="new" alt="" />
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                        <!-- SP5 -->
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product5.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p> </p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>Mã giảm giá để đây</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                    </div>
-                                    <img src="images/home/sale.png" class="new" alt="" />
-                                </div>
-                                
-                            </div>
-                        </div>
+                      <?php } ?>
 
                         
-                        <!-- SP6 -->
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product6.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p> </p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>Mã giảm giá để đây</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
                         
                     </div><!--features_items-->
 

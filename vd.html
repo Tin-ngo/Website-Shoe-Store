@@ -1,206 +1,238 @@
-<div class="tab-products single-products section-padding extra-padding-top">
-    <div class="container">
+
+<!-- slide chạy tự động -->
+
+<section id="slider"><!--slider-->
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                        </ol>
+                        
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-6">
+                                    <h1><span>SHOE</span> STORE</h1>
+                                    <h2>UY TÍN - CHẤT LƯỢNG - THỜI THƯỢNG</h2>
+                                   
+                                    
+
+                                     <a href="?action=chitietmathang">
+                                    <button type="button" class="btn btn-secondary get">
+                                      MUA NGAY
+                                    </button>
+                                     </a>
 
 
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="section-title text-center">
-                    <div class="product-tab">
-                        <ul>
-                            <li class="active dangnhap"><a data-toggle="tab" href="#arrival">ĐĂNG NHẬP<span>/</span></a></li>
-                            <li class="dangky"><a data-toggle="tab" href="#popular"><span>/</span>ĐĂNG KÝ</a></li>
-                        </ul>
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- 2 ảnh dưới chồng vào nhau -->
+                                    <img src="public/image/giay1.jpg" class="girl img-responsive" alt="" />
+                                    <img src=""  class="pricing" alt="" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1><span>SHOE</span> STORE</h1>
+                                    <h2>UY TÍN - CHẤT LƯỢNG - THỜI THƯỢNG</h2>
+                                   <p><a href="#makm"> Mã Khuyến mãi trong từng sản phẩm </a></p>
+
+                                    <button type="button" class="btn btn-default get">MUA NGAY</button>
+
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="public/image/giay2.jpg" class="girl img-responsive" alt="" />
+                                    <img src=" "  class="pricing" alt="" />
+                                </div>
+                            </div>
+                            
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1><span>SHOE</span> STORE</h1>
+                                    <h2>UY TÍN - CHẤT LƯỢNG - THỜI THƯỢNG</h2>
+
+                                   <p><a href="#makm"> Mã Khuyến mãi trong từng sản phẩm </a></p>
+
+                                    <button type="button" class="btn btn-default get">MUA NGAY</button>
+
+
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="public/image/giay3.jpg" class="girl img-responsive" alt="" />
+                                    <img src=" " class="pricing" alt="" />
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left muiten"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right muiten"></i>
+                        </a>
                     </div>
+                    
                 </div>
             </div>
         </div>
-
-
-
-        <div class="text-center tab-content">
-            <div class="tab-pane  fade in active" id="arrival">
-                <div class="wrapper">
-                    <ul class="load-list load-list-two">
-                       
-
-
-
-                        <li>
-                            <div class="row text-center">
-                      
-
-
-                               <div class="container-fluid"> 
-
-
-         
-
-
-                                <div class="row-fluid"> 
-                                 <div class="col-md-offset-4 col-md-4" id="box"> 
-                                  <h2><br>Đăng nhập</h2> 
-                                  <hr> 
-                                  <form class="form-horizontal" action="dangnhapsubmit.php" method="POST" id="login_form"> 
-                                   <fieldset> 
-                                    <div class="form-group"> 
-                                     <div class="col-md-12"> 
-                                      <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-
-
-
-                                     <!--  <input name="first_name" placeholder="Username" class="form-control" type="text"> -->
-                                       <td><input type="text" name="username" class="form-control"></td> 
-
-
-
-                                      </div> 
-                                     </div> 
-                                    </div> 
-                                    <div class="form-group"> 
-                                     <div class="col-md-12"> 
-                                      <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> 
-
-
-
-                                         <!-- <input name="email" placeholder="Password" class="form-control" type="text"> -->
-                                      <td><input type="password" name="password" class="form-control"></td>
+    </section><!--/slider-->
 
 
 
 
 
-                                      </div> 
-                                     </div> 
-                                    </div> 
-                                    <div class="form-group"> 
-                                     <div class="col-md-12"> 
+//lớp home
+    <div class="divhover">
 
-                                       <center>  
-                                       <input type="submit" name="submit" class="btn btn-md btn-danger" value="Đăng nhập">
-                                    </center>
-      
-                                     </div> 
-                                    </div> 
-                                   </fieldset> 
-                                  </form> 
-                                   <div class="text-center">
-                                    <a data-toggle="tab" href="#popular" class="tk">Đăng ký tài khoản?</a>
-                                    <a href="?action=quenmatkhau" class="tk">Quên mật khẩu?</a>
+<div class="col-sm-3">
+    <div class="zoom">
+        <center><span style="font-size: 20px;">Giày Công sở</span></center>
+        <img class="imghover1" src="public/image/giay1.jpg" alt="">
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="zoom">
+       <center><span style="font-size: 20px;"> Giày Học sinh</span></center>
+        <img class="imghover1" src="public/image/giay1.jpg" alt="">
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="zoom">
+       <center><span style="font-size: 20px;"> Giày da bò</span></center>
+        <img class="imghover1" src="public/image/giay1.jpg" alt="">
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="zoom">
+        <center><span style="font-size: 20px;">Giày thời trang</span></center>
+        <img class="imghover1" src="public/image/giay1.jpg" alt="">
+    </div>
+</div>
 
+</div>
+
+
+
+//sản phẩm trang chủ
+
+ <!-- SP2 -->
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/product2.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Tên sản phẩm để đây</p>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
-                                 </div> 
-
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h2>$56</h2>
+                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </div>
+                                    </div>
                                 </div>
-                               </div>
-
-
-
-
-
-
-
-
-                            </div>
-                        </li>
-                     
-                    </ul>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- arrival product end -->
-            <div class="tab-pane fade" id="popular">
-                <div class="wrapper">
-                    <ul class="load-list load-list-three">
-                      
-                        <li>
-                            <div class="row text-center">
-
-
-                        <div class="container"> 
-
-
-
-                         <div class="roww"> 
-                          <div class="col-xs-12 col-sm-12 col-md-4 well well-sm col-md-offset-4 onee"> 
-                           <legend><a>
-                            <i class="glyphicon glyphicon-globe"></i></a> Đăng ký thành viên!
-                           </legend> 
-                           <!--     <form action="http://hocwebgiare.com" method="post" class="form" role="form"> -->
-                           <form action="dangkysubmit.php" method="POST" class="form" role="form"> 
-  
-   
-
-                            <!--  <input class="form-control" name="youremail" placeholder="Email" type="email">   -->
-                             <input class="form-control" type="text" name="username" placeholder="Tên đăng nhập">
-
-                            <!-- <input class="form-control" name="password" placeholder="Mật khẩu" type="password">   -->
-                            <input class="form-control" type="password" name="password" placeholder="Mật khẩu">
-
-
-                            <input class="form-control" type="password" name="email" placeholder="Email">
-
-
-
-
-                            <!--  <input class="form-control" name="retypepassword" placeholder="Nhập lại mật khẩu" type="password">  --> 
-                            <input class="form-control" type="password" name="repassword" placeholder="Nhập lại mật khẩu">
-
-   
-
-    
-
-                           <!--  <button class="btn btn-lg btn-primary btn-block" type="submit"> Đăng ký</button>  -->
-
-                                  <button class="btn btn-lg btn-primary btn-block button2" type="submit" name="submit">Đăng ký</button>
-
-                                  <button class="btn btn-lg btn-primary btn-block button2" type="reset">Làm mới</button>
-
-                           </form> 
-
-
-                           <div class="text-center">
-                            <br>
-                            <span> Bạn đã có tài khoản? </span>
-                            <a class="dn" data-toggle="tab" href="#arrival" >Đăng nhập</a> </div>
-                          </div> 
-                          </div> 
-                         </div>
-                        </div>
-
-
-
-      
-                                  
-                       
-                            </div>
-                        </li>
-                      
-                       
-                    </ul>
-                </div>
-            </div>
-            <!-- popular product end -->
-
-
-
-
-                                </div>
+                                
                             </div>
                         </div>
                         
+                        <!-- SP3 -->
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/product3.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Tên sản phẩm để đây</p>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h2>$56</h2>
+                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- SP4 -->
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/product4.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Tên sản phẩm để đây</p>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h2>$56</h2>
+                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </div>
+                                    </div>
+                                    <img src="images/home/new.png" class="new" alt="" />
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- SP5 -->
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/product5.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Tên sản phẩm để đây</p>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h2>$56</h2>
+                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </div>
+                                    </div>
+                                    <img src="images/home/sale.png" class="new" alt="" />
+                                </div>
+                                
+                            </div>
+                        </div>
 
-
-
-</section>
+                        
+                        <!-- SP6 -->
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/product6.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Tên sản phẩm để đây</p>
+                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h2>$56</h2>
+                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
+                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>

@@ -29,12 +29,7 @@
       </li>
       <li>
         <a href="?action=hoadon">
-         <i class="fa fa-table"></i>Duyệt hóa đơn
-        </a>
-      </li>
-      <li>
-        <a href="?action=danhmuc">
-          <i class="fa fa-table"></i>Danh mục sản phẩm
+         <i class="fa fa-table"></i>Hóa đơn
         </a>
       </li>
       <li>
@@ -59,12 +54,12 @@
   <div id="content">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
-      	<ul class="nav navbar-nav navbar-right">
+      	<ul class="nav navbar-nav navbar-left">
       		<li>
       			
 
 
-
+<!--
                         <div class="search_box pull-right">
                             
                             <input type="text" placeholder="Search"/>&ensp;
@@ -72,17 +67,17 @@
 
                               <span style="font-size: 20px;padding-left: 10px;"> |</span>
                         </div>
-
+-->
 
 
 
           </li>
           <li><a href="#" style="margin-right: 30px;">
-          	<img class="anhuser" src="public_admin/image/author.png" alt="">&emsp;Test User</a>
+          	<img class="anhuser" src="public_admin/image/author.png" alt="">&emsp; Xin chào .....</a>
           </li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-left">
+        <ul class="nav navbar-nav navbar-right" style="padding-right: 30px;">
           <li class="nav2">
             <a href="#"><i class="fa fa-bell nav1"></i></a>
           </li>

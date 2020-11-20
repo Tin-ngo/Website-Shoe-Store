@@ -1,25 +1,29 @@
-<?php 
-    class connection{
-        var $ketnoi;
+<?php
+    /**
+     * 
+     */
+    class ketnoi
+    {
+        var $connect;
+        
         function __construct()
         {
-            //Thong so ket noi CSDL
-            $severname ="localhost"; 
+            //các thông số cần thiết kết nối database
+            $host = "localhost";
             $username ="root";
-            $password =""; 
-            $db_name ="Shoe";
- 
-            //Tao ket noi CSDL
-            $this->ketnoi = new mysqli($severname,$username,$password,$db_name);
-            $this->ketnoi->set_charset("utf8");
+            $password = "";
+            $dbname = "shoe_store";
 
-            //check connection
-            if ($this->ketnoi->connect_error) {
-            	$database_error = "Lỗi kết nối với database!";
-		        die("Connection failed: " . $this->ketnoi->connect_error);
-		        echo $database_error;
-		    }
+            //tạo kết nối với cơ sở dữ liệu
+            $this->connect = new mysqli($host,$username,$password,$dbname);
+            $this->connect->set_charset('utf8');
+
+            //kiểm tra kết nối
+            if ($this->connect->connect_error) {
+                die(" Lỗi khi kết nối đến server: ".$this->connect->connect_error);
+            }
+
         }
-
     }
 ?>
+

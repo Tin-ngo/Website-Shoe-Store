@@ -1,6 +1,6 @@
 <div class="recommended_items"><!--recommended_items-->
    <div class="container spnb">
-                        <h2 class="title text-left" id="makm">SẢN PHẨM MỚI NHẤT
+                        <h2 class="title text-left" id="makm">SẢN PHẨM LIÊN QUAN
                             <a href="#" class="pull-right" id="textid">Xem tất cả >></a>
                         </h2>
    

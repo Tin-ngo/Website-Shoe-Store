@@ -1,4 +1,4 @@
-
+  
  <div class="header-middle"><!--header-middle-->
           
                 <div class="row row_header">
@@ -104,11 +104,13 @@
                                         <img src="public/image/logo.png" alt="logo" title="về trang chủ">
                                  </div>
                                 </a></li>
-                                <li class="dropdown"><a href="?action=cuahang">Giày thể thao</a></li> 
-                                <li class="dropdown"><a href="?action=">Giày công sở</a></li> 
-                                <li class="dropdown"><a href="?action=">Giày học sinh</a></li> 
-                                <li class="dropdown"><a href="?action=">Giày da bò</a></li> 
-                                <li class="dropdown"><a href="?action=">Giày thời trang</a></li> 
+                                <li class="dropdown"><a href="?action=cuahang">Cửa Hàng</a></li> 
+                                 
+                                 <!-- lấy action là id loại sản phẩm -->
+
+                                <?php foreach ($data_loaisanpham as $value) {  ?>
+                                <li class="dropdown"><a href="?action=<?= $value['idLoaiSP'] ?>&id=<?= $value['idLoaiSP'] ?>" style="font-size: 15px;"><?= $value['tenLSP'] ?></a></li>    
+                              <?php }  ?>
                             </ul>
                         </div>
                     </div>

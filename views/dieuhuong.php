@@ -3,13 +3,35 @@
 
     switch ($action) {
     	case 'trangchu':
-    		require_once('slider/slider.php');
     		require_once('home/home.php');
-    		require_once('sanphammoinhat/sanphammoinhat.php');
     		break;
     	case 'cuahang':
     	    require_once('cuahang/cuahang.php');
             break;
+
+        // sắp xếp theo id của loại sản phẩm
+        case '1':
+            require_once('cuahang/cuahang.php');
+            break;
+        case '2':
+            require_once('cuahang/cuahang.php');
+            break;
+        case '3':
+            require_once('cuahang/cuahang.php');
+            break;
+        case '4':
+            require_once('cuahang/cuahang.php');
+            break;
+        case '5':
+            require_once('cuahang/cuahang.php');
+            break;
+        case '6':
+            require_once('cuahang/cuahang.php');
+            break;
+
+
+
+
     	case 'gioithieu':
     	    require_once('gioithieu/gioithieu.php');
             break;
@@ -22,7 +44,7 @@
             break;
         case 'chitietmathang':
             require_once('chitietmathang/chitietmathang.php');
-            require_once('sanphammoinhat/sanphammoinhat.php');
+            require_once('sanphamlienquan/sanphamlienquan.php');
             # code...
             break;
         case 'giohang':

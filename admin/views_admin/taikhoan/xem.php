@@ -40,6 +40,10 @@
             <td><h4>Tên đăng nhập </h4></td>
             <td><h4> &emsp;<?= $data['tendangnhap'];   ?>  </h4></td>
           </tr>
+          <tr>
+            <td><h4>Chức vụ </h4></td>
+            <td><h4> &emsp;<?php if( $data['idQuyen'] == 0) echo "admin";  else echo "khách hàng"; ?>  </h4></td>
+          </tr>
         </table>
 
 

@@ -1,4 +1,6 @@
-<?php
+<?php      
+     // CONTROLLER DÙNG ĐỂ GỌI CÁC HÀM TRONG MODEL
+
 
     require_once('./model_admin/nguoidung.php'); // đã gọi được rồi
 
@@ -49,9 +51,37 @@
 
             $this->nguoidung_model->update($idUser, $ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau);
 
-
-         
          }
+
+
+         public function them()
+         {
+            $ho = filter_input(INPUT_POST, 'ho');
+            $ten =filter_input(INPUT_POST, 'ten');
+            $email =filter_input(INPUT_POST, 'email');
+            $diachi =filter_input(INPUT_POST, 'diachi');
+            $gioitinh =filter_input(INPUT_POST, 'gioitinh');
+            $sodienthoai =filter_input(INPUT_POST, 'sodienthoai');
+            $tendangnhap =filter_input(INPUT_POST, 'tendangnhap');
+            $matkhau =filter_input(INPUT_POST, 'matkhau');
+
+            $this->nguoidung_model->insert($ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau);
+         }
+
+
+         public function xoanguoidung()
+         {
+            $id = isset($_GET['id']) ? $_GET['id'] : '1';
+
+            $this->nguoidung_model->delete($id);
+         }
+
+
+
+
+
+
+
        }
 
        

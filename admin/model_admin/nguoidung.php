@@ -1,4 +1,5 @@
 <?php
+                                                //MODEL CHO TÀI KHOẢN NGƯỜI DÙNG
     require_once('ketnoi.php');
     /**
      * 
@@ -43,14 +44,42 @@
             $result = $this->conn->query($query);
 
             if($result == true){
-                setcookie('msg', 'Duyệt thành công', time() + 2);
+
                 header('Location: ?action=taikhoan');
             }
         
 
+         }
 
-       //$uup=mysql_query($sl);
+         function insert($ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau)
+         {
+            $query= "INSERT INTO user (ho, ten, email, diachi, gioitinh, sodienthoai, tendangnhap, matkhau) 
+            VALUES ('$ho', '$ten', '$email', '$diachi', '$gioitinh', '$sodienthoai', '$tendangnhap', '$matkhau')";  
 
+            $result = $this->conn->query($query);
+
+            if($result == true){
+                header('location: ?action=taikhoan');
+            }
+            else{
+                header('location: ?action=them_giaodien');
+            }
+         }
+
+         function delete($id)
+         {
+            $query = "DELETE FROM user WHERE idUser='$id' ";
+            $result = $this->conn->query($query);
+
+            if($result == true){
+
+                echo "<script> alert('Đã xóa thành công');";
+                echo "location.href='?action=taikhoan';</script>";
+
+            }else{
+                echo "<script> alert('LỖI, Chưa xóa được người dùng');";
+                echo "location.href='?action=taikhoan';</script>";
+            }
          }
 
 

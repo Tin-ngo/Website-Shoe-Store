@@ -226,10 +226,20 @@ img.girl {
   min-width: 300px;
 }
 
+img.girlcuahang {
+  margin-left:;
+  border-radius: 100px;
+  min-height: 250px;
+  max-height: 250px;
+  min-width: 300px;
+  background-size: cover;
+}
+
 #slider {
   background-color: none;
   color: white;
   animation: mymove 2s infinite;
+  height: 450px;
 }
 
 @keyframes mymove {
@@ -316,7 +326,7 @@ i.color{
   width: 290px;
   height: 250px;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.62);
+  background-color: orange;
   border-radius: 20px;
 }
 
@@ -324,7 +334,7 @@ i.color{
   -ms-transform: scale(0.1); /* IE 9 */
   -webkit-transform: scale(0.1); /* Safari 3-8 */
   transform: scale(0.9); 
-  background-color: orange;
+  background-color: lightgray;
 }
 
 .divhover{
@@ -421,6 +431,18 @@ div.spnb{
 div#box{
   background-color: gray;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1410,7 +1432,7 @@ h2.title {
 }
 
 .product-overlay {
-  background:#FE980F;
+  background:rgb(60, 60, 60, 0.9);
   top: 0;
   display: none;
   height: 0;
