@@ -33,7 +33,7 @@
             <tr>
               <td>Giới tính:</td>
               <td>
-                <input type="radio" name="gioitinh" value="nam">Nam 
+                <input type="radio" name="gioitinh" value="nam" checked>Nam 
                 <input type="radio" name="gioitinh" value="nu" >Nữ
               </td>
            </tr>

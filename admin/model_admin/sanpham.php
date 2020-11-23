@@ -30,6 +30,17 @@
     		return $data;
     	}
 
+        function xem_mau($id)
+        {
+             $query = "SELECT * FROM color WHERE idcolor=$id";
+            return $this->conn->query($query)->fetch_assoc();
+        }
+        function xem_size($id)
+        {
+             $query = "SELECT * FROM size WHERE idsize=$id";
+            return $this->conn->query($query)->fetch_assoc();
+        }
+
     	function find($id)
         {
             $query = "SELECT * FROM sanpham WHERE idSP=$id";
@@ -37,12 +48,12 @@
         }
 
 
-         function update($idSP, $tenSP, $Dongia, $anh1, $anh2, $anh3, $mau, $size, $ngaynhap, $mota) 
+         function update($idSP, $idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota) 
         {
             
 
      
-             $query="UPDATE sanpham SET tenSP='$tenSP', Dongia='$Dongia', anh1='$anh1', anh2='$anh2', anh3='$anh3', mau='$mau', size='$size', ngaynhap='$ngaynhap', mota='$mota' WHERE idSP='$idSP';";        
+             $query="UPDATE sanpham SET idKM='$idKM', idLoaiSP='$idLoaiSP', idcolor='$idcolor', idsize='$idsize', tenSP='$tenSP', Dongia='$Dongia', anh1='$anh1', anh2='$anh2', anh3='$anh3', ngaynhap='$ngaynhap', mota='$mota' WHERE idSP='$idSP';";        
 
             $result = $this->conn->query($query);
 
@@ -54,11 +65,11 @@
 
          }
 
-         function insert($idLoaiSP, $tenSP, $Dongia, $anh1, $anh2, $anh3, $mau, $size, $ngaynhap, $mota) 
+         function insert($idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota) 
          {
 
-             $query= "INSERT INTO sanpham (idLoaiSP, tenSP, Dongia, anh1, anh2, anh3, mau, size, ngaynhap, mota) 
-            VALUES ('$idLoaiSP', '$tenSP', '$Dongia', '$anh1', '$anh2', '$anh3', '$mau', '$size', '$ngaynhap', '$mota') ";
+             $query= "INSERT INTO sanpham (idKM, idLoaiSP, idcolor, idsize, tenSP, Dongia, anh1, anh2, anh3, ngaynhap, mota) 
+            VALUES ('$idKM','$idLoaiSP','$idcolor', '$idsize', '$tenSP', '$Dongia', '$anh1', '$anh2', '$anh3', '$ngaynhap', '$mota') ";
 
             $result = $this->conn->query($query);
 

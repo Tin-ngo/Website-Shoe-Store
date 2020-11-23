@@ -2,8 +2,10 @@
   <!-- Sidebar -->
   <div id="sidebar">
     <header>
-      <div style="color:white;" href="#">Quản Trị Viên<br> </div>
+      <a href="../?action=trangchu" title="xem trang web">
+        <div style="color:white;" href="#">Quản Trị Viên<br> </div> 
       	<div style="line-height: 1px; color:white;font-size: 10px;"><span style="color:orange;">SHOE</span> STORE</div>
+      </a>
       
     </header>
     <ul class="nav">
@@ -72,13 +74,25 @@
 
 
           </li>
-          <li><a href="#" style="margin-right: 30px;">
-          	<img class="anhuser" src="public_admin/image/author.png" alt="">&emsp; Xin chào .....</a>
+          <li>
+            <a href="#" style="margin-right: 30px;">
+          	<img class="anhuser" src="public_admin/image/author.png" alt="">
+            <?php
+            if(isset($_SESSION['tendangnhap'])){
+              echo "Xin chào ".$_SESSION['tendangnhap'];;
+            }else{
+              echo "Xin Chào ...";
+            }
+
+            ?>
+            </a>
+            
           </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right" style="padding-right: 30px;">
           <li class="nav2">
+
             <a href="#"><i class="fa fa-bell nav1"></i></a>
           </li>
            <li>

@@ -53,13 +53,25 @@
             }
          }
 
-  //       function Join_user_hoadon($id)
-  //       {
-  //           $query = "SELECT * FROM user INNER JOIN hoadon ON user.idUser = hoadon.idUser WHERE user.idUser=$id";
-//
-  //          $result = $this->conn->query($query);
+         //xem chi tiết hóa đơn
 
-       //  }
+         function user($id)
+         {
+             $query = "SELECT * FROM user WHERE idUser=$id";
+
+            return $this->conn->query($query)->fetch_assoc();
+
+         }
+
+         function sanpham($id)
+         {
+             $query = "SELECT * FROM sanpham WHERE idSP=$id";
+
+             return $this->conn->query($query)->fetch_assoc();
+
+         }
+
+
 
 
 

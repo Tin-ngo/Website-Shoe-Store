@@ -18,6 +18,18 @@
                </td>
            </tr>
             <tr>
+               <td>id Khuyến mãi:</td>
+               <td><input type="text" value="" name="idKM"></td>
+           </tr>
+            <tr>
+               <td>id màu:</td>
+               <td><input type="text" value="" name="idmau"></td>
+           </tr>
+            <tr>
+               <td>id size:</td>
+               <td><input type="text" value="" name="idsize"></td>
+           </tr>
+            <tr>
                <td>Tên Sản Phẩm:</td>
                <td><input type="text" value="" name="tenSP"></td>
            </tr>
@@ -36,14 +48,6 @@
             <tr>
                <td>ảnh 3:</td>
                <td><input type="file" value="" name="anh3"></td></td>
-           </tr>
-            <tr>
-               <td>Màu:</td>
-               <td><input type="text" value="" name="mau"></td>
-           </tr>
-           <tr>
-               <td>Size:</td>
-               <td><input type="text" value="" name="size"></td>
            </tr>
             <tr>
                <td>Ngày nhập:</td>

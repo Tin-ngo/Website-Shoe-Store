@@ -40,16 +40,19 @@
                                  <div class="col-md-offset-4 col-md-4" id="box"> 
                                   <h2><br>Đăng nhập</h2> 
                                   <hr> 
-                                  <form class="form-horizontal" action="dangnhapsubmit.php" method="POST" id="login_form"> 
+                                  <form class="form-horizontal" action="?action=dangnhap_xl" method="POST" id="login_form"> 
                                    <fieldset> 
                                     <div class="form-group"> 
                                      <div class="col-md-12"> 
-                                      <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                      <div class="input-group"> 
+                                        <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-user"></i>
+                                        </span>
 
 
 
                                      <!--  <input name="first_name" placeholder="Username" class="form-control" type="text"> -->
-                                       <td><input type="text" name="username" class="form-control"></td> 
+                                       <td><input type="text" name="tendangnhap_dn" class="form-control"></td> 
 
 
 
@@ -63,7 +66,7 @@
 
 
                                          <!-- <input name="email" placeholder="Password" class="form-control" type="text"> -->
-                                      <td><input type="password" name="password" class="form-control"></td>
+                                      <td><input type="password" name="matkhau_dn" class="form-control"></td>
 
 
 
@@ -138,16 +141,16 @@
                             <i class="glyphicon glyphicon-globe"></i></a> Đăng ký thành viên!
                            </legend> 
 
-                           <form action="dangkysubmit.php" method="POST" class="form" role="form"> 
+                           <form action="?action=dangky_xl" method="POST" class="form" role="form"> 
                         
                           <div class="col-sm-4">
-                            <input class="form-control" type="text" name="" placeholder="Họ">
+                            <input class="form-control" type="text" name="ho_dk" placeholder="Họ">
 
-                            <input class="form-control" type="text" name="" placeholder="Tên">
+                            <input class="form-control" type="text" name="ten_dk" placeholder="Tên">
                               <div class="pull-left" style="color:gray;font-size: 15px;">
                               Giới tính:
-                            <input type="radio" name="gioitinh" value="nam"> Nam
-                             <input type="radio" name="gioitinh" value="nu"> Nữ
+                            <input type="radio" name="gioitinh_dk" value="nam" checked> Nam
+                             <input type="radio" name="gioitinh_dk" value="nu"> Nữ
                            </div>
                           </div>
 
@@ -155,23 +158,23 @@
                           <div class="col-sm-4">
 
 
-                             <input class="form-control" type="text" name="" placeholder="địa chỉ">
-                             <input class="form-control" type="text" name="" placeholder="Email">
+                             <input class="form-control" type="text" name="diachi_dk" placeholder="địa chỉ">
+                             <input class="form-control" type="text" name="email_dk" placeholder="Email">
 
-                           <input class="form-control" type="text" name="" placeholder="Số điện thoại">
+                           <input class="form-control" type="text" name="sdt_dk" placeholder="Số điện thoại">
                            
                           </div>
 
                           <div class="col-sm-4">
 
                             <!--  <input class="form-control" name="youremail" placeholder="Email" type="email">   -->
-                             <input class="form-control" type="text" name="username" placeholder="Tên đăng nhập">
+                             <input class="form-control" type="text" name="tendangnhap_dk" placeholder="Tên đăng nhập">
 
                             <!-- <input class="form-control" name="password" placeholder="Mật khẩu" type="password">   -->
-                            <input class="form-control" type="password" name="password" placeholder="Mật khẩu">
+                            <input class="form-control" type="password" name="matkhau_dk" placeholder="Mật khẩu">
 
                             <!--  <input class="form-control" name="retypepassword" placeholder="Nhập lại mật khẩu" type="password">  --> 
-                            <input class="form-control" type="password" name="repassword" placeholder="Nhập lại mật khẩu">
+                            <input class="form-control" type="password" name="" placeholder="Nhập lại mật khẩu">
                           </div>
    
 

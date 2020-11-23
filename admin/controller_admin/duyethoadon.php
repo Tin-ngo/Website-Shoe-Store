@@ -38,12 +38,19 @@
             $this->hoadon_model->delete($id);
          }
 
- //        public function user_hoadon()
-//         {
-  //          $id = isset($_GET['id']) ? $_GET['id'] : '1';
-  //          $data = $this->hoadon_model->Join_user_hoadon('1');
-  //          require_once('views_admin/index.php');
-  //       }
+         public function chitiet_hoadon()
+         {
+            $id = isset($_GET['id']) ? $_GET['id'] : '1';
+
+            $data = $this->hoadon_model->find($id);
+
+            $name_user = $this->hoadon_model->user($id);
+
+            $name_sanpham = $this->hoadon_model->sanpham($id);
+
+            require_once('views_admin/index.php');
+            
+         }
 
 
 

@@ -21,7 +21,7 @@
                   <th class="theadd">Tên sản phẩm</th>
                   <th class="theadd">Giá thành</th>
                   <th class="theadd">Loại</th>
-                  <th class="theadd">Màu / Size</th>
+                  <th class="theadd">id Màu / id Size</th>
                   <th class="theadd">Hình ảnh</th>
                   <th>Hành động</th>
                </tr>
@@ -43,8 +43,8 @@
                     if($value['idLoaiSP'] == 5) echo "Giày Thời Trang"; 
                     ?>
                   </td> 
-                  <td><?= $value['mau']." ".$value['size'] ?></td>
-                   <td><img src="./public_admin/image/<?php echo $value['anh1'] ?>" widh='40' height='40'></td>
+                  <td><?= $value['idcolor']." / ".$value['idsize'] ?></td>
+                   <td><img src="./public_admin/image/sanpham/<?php echo $value['anh1'] ?>" widh='40' height='40'></td>
                   <td>
                       <!-- để ý dấu bằng trong href -->
                       <a href="?action=xemsanpham&id=<?= $value['idSP'] ?>" type="button" class="btn btn-light">Chi tiết</a>

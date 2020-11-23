@@ -25,7 +25,7 @@
                                    
                                     
 
-                                     <a href="?action=chitietmathang">
+                                     <a href="?action=cuahang1">
                                     <button type="button" class="btn btn-secondary get">
                                      XEM NGAY
                                     </button>

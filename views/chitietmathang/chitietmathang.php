@@ -43,15 +43,16 @@
                                     <div class="product-f tab-content">
                                      
                                             <div class="simpleLens-container tab-pane fade in" id="sin-1">
-                                                <a class="simpleLens-image" data-lens-image="public/image/one.png" href="#"><img src="public/image/one.png" alt="" class="simpleLens-big-image"></a>
+                                                <a class="simpleLens-image" data-lens-image="public/image/one.png" href="#">
+                                                    <img src="admin/public_admin/image/sanpham/<?php echo $data_chitiet['anh1']; ?>" class="simpleLens-big-image"></a>
                                             </div>
                                   
                                             <div class="simpleLens-container tab-pane active fade in" id="sin-2">
-                                                <a class="simpleLens-image" data-lens-image="public/image/one.png" href="#"><img src="public/image/one.png" alt="" class="simpleLens-big-image"></a>
+                                                <a class="simpleLens-image" data-lens-image="public/image/one.png" href="#"><img src="admin/public_admin/image/sanpham/<?php echo $data_chitiet['anh2']; ?>" alt="" class="simpleLens-big-image"></a>
                                             </div>
                                    
                                             <div class="simpleLens-container tab-pane fade in" id="sin-3">
-                                                <a class="simpleLens-image" data-lens-image="public/image/one.png" href="#"><img src="public/image/one.png" alt="" class="simpleLens-big-image"></a>
+                                                <a class="simpleLens-image" data-lens-image="public/image/one.png" href="#"><img src="admin/public_admin/image/sanpham/<?php echo $data_chitiet['anh3']; ?>" alt="" class="simpleLens-big-image"></a>
                                             </div>
                                   
                                     </div>
@@ -60,11 +61,11 @@
                             <div class="quick-thumb">
                                 <ul class="product-slider">
                             
-                                        <li class="active float"><a data-toggle="tab" href="#sin-1"> <img src="public/image/one.png" alt="quick view" /> </a></li>
+                                        <li class="active float"><a data-toggle="tab" href="#sin-1"> <img src="admin/public_admin/image/sanpham/<?php echo $data_chitiet['anh1']; ?>"  /> </a></li>
                                  
-                                        <li class="float"><a data-toggle="tab" href="#sin-2"> <img src="public/image/one.png" alt="small image" /> </a></li>
+                                        <li class="float"><a data-toggle="tab" href="#sin-2"> <img src="admin/public_admin/image/sanpham/<?php echo $data_chitiet['anh2']; ?>" alt="small image" /> </a></li>
                                    
-                                        <li class="float"><a data-toggle="tab" href="#sin-3"> <img src="public/image/one.png" alt="small image" /> </a></li>
+                                        <li class="float"><a data-toggle="tab" href="#sin-3"> <img src="admin/public_admin/image/sanpham/<?php echo $data_chitiet['anh3']; ?>" alt="small image" /> </a></li>
                                    
                                 </ul>
                             </div>
@@ -73,18 +74,13 @@
                     <div class="col-xs-12 col-sm-7 col-md-8">
                         <div class="quick-right">
                             <div class="list-text">
-                                <h3>Chỗ này hiển thị tên sản phẩm</h3>
+                                <h3><?php echo $data_chitiet['tenSP']; ?></h3>
                                 <div class="ratting floatright">
-                                    <p>( 27 Rating )</p>
-                                    <i class="mdi mdi-star"></i>
-                                    <i class="mdi mdi-star"></i>
-                                    <i class="mdi mdi-star"></i>
-                                    <i class="mdi mdi-star-half"></i>
-                                    <i class="mdi mdi-star-outline"></i>
+                                    
                                 </div>
-                                <h5> VNĐ</h5>
+                                <h5><?php echo $data_chitiet['Dongia']; ?> VNĐ</h5>
                              
-                                    <p>CHỗ này để mô tả mặt hàng</p>
+                                    <p>Mô tả: <?php echo $data_chitiet['mota']; ?></p>
                             
                                 <div class="list-btn">
                                     <a href="?action=giohang">Thêm vào giỏ</a>
@@ -115,24 +111,20 @@
                                         <h5>ĐẶC ĐIỂM</h5>
                                         <ul>
                                             <li>
-                                                <span>Xuất xứ</span>
-                                                <div></div>
-                                            </li>
-                                            <li>
                                                 <span>kiểu giày</span>
-                                                <div></div>
+                                                <div><?php echo $ten_loaisanpham['tenLSP']; ?></div>
                                             </li>
                                             <li>
                                                 <span>Màu sắc</span>
-                                                <div></div>
+                                                <div><?php echo $ten_color['color']; ?></div>
                                             </li>
                                             <li>
                                                 <span>Kích cỡ</span>
-                                                <div></div>
+                                                <div><?php echo $size['size']; ?></div>
                                             </li>
                                             <li>
-                                                <span>Thương hiệu</span>
-                                                <div></div>
+                                                <span>Ngày nhập</span>
+                                                <div><?php echo $data_chitiet['ngaynhap']; ?></div>
                                             </li>
                                           
                                         </ul>

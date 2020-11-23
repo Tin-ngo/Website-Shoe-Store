@@ -18,7 +18,7 @@
           </tr>
           <tr>
             <td><h4>Hình ảnh</h4></td>
-            <td><h4> &emsp;<img src="./public_admin/image/<?= $data['hinhanh'] ?>"  height='90' > </h4></td>
+            <td><h4> &emsp;<img src="./public_admin/image/loaisanpham<?= $data['hinhanh'] ?>"  height='90' > </h4></td>
           </tr>
           
         </table>

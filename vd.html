@@ -1,238 +1,197 @@
+<div class="cuahang">
+<h1>Cửa Hàng</h1>
+</div>
 
-<!-- slide chạy tự động -->
-
-<section id="slider"><!--slider-->
-
+<section id="cart_items" style="margin-top: -50px; margin-bottom: -50px;">
         <div class="container">
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#slider-carousel" data-slide-to="1"></li>
-                            <li data-target="#slider-carousel" data-slide-to="2"></li>
-                        </ol>
-                        
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="col-sm-6">
-                                    <h1><span>SHOE</span> STORE</h1>
-                                    <h2>UY TÍN - CHẤT LƯỢNG - THỜI THƯỢNG</h2>
-                                   
-                                    
-
-                                     <a href="?action=chitietmathang">
-                                    <button type="button" class="btn btn-secondary get">
-                                      MUA NGAY
-                                    </button>
-                                     </a>
-
-
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <!-- 2 ảnh dưới chồng vào nhau -->
-                                    <img src="public/image/giay1.jpg" class="girl img-responsive" alt="" />
-                                    <img src=""  class="pricing" alt="" />
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>SHOE</span> STORE</h1>
-                                    <h2>UY TÍN - CHẤT LƯỢNG - THỜI THƯỢNG</h2>
-                                   <p><a href="#makm"> Mã Khuyến mãi trong từng sản phẩm </a></p>
-
-                                    <button type="button" class="btn btn-default get">MUA NGAY</button>
-
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="public/image/giay2.jpg" class="girl img-responsive" alt="" />
-                                    <img src=" "  class="pricing" alt="" />
-                                </div>
-                            </div>
-                            
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>SHOE</span> STORE</h1>
-                                    <h2>UY TÍN - CHẤT LƯỢNG - THỜI THƯỢNG</h2>
-
-                                   <p><a href="#makm"> Mã Khuyến mãi trong từng sản phẩm </a></p>
-
-                                    <button type="button" class="btn btn-default get">MUA NGAY</button>
-
-
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="public/image/giay3.jpg" class="girl img-responsive" alt="" />
-                                    <img src=" " class="pricing" alt="" />
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                            <i class="fa fa-angle-left muiten"></i>
-                        </a>
-                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                            <i class="fa fa-angle-right muiten"></i>
-                        </a>
-                    </div>
-                    
-                </div>
+            <div class="breadcrumbs">
+                <ol class="breadcrumb">
+                  <li><a href="#">Home</a></li>
+                  <li class="active">Cửa hàng</li>
+                </ol>
             </div>
         </div>
-    </section><!--/slider-->
+    </section>
 
+<div class="container cn2">
+<div class="row">
 
+                <div class="col-sm-3">
+                    <div class="left-sidebar">
 
+                        <h2>Thể Loại</h2>
+                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
 
+                            <?php foreach ($data_loaisanpham as $value) {  ?>
 
-//lớp home
-    <div class="divhover">
-
-<div class="col-sm-3">
-    <div class="zoom">
-        <center><span style="font-size: 20px;">Giày Công sở</span></center>
-        <img class="imghover1" src="public/image/giay1.jpg" alt="">
-    </div>
-</div>
-<div class="col-sm-3">
-    <div class="zoom">
-       <center><span style="font-size: 20px;"> Giày Học sinh</span></center>
-        <img class="imghover1" src="public/image/giay1.jpg" alt="">
-    </div>
-</div>
-<div class="col-sm-3">
-    <div class="zoom">
-       <center><span style="font-size: 20px;"> Giày da bò</span></center>
-        <img class="imghover1" src="public/image/giay1.jpg" alt="">
-    </div>
-</div>
-<div class="col-sm-3">
-    <div class="zoom">
-        <center><span style="font-size: 20px;">Giày thời trang</span></center>
-        <img class="imghover1" src="public/image/giay1.jpg" alt="">
-    </div>
-</div>
-
-</div>
-
-
-
-//sản phẩm trang chủ
-
- <!-- SP2 -->
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product2.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Tên sản phẩm để đây</p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                    </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a href="?action=<?= $value['idLoaiSP'] ?>&id=<?= $value['idLoaiSP'] ?>">
+                                            <?= $value['tenLSP'] ?>
+                                        </a>
+                                    </h4>
                                 </div>
-                                
                             </div>
+
+                        <?php } ?>
+
+
                         </div>
+
+                    </div>
+
+
+
+
+        <div class="chongia">
+            <div class="chongia2">
+
+
+
+
+
+
+                <form action="?action=luachon" method="POST">
+
+                    <label for="cars">Màu:</label>
+
+                   <select id="" name="chon_mau">
+                    <option value="">Chọn màu</option>
+                    <?php foreach ($color as $value) {   ?>
+                    <option value="<?= $value['idcolor'];?>">
+                   <?php echo $value['color']; ?>
+                    </option>
+                <?php } ?>      
+                   </select>
+
+                   <br><br>
+
+
+
+                   <label for="cars">Size:</label>
+
+                   <select id="" name="chon_size">
+                    <option value="">Chọn kích cỡ</option>
+                    <?php foreach ($size as $value) {   ?>
+                    <option value="<?= $value['idsize'];?>">
+                    <a href="?action=<?= $value['idsize'] ?>&id=<?= $value['idsize'] ?>" class="acolor"><?php echo $value['size']; ?></a>
+                    </option>
+                <?php } ?>      
+                   </select>
+
+                   <br><br>
+
+
+
+
+
+                   <label for="cars">Giá:</label>
+
+                   <select id="" name="chongia">
+
+                    <option value=""><a href="#" class="">Chọn giá</a> </option>
+
+                    <option value=""><a href="#" class="">0 - 100.000</a> </option>
+
+                   <option value=""> <a href="#" class="">100.000 - 300.000</a></option>
+
+                    <option value=""><a href="#" class="">300.000 - 500.000</a></option>
+                   
+                   <option value=""> <a href="#" class="">500.000 - 700.000</a></option>
+                   
+                   <option value=""> <a href="#" class="">700.000 - 1.000.000</a></option>
+                   
+                    <option value=""><a href="#" class="">1.000.000  &uarr;</a></option>
+                   
+                
+                   </select>
+
+                   <br><br>
+
+                   <button type="submit">Tìm kiếm</button>
+                 
+       
+                   </form>
+
+
+
+
+
+
+             </div>
+
+          </div>
+
+
+            <br>
+            <br>
+
+                    
+   </div>  <!-- div thứ 3 -->
+
+
+
+
+
+
+                     <div class="col-sm-9 padding-right c_cn2">
+                   <!-- hiển thị sản phẩm -->
+
+                    <div class="features_items"><!--features_items-->
+                       
+                        <h2 class="title text-center">SẢN PHẨM NỔI BẬT</h2>
                         
-                        <!-- SP3 -->
+                        <?php foreach ($data_sanphamcuahang as $value) { ?>
                         <div class="col-sm-4">
                             <div class="product-image-wrapper">
                                 <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product3.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Tên sản phẩm để đây</p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <div class="productinfo text-center">
+                                            <img src="./admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" class="girlcuahang img-responsive" height='230'/>
+                                            <h4><?php echo $value['tenSP'] ?></h4>
+                                            <p></p>
+                                            <a href="?action=chitietmathang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
                                         </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                        <!-- SP4 -->
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product4.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Tên sản phẩm để đây</p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <div class="product-overlay">
+                                            <div class="overlay-content">
+                                                <h2><?php echo $value['Dongia']."$" ?></h2>
+                                                <p><?php echo $value['mota'] ?></p>
+                                                <a href="?action=chitietmathang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <img src="images/home/new.png" class="new" alt="" />
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                        <!-- SP5 -->
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product5.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Tên sản phẩm để đây</p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                    </div>
-                                    <img src="images/home/sale.png" class="new" alt="" />
                                 </div>
                                 
                             </div>
                         </div>
 
+                      <?php } ?>
+
                         
-                        <!-- SP6 -->
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/product6.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Tên sản phẩm để đây</p>
-                                        <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>$56</h2>
-                                            <p>CHỗ này hiển thị mã khuyến mãi</p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
+                        
+                    </div><!--features_items-->
+
+
+
+
+
+
+                        <ul class="pagination">
+                            <li class="active"><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">&raquo;</a></li>
+                        </ul>
+
+
+
+                        
+
+
+
+
+                </div>
+
+
+</div>   <!-- div row -->
+
+</div>

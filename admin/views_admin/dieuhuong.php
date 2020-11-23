@@ -65,9 +65,9 @@
         case 'hoadon':
             require_once('hoadon/quanlyhoadon.php');
             break;
-     //   case 'xemhoadon':
-    //        require_once('hoadon/xem.php');
-    //        break;
+        case 'xemhoadon':
+            require_once('hoadon/xem.php');
+            break;
 
     //banner
             

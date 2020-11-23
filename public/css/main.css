@@ -170,6 +170,9 @@ div.cuahang{
   position: relative;
   display: inline-block;
   padding-top: 10px;
+  padding-right: 30px;
+  text-align: center;
+
 }
 .dropdown221{
   position: relative;
@@ -205,6 +208,7 @@ div.cuahang{
 }
 a.aacount span{
   font-size: 10px;
+  margin-left: -30px;
 }
 a.aacount:hover{
   font-size: 20px;
@@ -247,7 +251,7 @@ img.girlcuahang {
 }
 
 div.chongia{
-   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);margin-top: 30px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);margin-top: 30px;
 }
 div.chongia2{
    padding: 30px;
@@ -430,6 +434,12 @@ div.spnb{
 }
 div#box{
   background-color: gray;
+}
+
+
+div.panel-default div.panel-heading h4.panel-title a:hover{
+  color:red;
+  font-size: 15px;
 }
 
 
@@ -1402,10 +1412,9 @@ h2.title {
   right: 0;
 }
 
-.productinfo h2{
+.productinfo h4{
 	color: #FE980F;
 	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
 	font-weight: 700;
 }
 .product-overlay h2{

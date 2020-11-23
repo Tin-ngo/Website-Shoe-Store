@@ -32,7 +32,10 @@
        public function update()
        {
              $idbanner = filter_input(INPUT_POST, 'idbanner');
-             $anh = filter_input(INPUT_POST, 'anh');
+             
+             $anh = $_FILES['anh']['name'];
+             $anh_tmp = $_FILES['anh']['tmp_name'];
+             move_uploaded_file($anh_tmp, './public_admin/image/banner/'.$anh);
 
             $this->banner_model->update($idbanner, $anh);
 

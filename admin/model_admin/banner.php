@@ -40,7 +40,6 @@
          function update($idbanner, $anh) 
         {
             
-
      
              $query="UPDATE banner SET idbanner='$idbanner', anh='$anh' WHERE idbanner='$idbanner' ";        
 

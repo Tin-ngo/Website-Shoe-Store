@@ -9,23 +9,19 @@
     	    require_once('cuahang/cuahang.php');
             break;
 
-        // sắp xếp theo id của loại sản phẩm
-        case '1':
+        case 'cuahang1':
             require_once('cuahang/cuahang.php');
             break;
-        case '2':
-            require_once('cuahang/cuahang.php');
+
+
+        // chỗ đăng nhập
+
+        case 'taikhoan':
+            require_once('taikhoannguoidung/taikhoannguoidung.php');
             break;
-        case '3':
-            require_once('cuahang/cuahang.php');
-            break;
-        case '4':
-            require_once('cuahang/cuahang.php');
-            break;
-        case '5':
-            require_once('cuahang/cuahang.php');
-            break;
-        case '6':
+
+       // chỗ cửa hàng
+        case 'luachon':
             require_once('cuahang/cuahang.php');
             break;
 

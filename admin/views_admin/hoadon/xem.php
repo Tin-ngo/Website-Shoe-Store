@@ -14,15 +14,15 @@
           </tr>
           <tr>
             <td><h4>tên khách hàng</h4></td>
-            <td><h4> &emsp;<?= $data['loaiKM'];   ?>   </h4></td>
+            <td><h4> &emsp;<?= $name_user['ten'];   ?>   </h4></td>
           </tr>
           <tr>
             <td><h4>tên sản phẩm</h4></td>
-            <td><h4> &emsp;<?= $data['giatriKM'];   ?>  </h4></td>
+            <td><h4> &emsp;<?= $name_sanpham['tenSP'];   ?>  </h4></td>
           </tr>
           <tr>
             <td><h4>Tổng tiền </h4></td>
-            <td><h4> &emsp;<?= $data['ngaybatdau'];   ?>  </h4></td>
+            <td><h4> &emsp;<?= $data['tongtien'];   ?>  </h4></td>
           </tr>
           
         </table>

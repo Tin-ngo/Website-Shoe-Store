@@ -7,7 +7,9 @@
 <div class="col-sm-3">
     <div class="zoom">
         <center><span style="font-size: 20px;"><?php echo $value['tenLSP'] ?></span></center>
-        <img class="imghover1" src="admin/public_admin/image/loaisanpham/<?php echo $value['hinhanh'] ?>">
+        <a href="?action=cuahang&id=<?= $value['idLoaiSP'] ?>">
+            <img class="imghover1" src="admin/public_admin/image/loaisanpham/<?php echo $value['hinhanh'] ?>">
+        </a>
     </div>
 </div>
 
@@ -40,13 +42,13 @@
                                             <img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" height='200'/>
                                             <h2> <?php echo "$".$value['Dongia'] ?> </h2>
                                             <p> <?php echo $value['tenSP'] ?> </p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
+                                            <a href="?action=chitietmathang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
                                                 <h2><?php echo "$".$value['Dongia'] ?> </h2>
                                                 <p>CHỗ này hiển thị mã khuyến mãi</p>
-                                                <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
+                                                <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
                                             </div>
                                         </div>
                                 </div>
@@ -76,7 +78,7 @@
  <div class="khuyenmai">
     <div class="col-sm-12">
            <h2>Khuyến Mãi Hấp Dẫn Lên Đến 30%</h2>
-          <center><button type="button" class="btn btn-outline-primary"><a href="#">Mua Ngay</a></button> </center>
+          <center><button type="button" class="btn btn-outline-primary"><a href="?action=cuahang1">Mua Ngay</a></button> </center>
     </div>
 
  </div>

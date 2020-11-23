@@ -17,58 +17,70 @@
             $index->list();
             break;
 
-        // id hiển thị theo id loại sản phẩm
+        case 'cuahang1':  //đang
+            require_once('controller/cuahang_controller.php');
+            $index = new showcuahang();
+            $index->list1();
+            break;
+        
 
      
-        case '1':  //đang   
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
-            $index->list_theoid();
-            break;
-        case '2':  //đang   
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
-            $index->list_theoid();
-            break;
-        case '3':  //đang   
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
-            $index->list_theoid();
-            break;
-        case '4':  //đang   
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
-            $index->list_theoid();
-            break;
-        case '5':  //đang   
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
-            $index->list_theoid();
-            break;
-        case '6':  //đang   
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
-            $index->list_theoid();
+         
+//đăng nhập đăng ký, chưa xong
+
+        case 'dangky_xl':
+            require_once('controller/dangnhap_controller.php');
+            $index = new dangnhap_dangky_controller();
+            $index->dangky();
             break;
 
-    
+        case 'dangnhap_xl':
+            require_once('controller/dangnhap_controller.php');
+            $index = new dangnhap_dangky_controller();
+            $index->dangnhap();
+            break;
+        case 'dangxuat':
+            require_once('controller/dangnhap_controller.php');
+            $index = new dangnhap_dangky_controller();
+            $index->dangxuat();
+            break;
 
-
-        case 'giohang':
+        case 'taikhoan':    //CHƯA LÀM
             require_once('controller/cuahang_controller.php');
             $index = new showcuahang();
             $index->list();
             break;
+    
+
+
+
+
+//đang làm
+        case 'chitietmathang':   //đnag làm
+            require_once('controller/chitietmathang_controller.php');
+            $index = new chitietmathang();
+            $index->chitiet_hang();
+            break;
+            
+        case 'giohang':   //đâng làm
+            require_once('controller/cuahang_controller.php');
+            $index = new showcuahang();
+            $index->list();
+            break;
+
+
+
+
+
+
+
+
         case 'gioithieu':
             require_once('controller/cuahang_controller.php');
             $index = new showcuahang();
             $index->list();
             break;
-        case 'chitietmathang':
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
-            $index->list();
-            break;
+        
 
         // lấy chức năng của cuahang controller cũng đưuọc
         case 'dangnhap':

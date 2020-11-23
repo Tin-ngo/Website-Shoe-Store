@@ -12,31 +12,80 @@
     	
     	function __construct()
     	{
-    		$this->home_controller = new cuahang();
+    		$this->cuahang_controller = new cuahang();
     	}
         
         public function list()
         {
+            if(isset($_GET['id'])){
+                $idLoaiSP = $_GET['id'];
 
-            $data_loaisanpham = $this->home_controller->loaisanpham();
+                  $data_sanphamcuahang = $this->cuahang_controller->sanpham_cuahangtheoid($idLoaiSP);
 
-            $data_sanphamcuahang = $this->home_controller->sanpham_cuahang();
+            }else{
+                $idLoaiSP = null;
+            
+                 }
+
+           
+            
+
+            $data_loaisanpham = $this->cuahang_controller->loaisanpham();
+
+             $color = $this->cuahang_controller->color();
+
+             $size = $this->cuahang_controller->size();
+
+
+             if(isset($_GET['idmau'])){
+                $idmau = $_GET['idmau'];
+
+                  $data_sanphamcuahang = $this->cuahang_controller->chonsanpham_mau($idmau);
+
+            }else{
+                $idmau = null;
+            
+                 }
+
+
+
+
+            if(isset($_GET['idsize'])){
+                $idsize = $_GET['idsize'];
+
+                  $data_sanphamcuahang = $this->cuahang_controller->chonsanpham_size($idsize);
+
+            }else{
+                $idzíe = null;
+            
+                 }
+
+
+
 
 
         	require_once('views/index.php');
         }
 
-
-        public function list_theoid()
+         public function list1()
         {
-
-        	$data_loaisanpham = $this->home_controller->loaisanpham();
-
-        	$idLoaiSP = $_GET['id'] ? $_GET['id'] : '1';
-            $data_sanphamcuahang = $this->home_controller->sanpham_cuahangtheoid($idLoaiSP);
+            $data_loaisanpham = $this->cuahang_controller->loaisanpham();
+             $data_sanphamcuahang = $this->cuahang_controller->sanpham_cuahang();
+              $color = $this->cuahang_controller->color();
+               $size = $this->cuahang_controller->size();
 
             require_once('views/index.php');
         }
+
+
+
+
+
+        //lựa chọn sản phẩm theo màu, size
+
+   
+
+
 
     }
 ?>

@@ -21,131 +21,21 @@
 
                         <h2>Thể Loại</h2>
                         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Giày THỂ THAO
-                                        </a>
-                                    </h4>
-                                </div>
 
-                                <div id="sportswear" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Nike </a></li>
-                                            <li><a href="#">Under Armour </a></li>
-                                            <li><a href="#">Adidas </a></li>
-                                            <li><a href="#">Puma</a></li>
-                                            <li><a href="#">ASICS </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-
+                            <?php foreach ($data_loaisanpham as $value) {  ?>
 
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Giày CÔNG SỞ
+                                        <a href="?action=cuahang&id=<?= $value['idLoaiSP'] ?>">
+                                            <?= $value['tenLSP'] ?>
                                         </a>
                                     </h4>
                                 </div>
-
-                                <div id="mens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Nike </a></li>
-                                            <li><a href="#">Under Armour </a></li>
-                                            <li><a href="#">Adidas </a></li>
-                                            <li><a href="#">Puma</a></li>
-                                            <li><a href="#">ASICS </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
                             </div>
 
+                        <?php } ?>
 
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Giày học sinh
-                                        </a>
-                                    </h4>
-                                </div>
-
-                                <div id="womens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Nike </a></li>
-                                            <li><a href="#">Under Armour </a></li>
-                                            <li><a href="#">Adidas </a></li>
-                                            <li><a href="#">Puma</a></li>
-                                            <li><a href="#">ASICS </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#giaydabo">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Giày Da bò
-                                        </a>
-                                    </h4>
-                                </div>
-
-                                <div id="giaydabo" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Nike </a></li>
-                                            <li><a href="#">Under Armour </a></li>
-                                            <li><a href="#">Adidas </a></li>
-                                            <li><a href="#">Puma</a></li>
-                                            <li><a href="#">ASICS </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#giaythoitrang">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Giày Thời trang
-                                        </a>
-                                    </h4>
-                                </div>
-
-                                <div id="giaythoitrang" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Nike </a></li>
-                                            <li><a href="#">Under Armour </a></li>
-                                            <li><a href="#">Adidas </a></li>
-                                            <li><a href="#">Puma</a></li>
-                                            <li><a href="#">ASICS </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
 
                         </div>
 
@@ -161,26 +51,15 @@
                  <button class="dropbtn">Màu</button>
                  <div class="dropdown-content" style="left:0;">
                  <table>
+             <?php foreach ($color as $value) {   ?>
+  
                      <tr>
-                        <td><a href="#" class="acolor" style="background-color: red;"></a></td>
-                        <td><a href="#" style="background-color: black;"></a></td>
+                        <td>
+                            <a href="?action=cuahang&idmau=<?= $value['idcolor'] ?>" class="acolor"><?php echo $value['color']; ?></a>
+                        </td>
                      </tr>
-                     <tr>
-                        <td><a href="#" style="background-color: gray"></a></td>
-                        <td><a href="#" style="background-color: yellow"></a></td>
-                     </tr>
-                     <tr>
-                        <td><a href="#" style="background-color: green"></a></td>
-                        <td><a href="#" style="background-color: blue"></a></td>
-                     </tr>
-                     <tr>
-                        <td><a href="#" style="background-color: brown"></a></td>
-                        <td><a href="#" style="background-color: orange"></a></td>
-                     </tr>
-                     <tr>
-                        <td><a href="#" style="background-color: white"></a></td>
-                        <td><a href="#" style="background-color: pink"></a></td>
-                     </tr>
+
+             <?php } ?>   
                  </table>
                  </div>
                </div>
@@ -189,39 +68,15 @@
                  <div class="dropdown-content" style="left:-50px;">
 
                  <table>
+             <?php foreach ($size as $value) {   ?>
+  
                      <tr>
-                        <td><a href="#" style="width: 0;">25</a></td>
-                        <td><a href="#" style="width: 0;">26</a></td>
-                        <td><a href="#" style="width: 0;">27</a></td>
-                        <td><a href="#" style="width: 0;">28</a></td>
+                        <td>
+                            <a href="?action=cuahang&idsize=<?= $value['idsize'] ?>" class="acolor"><?php echo $value['size']; ?></a>
+                        </td>
                      </tr>
-                     <tr>
-                        <td><a href="#" style="width: 0;">29</a></td>
-                        <td><a href="#" style="width: 0;">30</a></td>
-                        <td><a href="#" style="width: 0;">31</a></td>
-                        <td><a href="#" style="width: 0;">32</a></td>
-                     </tr>
-                     <tr>
-                        <td><a href="#" style="width: 0;">33</a></td>
-                        <td><a href="#" style="width: 0;">34</a></td>
-                        <td><a href="#" style="width: 0;">35</a></td>
-                        <td><a href="#" style="width: 0;">36</a></td>
-                     </tr>
-                     <tr>
-                        <td><a href="#" style="width: 0;">37</a></td>
-                        <td><a href="#" style="width: 0;">38</a></td>
-                        <td><a href="#" style="width: 0;">39</a></td>
-                        <td><a href="#" style="width: 0;">40</a></td>
-                     </tr>
-                     <tr>
-                        <td><a href="#" style="width: 0;">41</a></td>
-                        <td><a href="#" style="width: 0;">42</a></td>
-                        <td><a href="#" style="width: 0;">43</a></td>
-                        <td><a href="#" style="width: 0;">44</a></td>
-                     </tr>
-                     <tr>
-                        <td><a href="#" style="width: 0;">45</a></td>
-                     </tr>
+
+             <?php } ?>   
                  </table>
 
                  </div>
@@ -276,15 +131,15 @@
                                 <div class="single-products">
                                         <div class="productinfo text-center">
                                             <img src="./admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" class="girlcuahang img-responsive" height='230'/>
-                                            <h2><?php echo $value['tenSP'] ?></h2>
+                                            <h4><?php echo $value['tenSP'] ?></h4>
                                             <p></p>
-                                            <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
+                                            <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
-                                                <h2>$56</h2>
-                                                <p>Mã giảm giá để đây</p>
-                                                <a href="?action=giohang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
+                                                <h2><?php echo $value['Dongia']."$" ?></h2>
+                                                <p><?php echo $value['mota'] ?></p>
+                                                <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
                                             </div>
                                         </div>
                                 </div>

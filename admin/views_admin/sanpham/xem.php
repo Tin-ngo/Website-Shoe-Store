@@ -36,11 +36,11 @@
           </tr>
           <tr>
             <td><h4>Màu </h4></td>
-            <td><h4> &emsp;<?= $data['mau'];   ?>  </h4></td>
+            <td><h4><?= $data['idcolor'];   ?> &emsp;<?= $data_mau['color'];   ?>  </h4></td>
           </tr>
           <tr>
             <td><h4>Size </h4></td>
-            <td><h4> &emsp;<?= $data['size'];   ?>  </h4></td>
+            <td><h4> &emsp;<?= $data_size['size'];   ?>  </h4></td>
           </tr>
           <tr>
             <td><h4>Ngày nhập </h4></td>
@@ -54,11 +54,11 @@
      </div>
           <div class="col-sm-5">
               <h4>ảnh 1 </h4>
-              <h4> &emsp;<img src="./public_admin/image/<?php echo $data['anh1'] ?>" height='90'> </h4>
+              <h4> &emsp;<img src="./public_admin/image/sanpham/<?php echo $data['anh1'] ?>" height='90'> </h4>
               <h4>ảnh 2 </h4>
-              <h4> &emsp;<img src="./public_admin/image/<?php echo $data['anh2'] ?>"  height='90'>  </h4>
+              <h4> &emsp;<img src="./public_admin/image/sanpham/<?php echo $data['anh2'] ?>"  height='90'>  </h4>
               <h4>ảnh 3 </h4>
-            <h4> &emsp;<img src="./public_admin/image/<?php echo $data['anh3'] ?>"height='90'>  </h4>
+            <h4> &emsp;<img src="./public_admin/image/sanpham/<?php echo $data['anh3'] ?>"height='90'>  </h4>
      </div>  
 
 

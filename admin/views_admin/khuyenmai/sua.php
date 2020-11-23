@@ -28,7 +28,7 @@
            </tr>
            <tr>
                <td>Ngày kết thúc:</td>
-               <td><input type="date" name="anh2" value=<?php echo $data['ngayketthuc']; ?>></td>
+               <td><input type="date" name="ngayketthuc" value=<?php echo $data['ngayketthuc']; ?>></td>
            </tr>
            
            <tr>

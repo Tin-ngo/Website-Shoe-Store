@@ -24,8 +24,10 @@
 
     	 public function details()  // hàm hiển thị chi tiết thông tin của một sản phẩm được chọn bởi $id
         {
-            $id = isset($_GET['id']) ? $_GET['id'] : 1;
+            $id = isset($_GET['id']) ? $_GET['id'] : '1';
             $data = $this->sanpham_model->find($id);
+            $data_mau = $this->sanpham_model->xem_mau($id);
+             $data_size = $this->sanpham_model->xem_size($id);
             require_once('views_admin/index.php');
         } 
 
@@ -34,12 +36,24 @@
 
         public function update()                            
        {
-             $tenSP = filter_input(INPUT_POST, 'tenSP');
-             $Dongia =filter_input(INPUT_POST, 'Dongia');
+
+            $idSP = filter_input(INPUT_POST, 'idSP');
+
+            $idKM = filter_input(INPUT_POST, 'idKM');
+
+            $idLoaiSP = filter_input(INPUT_POST, 'idLoaiSP');
+
+            $idcolor = filter_input(INPUT_POST, 'idmau');
+
+            $idsize = filter_input(INPUT_POST, 'idsize');
+
+            $tenSP = filter_input(INPUT_POST, 'tenSP');
+
+            $Dongia =filter_input(INPUT_POST, 'Dongia');
             
-            $anh1 = $_FILES['anh1']['name'];
+             $anh1 = $_FILES['anh1']['name'];
              $anh1_tmp = $_FILES['anh1']['tmp_name'];
-             move_uploaded_file($anh1_tmp, './public_admin/sanpham/image/'.$anh1);
+             move_uploaded_file($anh1_tmp, './public_admin/image/sanpham'.$anh1);
 
              $anh2 = $_FILES['anh2']['name'];
              $anh2_tmp = $_FILES['anh2']['tmp_name'];
@@ -49,14 +63,13 @@
              $anh3_tmp = $_FILES['anh3']['tmp_name'];
              move_uploaded_file($anh3_tmp, './public_admin/image/sanpham'.$anh3);
              
-             $mau =filter_input(INPUT_POST, 'mau');
-             $size =filter_input(INPUT_POST, 'size');
              $ngaynhap =filter_input(INPUT_POST, 'ngaynhap');
+             
              $mota =filter_input(INPUT_POST, 'mota');
 
-            $idSP = filter_input(INPUT_POST, 'idSP');
+            
 
-            $this->sanpham_model->update($idSP, $tenSP, $Dongia, $anh1, $anh2, $anh3, $mau, $size, $ngaynhap, $mota);
+            $this->sanpham_model->update($idSP, $idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota);
 
          }
 
@@ -64,12 +77,19 @@
          public function them()  
          {
             $idLoaiSP =filter_input(INPUT_POST, 'idLoaiSP');
+
+             $idKM =filter_input(INPUT_POST, 'idKM');
+
+
+            $idcolor =filter_input(INPUT_POST, 'idmau');
+             $idsize =filter_input(INPUT_POST, 'idsize');
+
             $tenSP = filter_input(INPUT_POST, 'tenSP');
              $Dongia =filter_input(INPUT_POST, 'Dongia');
 // lấy ảnh
              $anh1 = $_FILES['anh1']['name'];
              $anh1_tmp = $_FILES['anh1']['tmp_name'];
-             move_uploaded_file($anh1_tmp, './public_admin/sanpham/image/'.$anh1);
+             move_uploaded_file($anh1_tmp, './public_admin/image/sanpham'.$anh1);
 
              $anh2 = $_FILES['anh2']['name'];
              $anh2_tmp = $_FILES['anh2']['tmp_name'];
@@ -79,12 +99,10 @@
              $anh3_tmp = $_FILES['anh3']['tmp_name'];
              move_uploaded_file($anh3_tmp, './public_admin/image/sanpham'.$anh3);
 
-             $mau =filter_input(INPUT_POST, 'mau');
-             $size =filter_input(INPUT_POST, 'size');
              $ngaynhap =filter_input(INPUT_POST, 'ngaynhap');
              $mota =filter_input(INPUT_POST, 'mota');
 
-            $this->sanpham_model->insert( $idLoaiSP,$tenSP, $Dongia, $anh1, $anh2, $anh3, $mau, $size, $ngaynhap, $mota);
+            $this->sanpham_model->insert($idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota);
          }
 
 

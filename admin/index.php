@@ -130,16 +130,16 @@
             $controller_taikhoanobj = new hoadoncontroller();
             $controller_taikhoanobj->list();
             break;
-        case 'xoahoadon': //đang
+        case 'xoahoadon':
             require_once('controller_admin/duyethoadon.php');
             $controller_taikhoanobj = new hoadoncontroller();
             $controller_taikhoanobj->xoahoadon();
             break;
-  //      case 'xemhoadon':
-  //          require_once('controller_admin/duyethoadon.php');
-  //          $controller_taikhoanobj = new hoadoncontroller();
- //          $controller_taikhoanobj->user_hoadon();
-  //          break;
+        case 'xemhoadon':
+            require_once('controller_admin/duyethoadon.php');
+            $controller_taikhoanobj = new hoadoncontroller();
+            $controller_taikhoanobj->chitiet_hoadon();
+            break;
 
         //banner
 

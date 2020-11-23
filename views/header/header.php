@@ -29,20 +29,25 @@
                          <!-- đăng ký -->
                               <li>
                                <div class="dropdown221">
+
+                                 <?php  if(!isset($_SESSION['tendangnhap'])){ ?>
                                
                                   <i class="fa fa-plus img_user" title="Tài Khoản">
                                     <a href="?action=dangnhap" class="dangkya">&emsp;Đăng ký &ensp; </a></i>
+                                  <?php }else{
+
+                                  } ?>
                                
                                   <div class="dropdown-content22"> 
                                     <!-- <a class="aacount" href="#"><center><span>Đăng nhập</span></center></a>-->
                                      <ul>
-                                        <?php  if(isset($_SESSION['dangnhap'])){ ?>
-                                        <li><b>Chào <?=$_SESSION['dangnhap']['Ho']?> <?=$_SESSION['dangnhap']['Ten']?></b></li>
+                                        <?php  if(isset($_SESSION['tendangnhap'])){ ?>
+                                        <li><b>Chào <?=$_SESSION['tendangnhap']?></b></li>
                                         <li><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
                                         <li><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                                       <?php
-                                        if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
-                                        <li><a href="admin/?mod=login">Trang quản lý</a></li>
+                                        if(isset($_SESSION['admin'])){ ?>
+                                        <li><a href="admin/">Trang quản lý</a></li>
                                      <?php }}else{ ?>
                                         <li><center><b class="hd_kh">Khách hàng<br><br></b></center></li>
                                         <li><a class="aacount" href="?action=dangnhap"><center><span>Đăng nhập</span></center></a></li>
@@ -55,20 +60,33 @@
                       <!-- đăng nhập -->
                             <li>
                                <div class="dropdown22">
-                                <i class="fa fa-user img_user" title="Tài Khoản">&emsp;Đăng nhập</i>
+                                <i class="fa fa-user img_user" title="Tài Khoản">
+
+
+                        <?php  if(isset($_SESSION['tendangnhap'])){
+
+                               echo 'Chào '.$_SESSION['tendangnhap'];
+                             }else{
+                              echo '&emsp;Đăng nhập';
+                             }
+                             ?>
+
+
+
+                              </i>
                                   <div class="dropdown-content22"> 
                                     <!-- <a class="aacount" href="#"><center><span>Đăng nhập</span></center></a>-->
                                      <ul>
-                                        <?php  if(isset($_SESSION['dangnhap'])){ ?>
-                                        <li><b>Chào <?=$_SESSION['dangnhap']['Ho']?> <?=$_SESSION['dangnhap']['Ten']?></b></li>
-                                        <li><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
-                                        <li><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
-                                      <?php
-                                        if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                                        <?php  if(isset($_SESSION['tendangnhap'])){ ?>
+                                        <li><b>Chào <?=$_SESSION['tendangnhap']?></b></li>
+                                        <li><a href="?action=taikhoan">Tài khoản</a></li>
+                                        <li><a href="?action=dangxuat">Đăng xuất</a></li>
+                                    
+                                        <?php if($_SESSION['admin'] == true){ ?>
                                         <li><a href="admin/?mod=login">Trang quản lý</a></li>
                                      <?php }}else{ ?>
                                         <li><center><b class="hd_kh">Khách hàng<br><br></b></center></li>
-                                        <li><a class="aacount" href="?action=dangnhap"><center><span>Đăng nhập</span></center></a></li>
+                                        <li><a class="aacount" href="?action=dangnhap"><span>Đăng nhập</span></a></li>
                                       <?php } ?>
                                     </ul>
                                   </div>
@@ -104,12 +122,12 @@
                                         <img src="public/image/logo.png" alt="logo" title="về trang chủ">
                                  </div>
                                 </a></li>
-                                <li class="dropdown"><a href="?action=cuahang">Cửa Hàng</a></li> 
+                                <li class="dropdown"><a href="?action=cuahang1">Cửa Hàng</a></li> 
                                  
                                  <!-- lấy action là id loại sản phẩm -->
 
                                 <?php foreach ($data_loaisanpham as $value) {  ?>
-                                <li class="dropdown"><a href="?action=<?= $value['idLoaiSP'] ?>&id=<?= $value['idLoaiSP'] ?>" style="font-size: 15px;"><?= $value['tenLSP'] ?></a></li>    
+                                <li class="dropdown"><a href="?action=cuahang&id=<?= $value['idLoaiSP'] ?>" style="font-size: 15px;"><?= $value['tenLSP'] ?></a></li>    
                               <?php }  ?>
                             </ul>
                         </div>
