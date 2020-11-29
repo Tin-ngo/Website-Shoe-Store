@@ -18,8 +18,17 @@
 
     	public function list()   // hàm hiển thị tất cả sản phẩm trong database 
     	{
-    		$data = $this->sanpham_model->all();
-    		require_once('views_admin/index.php');
+
+            if(isset($_POST['timkiem_sp'])){
+                $timkiem_sp = $_POST['timkiem_sp'];
+                $data = $this->sanpham_model->timkiem_sp($timkiem_sp);
+            }else{
+                $data = $this->sanpham_model->all();
+            }
+            require_once('views_admin/index.php');
+
+
+
     	}
 
     	 public function details()  // hàm hiển thị chi tiết thông tin của một sản phẩm được chọn bởi $id
@@ -53,15 +62,15 @@
             
              $anh1 = $_FILES['anh1']['name'];
              $anh1_tmp = $_FILES['anh1']['tmp_name'];
-             move_uploaded_file($anh1_tmp, './public_admin/image/sanpham'.$anh1);
+             move_uploaded_file($anh1_tmp, './public_admin/image/sanpham/'.$anh1);
 
              $anh2 = $_FILES['anh2']['name'];
              $anh2_tmp = $_FILES['anh2']['tmp_name'];
-             move_uploaded_file($anh2_tmp, './public_admin/image/sanpham'.$anh2);
+             move_uploaded_file($anh2_tmp, './public_admin/image/sanpham/'.$anh2);
 
              $anh3 = $_FILES['anh3']['name'];
              $anh3_tmp = $_FILES['anh3']['tmp_name'];
-             move_uploaded_file($anh3_tmp, './public_admin/image/sanpham'.$anh3);
+             move_uploaded_file($anh3_tmp, './public_admin/image/sanpham/'.$anh3);
              
              $ngaynhap =filter_input(INPUT_POST, 'ngaynhap');
              
@@ -89,15 +98,15 @@
 // lấy ảnh
              $anh1 = $_FILES['anh1']['name'];
              $anh1_tmp = $_FILES['anh1']['tmp_name'];
-             move_uploaded_file($anh1_tmp, './public_admin/image/sanpham'.$anh1);
+             move_uploaded_file($anh1_tmp, './public_admin/image/sanpham/'.$anh1);
 
              $anh2 = $_FILES['anh2']['name'];
              $anh2_tmp = $_FILES['anh2']['tmp_name'];
-             move_uploaded_file($anh2_tmp, './public_admin/image/sanpham'.$anh2);
+             move_uploaded_file($anh2_tmp, './public_admin/image/sanpham/'.$anh2);
 
              $anh3 = $_FILES['anh3']['name'];
              $anh3_tmp = $_FILES['anh3']['tmp_name'];
-             move_uploaded_file($anh3_tmp, './public_admin/image/sanpham'.$anh3);
+             move_uploaded_file($anh3_tmp, './public_admin/image/sanpham/'.$anh3);
 
              $ngaynhap =filter_input(INPUT_POST, 'ngaynhap');
              $mota =filter_input(INPUT_POST, 'mota');

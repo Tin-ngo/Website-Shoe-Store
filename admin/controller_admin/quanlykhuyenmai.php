@@ -18,8 +18,13 @@
 
     	public function list()  
     	{
-    		$data = $this->khuyenmai_model->all();
-    		require_once('views_admin/index.php');
+    		 if(isset($_POST['timkiem_km'])){
+                $timkiem_km = $_POST['timkiem_km'];
+                $data = $this->khuyenmai_model->timkiem_km($timkiem_km);
+            }else{
+                $data = $this->khuyenmai_model->all();
+            }
+            require_once('views_admin/index.php');
     	}
 
     	 public function details()    

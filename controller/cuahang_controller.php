@@ -56,7 +56,7 @@
                   $data_sanphamcuahang = $this->cuahang_controller->chonsanpham_size($idsize);
 
             }else{
-                $idzíe = null;
+                $idsize = null;
             
                  }
 
@@ -70,12 +70,22 @@
          public function list1()
         {
             $data_loaisanpham = $this->cuahang_controller->loaisanpham();
-             $data_sanphamcuahang = $this->cuahang_controller->sanpham_cuahang();
-              $color = $this->cuahang_controller->color();
-               $size = $this->cuahang_controller->size();
+            
+            $color = $this->cuahang_controller->color();
+            $size = $this->cuahang_controller->size();
 
+
+           if(isset($_POST['timkiem_sp'])){
+                $timkiem_sp = $_POST['timkiem_sp'];
+               $data_sanphamcuahang = $this->cuahang_controller->timkiem_sp($timkiem_sp);
+            }else{
+                $data_sanphamcuahang = $this->cuahang_controller->sanpham_cuahang();
+            }
             require_once('views/index.php');
         }
+
+
+         
 
 
 

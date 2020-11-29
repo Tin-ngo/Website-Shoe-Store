@@ -38,22 +38,7 @@
 
                                   } ?>
                                
-                                  <div class="dropdown-content22"> 
-                                    <!-- <a class="aacount" href="#"><center><span>Đăng nhập</span></center></a>-->
-                                     <ul>
-                                        <?php  if(isset($_SESSION['tendangnhap'])){ ?>
-                                        <li><b>Chào <?=$_SESSION['tendangnhap']?></b></li>
-                                        <li><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
-                                        <li><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
-                                      <?php
-                                        if(isset($_SESSION['admin'])){ ?>
-                                        <li><a href="admin/">Trang quản lý</a></li>
-                                     <?php }}else{ ?>
-                                        <li><center><b class="hd_kh">Khách hàng<br><br></b></center></li>
-                                        <li><a class="aacount" href="?action=dangnhap"><center><span>Đăng nhập</span></center></a></li>
-                                      <?php } ?>
-                                    </ul>
-                                  </div>
+                                 
                             </div>
                             </li>
 
@@ -79,11 +64,11 @@
                                      <ul>
                                         <?php  if(isset($_SESSION['tendangnhap'])){ ?>
                                         <li><b>Chào <?=$_SESSION['tendangnhap']?></b></li>
-                                        <li><a href="?action=taikhoan">Tài khoản</a></li>
+                                        <li><a href="?action=taikhoan&id=<?php echo $_SESSION['tendangnhap']; ?>">Tài khoản</a></li>
                                         <li><a href="?action=dangxuat">Đăng xuất</a></li>
                                     
                                         <?php if($_SESSION['admin'] == true){ ?>
-                                        <li><a href="admin/?mod=login">Trang quản lý</a></li>
+                                        <li><a href="admin/?action=trangchu">Trang quản lý</a></li>
                                      <?php }}else{ ?>
                                         <li><center><b class="hd_kh">Khách hàng<br><br></b></center></li>
                                         <li><a class="aacount" href="?action=dangnhap"><span>Đăng nhập</span></a></li>
@@ -132,16 +117,20 @@
                             </ul>
                         </div>
                     </div>
+                    <form method="POST" action="?action=cuahang1">
                     <div class="col-sm-3">
                         <div class="search_box pull-right">
                             
-                            <input type="text" placeholder="Search"/>&ensp;
-                            <a href="#"><i class="fa fa-search" id="i1"></i></a>
 
-                            <a id="a1" href="?action=giohang"> <i class="fa fa-shopping-cart" title="Giỏ Hàng Của Bạn"></i>&emsp;</a>
+                              <input type="text" placeholder="Search By Name" name="timkiem_sp">&ensp;
+                               <button type="submit"><i class="fa fa-search"></i></button>
+                           
+                            <a id="a1" href="?action=giohang&?act=list_giohang"> <i class="fa fa-shopping-cart" title="Giỏ Hàng Của Bạn"></i>&emsp;</a>
 
                         </div>
                     </div>
+
+                    </form>
                 </div>
             </div>
         </div>

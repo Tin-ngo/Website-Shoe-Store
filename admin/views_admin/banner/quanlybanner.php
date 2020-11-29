@@ -6,8 +6,11 @@
       <a class="pull-left themmoi" href="?action=thembanner_giaodien"> Thêm mới</a>
 
       <div class="search_box pull-right" style="margin-right: 50px; margin-top: 0px;">
-          <input type="text" placeholder="Search"/>&ensp;
-          <a href="#"><i class="fa fa-search" id="i1"></i></a>
+           <form method="POST" action="?action=banner">
+          <input type="text" placeholder="Search By idbanner" name="timkiem_bn">&ensp;
+          <button type="submit"><i class="fa fa-search"></i></button>
+          <a href="?action=banner" style="font-size: 15px;">All >> </a>
+        </form>
       </div>
 
       <br>

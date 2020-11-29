@@ -50,41 +50,42 @@
 								<div id="collapse1" class="panel-collapse collapse in">
 									<div class="single-log-info">
 										<div class="bulling-title">
-											<b>
-												<?php if (isset($_COOKIE['doimk'])) {
-													echo $_COOKIE['doimk'];
-												} ?>
-											</b>
+											
 											<div class="custom-input">
-												<form action="?act=taikhoan&xuli=update" method="post">
+												<form action="?action=suataikhoan" method="POST">
+													<input type="text" name="" placeholder="idUser:  <?php echo $data_taikhoan['idUser'] ?>" value="<?php echo $data_taikhoan['idUser'] ?>" disabled/>
+													<input type="hidden" name="idUser" value="<?php echo $data_taikhoan['idUser'] ?>">
 													<div class="row">
 														<div class="col-md-6">
-															<input type="text" name="Ho" placeholder="Họ.." required value="Chỗ này để code php hiển thị họ" />
+															<input type="text" name="ho" placeholder="Họ.." value="<?php echo $data_taikhoan['ho'] ?>" >
 														</div>
 														<div class="col-md-6">
-															<input type="text" name="Ten" placeholder="Tên.." required value="Chỗ này để code php hiển thị tên" />
+															<input type="text" name="ten" placeholder="Tên.." value="<?php echo $data_taikhoan['ten'] ?>" >
 														</div>
 													</div>
+													<input type="text" name="email" placeholder="Email.." value="<?php echo $data_taikhoan['email'] ?>">
+													<input type="text" name="diachi" placeholder="Địa chỉ.." value="<?php echo $data_taikhoan['diachi'] ?>" >
 													<div class="custom-select">
 
-														<select class="form-control" name="GioiTinh" title="Giới tính">
-															<option  value="Nam"> Nam</option>
+														<select class="form-control" name="gioitinh" title="Giới tính">
+															<option  value="Nam" > Nam</option>
 															<option value="Nữ"> Nữ</option>
 															<option value="Khác"> Khác</option>
 														</select>
 													</div>
-													<input type="email" name="Email" placeholder="Địa chỉ Email.." required value="Chỗ này để code php hiển thị email" />
-													<input type="text" name="SĐT" placeholder="Số điện thoại.." required pattern="[0-9]+" minlength="10" value="Chỗ này để code php hiển thị số điện thoại" />
-													<input type="text" name="DiaChi" placeholder="Địa chỉ.." required value="Chỗ này để code php hiển thị địa chỉ" />
+													<input type="text" name="sodienthoai" placeholder="Số điện thoại.." pattern="[0-9]+" minlength="10" value="<?php echo $data_taikhoan['sodienthoai'] ?>" />
+													
+													<input type="text" name="tendangnhap" placeholder="Tên đăng nhập.." value="<?php echo $data_taikhoan['tendangnhap'] ?>" />
+													<input type="text" name="matkhau" placeholder="Mật khẩu.." pattern="[0-9]+" minlength="10" value="<?php echo $data_taikhoan['matkhau'] ?>" />
 													<div class="submit-text">
-														<button type="submit_tt">Lưu</button>
+													<button type="submit">Lưu</button>
 													</div>
 												</form>
 											</div>
 										</div>
 									</div>
 							</li>
-							<li class="panel">
+				<!--			<li class="panel">
 								<div class="account-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapse4">
 									<label>
 										<input type="radio" value="forever" name="rememberme" />
@@ -106,6 +107,7 @@
 									</div>
 								</div>
 							</li>
+						-->
 						</ul>
 					</div>
 				</div>

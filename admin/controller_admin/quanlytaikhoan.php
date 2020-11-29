@@ -18,7 +18,12 @@
 
     	public function list()   // hàm hiển thị tất cả tài khoản người dùng trong database 
     	{
-    		$data = $this->nguoidung_model->all();
+            if(isset($_POST['timkiem'])){
+                $timkiem = $_POST['timkiem'];
+                $data = $this->nguoidung_model->timkiem($timkiem);
+            }else{
+                $data = $this->nguoidung_model->all();
+            }
     		require_once('views_admin/index.php');
     	}
 

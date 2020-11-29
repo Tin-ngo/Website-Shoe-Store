@@ -18,8 +18,13 @@
 
     	public function list() 
     	{
-    		$data = $this->loaisanpham_model->all();
-    		require_once('views_admin/index.php');
+    		if(isset($_POST['timkiem_lsp'])){
+                $timkiem_lsp = $_POST['timkiem_lsp'];
+                $data = $this->loaisanpham_model->timkiem_lsp($timkiem_lsp);
+            }else{
+                $data = $this->loaisanpham_model->all();
+            }
+            require_once('views_admin/index.php');
     	}
 
     	 public function details() 

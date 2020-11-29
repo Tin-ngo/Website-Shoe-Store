@@ -40,6 +40,22 @@
                 }
                return $data;
           }
+//tìm kiếm sản phẩm chung
+          function timkiem_sp($timkiem_sp)
+        {
+            $query = "SELECT * FROM sanpham WHERE tenSP LIKE '%$timkiem_sp%' ORDER BY idSP";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
 
 
 
@@ -114,6 +130,28 @@
                 }
                return $data;
           }
+
+/*   Phân trang
+        public function get_all_product(){
+
+          $query="SELECT * FROM sanpham";
+          $result = $this->db->select($query);
+
+          return $result;
+        }
+
+        $product_all=$product->get_all_product();
+          $product_count=mysqli_num_rows($product_all);
+          $product_button=ceil($product_count/6);
+          $i=1;
+          echo '<p>Trang:</p>';
+          for($i=1;$i<=$product_button;$i++)
+          {
+            echo '<a href="shop.php?trang='.$i.'">'.$i.'</a>';
+
+          }
+
+*/
 
 
 

@@ -76,7 +76,7 @@
           </li>
           <li>
             <a href="#" style="margin-right: 30px;">
-          	<img class="anhuser" src="public_admin/image/author.png" alt="">
+          	<img class="anhuser" src="public_admin/image/author.jpg" alt="">
             <?php
             if(isset($_SESSION['tendangnhap'])){
               echo "Xin chào ".$_SESSION['tendangnhap'];;

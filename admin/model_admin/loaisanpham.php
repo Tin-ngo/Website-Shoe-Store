@@ -30,6 +30,24 @@
     		return $data;
     	}
 
+         function timkiem_lsp($timkiem_lsp)
+        {
+            $query = "SELECT * FROM loaisanpham WHERE tenLSP LIKE '%$timkiem_lsp%' ORDER BY idLoaiSP";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
+
+
+
     	function find($id)
         {
             $query = "SELECT * FROM loaisanpham WHERE idLoaiSP=$id";

@@ -35,35 +35,55 @@
 						</tr>
 					</thead>
 					<tbody>
+					<?php	if(isset($_SESSION['sanpham'])){
+					   foreach ($_SESSION['sanpham'] as $value) { ?>
 						<tr>
 							<td class="cart_product">
-								<a href=""><img src="images/cart/one.png" alt="">Chỗ này để ảnh</a>
+								<img height='100' src="admin/public_admin/image/sanpham/<?= $value['anh1'] ?>">
 							</td>
 							<td class="cart_description">
-								<h4><a href="">Tên sản phẩm <br>(người dùng kick vào để xem chi tiết)</a></h4>
-								<p> Đây là ID sản phẩm</p>
+								<h4><a href=""><?= $value['tenSP'] ?></a></h4>
+								<p> </p> 
 							</td>
 							<td class="cart_price">
-								<p>Giá để đây</p>
+								<p><?= $value['Dongia'] ?></p>
 							</td>
 							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
+
+                                
+                                <div class="cart_quantity_button">
+									<a class="cart_quantity_up" href="?action=giohang&act=update_giohang&id=<?= $value['idSP'] ?>"> + </a>
+                                      <input class="cart_quantity_input" size="2" type="text" name="soluong" value="<?php echo $value['soluong']; ?>">
+                                     <a class="cart_quantity_down" href="?action=giohang&act=update_giohang_tru&id=<?= $value['idSP'] ?>"> - </a>
 								</div>
-							</td>
+<!--
+								<select>
+								<?php for($i = 1; $i <= 10; $i++) : ?>
+                                    <option value="<?php echo $i; ?>">
+                                         <?php echo $i.$value['soluong']; ?>
+                                    </option>
+                                <?php endfor; ?>
+                                </select>
+-->
+
+
+		 					</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
+								<p class="cart_total_price"><?php echo $value['thanhtien']; ?></p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+								<a class="cart_quantity_delete" href="?action=giohang&act=xoagiohang&id=<?= $value['idSP'] ?>"><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
-
+             <?php } }?>
+             
 						
 					</tbody>
 				</table>
+
+				<a href="?action=giohang&act=xoagiohang_all" class="pull-right" style="padding: 30px; padding-bottom: 100px;">Xóa giỏ hàng</a>
+
+
 			</div>
 		</div>
 	</section> <!--/#cart_items-->
@@ -72,7 +92,7 @@
     
 
 
-
+<!--
 
 <section id="cart_items">
 
@@ -149,7 +169,7 @@
 						<tr>
 							<td>
 								<a href="?action=thanhtoan">
-									<!-- <input class="btn" type="submit" name="" value="Đặt hàng"></a> -->
+									//   <input class="btn" type="submit" name="" value="Đặt hàng"></a> 
 									đặt hàng
 							</td>
 
@@ -246,6 +266,9 @@
 		</div>
 
 </section>
+
+
+-->
 
 
 

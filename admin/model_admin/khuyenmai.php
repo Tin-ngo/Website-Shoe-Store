@@ -30,6 +30,24 @@
     		return $data;
     	}
 
+        function timkiem_km($timkiem_km)
+        {
+            $query = "SELECT * FROM khuyenmai WHERE loaiKM LIKE '%$timkiem_km%' ORDER BY idKM";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
+
+
+
     	function find($id)
         {
             $query = "SELECT * FROM khuyenmai WHERE idKM=$id";

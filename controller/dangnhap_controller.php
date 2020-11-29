@@ -53,6 +53,39 @@
             
          }
 
+         public function taikhoan()
+         {
+
+            $data_loaisanpham = $this->dangnhap_dangky_model->loaisanpham();
+
+
+
+            $tendangnhap = $_SESSION['tendangnhap'];
+            
+            $data_taikhoan = $this->dangnhap_dangky_model->taikhoan($tendangnhap);
+
+            require_once('views/index.php');
+         }
+
+
+         public function suataikhoan()
+         {
+            $ho = filter_input(INPUT_POST, 'ho');
+            $ten =filter_input(INPUT_POST, 'ten');
+            $email =filter_input(INPUT_POST, 'email');
+            $diachi =filter_input(INPUT_POST, 'diachi');
+            $gioitinh =filter_input(INPUT_POST, 'gioitinh');
+            $sodienthoai =filter_input(INPUT_POST, 'sodienthoai');
+            $tendangnhap =filter_input(INPUT_POST, 'tendangnhap');
+            $matkhau =filter_input(INPUT_POST, 'matkhau');
+
+            $idUser = filter_input(INPUT_POST, 'idUser');
+
+            $this->dangnhap_dangky_model->suataikhoan($idUser, $ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau);
+
+            require_once('views/index.php');
+         }
+
 
           
 

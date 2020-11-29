@@ -6,8 +6,12 @@
       <a class="pull-left themmoi" href="?action=them_giaodien"> Thêm mới</a>
 
       <div class="search_box pull-right" style="margin-right: 50px; margin-top: 0px;">
-          <input type="text" placeholder="Search"/>&ensp;
-          <a href="#"><i class="fa fa-search" id="i1"></i></a>
+        <form method="POST" action="?action=taikhoan">
+          <input type="text" placeholder="Search By Name" name="timkiem">&ensp;
+          <button type="submit"><i class="fa fa-search"></i></button>
+          <a href="?action=taikhoan" style="font-size: 15px;">All >> </a>
+        </form>
+
       </div>
 
       <br>
@@ -18,7 +22,8 @@
           <thead>
                <tr>
                   <th>Mã ND</th>
-                  <th class="theadd">Tên tài khoản</th>
+                  <th class="theadd">Họ</th>
+                  <th class="theadd">Tên</th>
                   <th class="theadd">SDT</th>
                   <th class="theadd">Email</th>
                   <th class="theadd">Giới tính</th>
@@ -30,7 +35,8 @@
               <?php foreach ($data as $row) { ?>
               <tr>
                   <td scope="row"><?= $row['idUser'] ?></td>
-                  <td><?= $row['ho']. $row['ten'] ?></td>
+                  <td><?= $row['ho']?></td>
+                  <td><?= $row['ten'] ?></td>
                   <td><?= $row['sodienthoai'] ?></td>
                   <td><?= $row['email'] ?></td>
                   <td><?= $row['gioitinh'] ?></td>

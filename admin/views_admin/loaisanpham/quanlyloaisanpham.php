@@ -6,8 +6,11 @@
       <a class="pull-left themmoi" href="?action=themloaisanpham_giaodien"> Thêm mới</a>
 
       <div class="search_box pull-right" style="margin-right: 50px; margin-top: 0px;">
-          <input type="text" placeholder="Search"/>&ensp;
-          <a href="#"><i class="fa fa-search" id="i1"></i></a>
+          <form method="POST" action="?action=loaisanpham">
+          <input type="text" placeholder="Search By Name" name="timkiem_lsp">&ensp;
+          <button type="submit"><i class="fa fa-search"></i></button>
+          <a href="?action=loaisanpham" style="font-size: 15px;">All >> </a>
+        </form>
       </div>
 
       <br>

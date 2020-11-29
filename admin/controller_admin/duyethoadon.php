@@ -18,8 +18,13 @@
 
     	public function list()
     	{
-    		$data = $this->hoadon_model->all();
-    		require_once('views_admin/index.php');
+    		 if(isset($_POST['timkiem_hd'])){
+                $timkiem_hd = $_POST['timkiem_hd'];
+                $data = $this->hoadon_model->timkiem_hd($timkiem_hd);
+            }else{
+                $data = $this->hoadon_model->all();
+            }
+            require_once('views_admin/index.php');
     	}
 
     	 public function details() //đang

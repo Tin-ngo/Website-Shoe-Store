@@ -5,7 +5,7 @@
 
       
       <div style="background-color: #e5e5e5; padding: 10px 50px 10px; color:gray;">
-        <form action="?action=suasanpham_xl" method="post" enctype="multipart/form-data">  <!-- model_admin/sua_xl.php -->
+        <form action="?action=suasanpham_xl" method="post" enctype="multipart/form-data" >  <!-- model_admin/sua_xl.php -->
       	<table border="0" cellpadding="10">
           <tr>
                <td>idSP: </td>
@@ -49,15 +49,15 @@
            </tr>
             <tr>
                <td>ảnh 1:</td>
-               <td><input type="file" value="<?php echo $data['anh1'];?>" name="anh1"></td>
+               <td><input type="file"  name="anh1"></td>
            </tr>
            <tr>
                <td>ảnh 2:</td>
-               <td><input type="file" value="<?php echo $data['anh2'];?>" name="anh2"></td>
+               <td><input type="file"  name="anh2"></td>
            </tr>
             <tr>
                <td>ảnh 3:</td>
-               <td><input type="file" value="<?php echo $data['anh3'];?>" name="anh3"></td></td>
+               <td><input type="file" name="anh3"></td></td>
            </tr>
             <tr>
                <td>Ngày nhập:</td>

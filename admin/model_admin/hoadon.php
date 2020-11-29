@@ -30,6 +30,25 @@
     		return $data;
     	}
 
+
+         function timkiem_hd($timkiem_hd)
+        {
+            $query = "SELECT * FROM hoadon WHERE idUser LIKE '%$timkiem_hd%' ORDER BY idhoadon";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
+
+
+
     	function find($id)   
         {
             $query = "SELECT * FROM hoadon WHERE idhoadon=$id";

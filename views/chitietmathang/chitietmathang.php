@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="pages-title-text text-center">
-                        <h2>Chỗ này để tên mặt hàng</h2>
+                        <h2><?php echo $data_chitiet['tenSP']; ?></h2>
                         
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                                     <p>Mô tả: <?php echo $data_chitiet['mota']; ?></p>
                             
                                 <div class="list-btn">
-                                    <a href="?action=giohang">Thêm vào giỏ</a>
+                                    <a href="?action=giohang&act=add_giohang&id=<?= $data_chitiet['idSP'] ?>">Thêm vào giỏ</a>
                                  
                                     <a href="#info">Chi tiết</a>
                                

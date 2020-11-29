@@ -53,7 +53,7 @@
                     $_SESSION['admin'] = false;
                 }
                 
-
+            
             $_SESSION['tendangnhap']=$tendangnhap;
             $_SESSION['matkhau']=$matkhau;
             echo "<script language='javascript'>alert('Dang nhap thanh cong');";
@@ -66,8 +66,51 @@
             }
 
 
+         }
+
+
+
+         function loaisanpham()  //đang
+          {
+               $query = "SELECT * from loaisanpham limit 0,4";
+               $result = $this->conn->query($query);
+
+               $data = array();
+
+               while ($row = $result->fetch_assoc()) {
+                   $data[] = $row;
+                }
+               return $data;
+          }
+
+
+
+
+         function taikhoan($tendangnhap)
+         {
+            $query = "SELECT * FROM user WHERE tendangnhap = '$tendangnhap'";
+            return $this->conn->query($query)->fetch_assoc();
+         }
+
+
+
+         function suataikhoan($idUser, $ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau)
+        {
+            
+
+     
+             $query="UPDATE user SET ho='$ho',ten='$ten',email='$email', diachi='$diachi', gioitinh='$gioitinh', sodienthoai='$sodienthoai', tendangnhap='$tendangnhap', matkhau='$matkhau' WHERE idUser='$idUser';";        
+
+            $result = $this->conn->query($query);
+
+            if($result == true){
+
+                header('Location: ?action=taikhoan');
+            }
+        
 
          }
+
 
       
 

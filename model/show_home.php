@@ -42,7 +42,7 @@
 
           function sanpham_trangchu()  //đang
           {
-               $query = "SELECT * from sanpham limit 0,3";
+               $query = "SELECT * from sanpham limit 0,4";
                $result = $this->conn->query($query);
 
                $data = array();

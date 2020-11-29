@@ -30,6 +30,24 @@
     		return $data;
     	}
 
+        function timkiem_sp($timkiem_sp)
+        {
+            $query = "SELECT * FROM sanpham WHERE tenSP LIKE '%$timkiem_sp%' ORDER BY idSP";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
+
+
+
         function xem_mau($id)
         {
              $query = "SELECT * FROM color WHERE idcolor=$id";

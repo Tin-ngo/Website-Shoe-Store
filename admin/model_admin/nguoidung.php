@@ -16,7 +16,7 @@
 
     	function all()
     	{
-    		$query = "SELECT * FROM user ORDER BY idUser";
+    		$query = "SELECT * FROM user ORDER BY idUser ASC";
 
     		$result = $this->conn->query($query);
 
@@ -28,6 +28,26 @@
 
     		return $data;
     	}
+
+
+        function timkiem($timkiem)
+        {
+            $query = "SELECT * FROM user WHERE ten LIKE '%$timkiem%' ORDER BY idUser";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
+
+
+
         function find($id)
         {
             $query = "SELECT * FROM user WHERE idUser=$id";

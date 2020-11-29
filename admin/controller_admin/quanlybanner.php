@@ -18,8 +18,13 @@
 
     	public function list()  
     	{
-    		$data = $this->banner_model->all();
-    		require_once('views_admin/index.php');
+    		if(isset($_POST['timkiem_bn'])){
+                $timkiem_bn = $_POST['timkiem_bn'];
+                $data = $this->banner_model->timkiem_bn($timkiem_bn);
+            }else{
+                $data = $this->banner_model->all();
+            }
+            require_once('views_admin/index.php');
     	}
 
         public function details() 

@@ -1,141 +1,63 @@
-<div class="cuahang">
-<h1>Cửa Hàng</h1>
+                     <div class="col-sm-3">
+                            <div class="single-product">
+                                            <div class="product-f">
+                                                <a href="?act=detail&id=<?= $data_sanpham1[$i]['MaSP'] ?>"><img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" alt="Product Title" class="img-products" /></a>
+                                                <div class="actions-btn">
+                                                    <a href="#"><i style="font-size: 25px; text-align: center;" class="fa fa-shopping-cart"></i></a>
+                                                    <a href="#" data-toggle="modal" ><i style="font-size: 25px; text-align: center;" class="fa fa-eye"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="product-dsc">
+                                                <p><a href="#"><center> <?php echo $value['tenSP'] ?> </center></a></p>
+                                                <span><center><?php echo "$".$value['Dongia'] ?></center></span>
+                                            </div>
+                                        </div>
+                        </div>
+                
+
+
+
+
+
+
+
+
+
+<div class="container">
+<?php foreach ($data_loaisanpham as $value) {  ?>
+
+<div class="col-sm-3">
+     <div class="col-sm-3">
+                            <div class="single-product">
+                                            <div class="product-f">
+                                                <a href="?act=detail&id=<?= $data_sanpham1[$i]['MaSP'] ?>"><img src="admin/public_admin/image/loaisanpham/<?php echo $value['hinhanh'] ?>" alt="Product Title" class="img-products" /></a>
+                                                <div class="actions-btn">
+                                                    <?php echo $value['tenLSP'] ?>
+                                                </div>
+                                            </div>
+                                            <div class="product-dsc">
+                                                <p><a href="#"><center> <?php echo $value['tenSP'] ?> </center></a></p>
+                                                <span><center><?php echo "$".$value['Dongia'] ?></center></span>
+                                            </div>
+                                        </div>
+                        </div>
 </div>
 
-<section id="cart_items" style="margin-top: -50px; margin-bottom: -50px;">
-        <div class="container">
-            <div class="breadcrumbs">
-                <ol class="breadcrumb">
-                  <li><a href="#">Home</a></li>
-                  <li class="active">Cửa hàng</li>
-                </ol>
-            </div>
-        </div>
-    </section>
+<?php }  ?>
 
-<div class="container cn2">
-<div class="row">
-
-                <div class="col-sm-3">
-                    <div class="left-sidebar">
-
-                        <h2>Thể Loại</h2>
-                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-
-                            <?php foreach ($data_loaisanpham as $value) {  ?>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="?action=<?= $value['idLoaiSP'] ?>&id=<?= $value['idLoaiSP'] ?>">
-                                            <?= $value['tenLSP'] ?>
-                                        </a>
-                                    </h4>
-                                </div>
-                            </div>
-
-                        <?php } ?>
-
-
-                        </div>
-
-                    </div>
-
-
-
-
-        <div class="chongia">
-            <div class="chongia2">
+</div>
 
 
 
 
 
 
-                <form action="?action=luachon" method="POST">
 
-                    <label for="cars">Màu:</label>
-
-                   <select id="" name="chon_mau">
-                    <option value="">Chọn màu</option>
-                    <?php foreach ($color as $value) {   ?>
-                    <option value="<?= $value['idcolor'];?>">
-                   <?php echo $value['color']; ?>
-                    </option>
-                <?php } ?>      
-                   </select>
-
-                   <br><br>
+------------
+slide sản phẩm trong cửa hàng
 
 
-
-                   <label for="cars">Size:</label>
-
-                   <select id="" name="chon_size">
-                    <option value="">Chọn kích cỡ</option>
-                    <?php foreach ($size as $value) {   ?>
-                    <option value="<?= $value['idsize'];?>">
-                    <a href="?action=<?= $value['idsize'] ?>&id=<?= $value['idsize'] ?>" class="acolor"><?php echo $value['size']; ?></a>
-                    </option>
-                <?php } ?>      
-                   </select>
-
-                   <br><br>
-
-
-
-
-
-                   <label for="cars">Giá:</label>
-
-                   <select id="" name="chongia">
-
-                    <option value=""><a href="#" class="">Chọn giá</a> </option>
-
-                    <option value=""><a href="#" class="">0 - 100.000</a> </option>
-
-                   <option value=""> <a href="#" class="">100.000 - 300.000</a></option>
-
-                    <option value=""><a href="#" class="">300.000 - 500.000</a></option>
-                   
-                   <option value=""> <a href="#" class="">500.000 - 700.000</a></option>
-                   
-                   <option value=""> <a href="#" class="">700.000 - 1.000.000</a></option>
-                   
-                    <option value=""><a href="#" class="">1.000.000  &uarr;</a></option>
-                   
-                
-                   </select>
-
-                   <br><br>
-
-                   <button type="submit">Tìm kiếm</button>
-                 
-       
-                   </form>
-
-
-
-
-
-
-             </div>
-
-          </div>
-
-
-            <br>
-            <br>
-
-                    
-   </div>  <!-- div thứ 3 -->
-
-
-
-
-
-
-                     <div class="col-sm-9 padding-right c_cn2">
+<div class="col-sm-9 padding-right c_cn2">
                    <!-- hiển thị sản phẩm -->
 
                     <div class="features_items"><!--features_items-->
@@ -148,50 +70,64 @@
                                 <div class="single-products">
                                         <div class="productinfo text-center">
                                             <img src="./admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" class="girlcuahang img-responsive" height='230'/>
+                                            <br>
                                             <h4><?php echo $value['tenSP'] ?></h4>
-                                            <p></p>
-                                            <a href="?action=chitietmathang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
+                                            <p><?php echo $value['idcolor']; ?></p>
+                                            <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
-                                                <h2><?php echo $value['Dongia']."$" ?></h2>
+                                                <h2><?php echo $value['Dongia']?></h2>
                                                 <p><?php echo $value['mota'] ?></p>
-                                                <a href="?action=chitietmathang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
+                                                <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
                                             </div>
                                         </div>
                                 </div>
-                                
                             </div>
                         </div>
-
                       <?php } ?>
-
-                        
-                        
                     </div><!--features_items-->
-
-
-
-
-
-
                         <ul class="pagination">
                             <li class="active"><a href="">1</a></li>
                             <li><a href="">2</a></li>
                             <li><a href="">3</a></li>
                             <li><a href="">&raquo;</a></li>
                         </ul>
-
-
-
-                        
-
-
-
-
                 </div>
 
 
-</div>   <!-- div row -->
 
+phần này định làm theo
+
+<div class="col-sm-9 padding-right c_cn2">
+                   <!-- hiển thị sản phẩm -->
+
+                    <div class="features_items"><!--features_items-->
+                       
+                        <h2 class="title text-center">SẢN PHẨM NỔI BẬT</h2>
+                        
+<?php foreach ($data_sanphamcuahang as $value) { ?>
+
+<div class="col-sm-3">
+         <div class="single-product">
+            <div class="product-f">
+                 <a href="#">
+                     <img style="height: 270px; width: 300px;" src="admin/public_admin/image/loaisanpham/<?php echo $value['hinhanh'] ?>" alt="Product Title" >
+                </a>
+             <div class="actions-btnn">
+              <span><?php echo $value['tenSP'] ?></span>
+             </div>
+          </div>
+        </div>
 </div>
+
+   <?php } ?>
+                    </div><!--features_items-->
+                        <ul class="pagination">
+                            <li class="active"><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">&raquo;</a></li>
+                        </ul>
+                </div>
+

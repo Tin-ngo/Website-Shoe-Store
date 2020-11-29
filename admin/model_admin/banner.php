@@ -30,6 +30,25 @@
     		return $data;
     	}
 
+        function timkiem_bn($timkiem_bn)
+        {
+            $query = "SELECT * FROM banner WHERE idbanner LIKE '%$timkiem_bn%' ORDER BY idbanner";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
+
+
+
+
     	function find($id) 
         {
             $query = "SELECT * FROM banner WHERE idbanner=$id";

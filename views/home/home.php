@@ -1,21 +1,47 @@
 
 <?php require_once('./views/slider/slider.php');  ?>
 
-<div class="divhover">
+
+<div>
+
 <?php foreach ($data_loaisanpham as $value) {  ?>
 
 <div class="col-sm-3">
-    <div class="zoom">
-        <center><span style="font-size: 20px;"><?php echo $value['tenLSP'] ?></span></center>
-        <a href="?action=cuahang&id=<?= $value['idLoaiSP'] ?>">
-            <img class="imghover1" src="admin/public_admin/image/loaisanpham/<?php echo $value['hinhanh'] ?>">
-        </a>
-    </div>
+         <div class="single-product">
+            <div class="product-f">
+                 <a href="?action=cuahang&id=<?php echo $value['idLoaiSP'] ?>">
+                     <img style="height: 270px; width: 300px;" src="admin/public_admin/image/loaisanpham/<?php echo $value['hinhanh'] ?>" alt="Product Title" >
+                </a>
+             <div class="actions-btnn">
+              <span><?php echo $value['tenLSP'] ?></span>
+             </div>
+          </div>
+        </div>
 </div>
 
 <?php }  ?>
 
 </div>
+
+
+
+
+
+<div class="khuyenmai">
+    <div class="col-sm-12">
+           <h2>Khuyến Mãi Hấp Dẫn Lên Đến 30%</h2>
+          <center><button type="button" class="btn btn-outline-warning"><a href="?action=cuahang1">Mua Ngay</a></button> </center>
+    </div>
+
+ </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -35,30 +61,30 @@
                    
                    <?php foreach ($data_sanphamtrangchu as $value) {  ?>
                     
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" height='200'/>
-                                            <h2> <?php echo "$".$value['Dongia'] ?> </h2>
-                                            <p> <?php echo $value['tenSP'] ?> </p>
-                                            <a href="?action=chitietmathang" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
-                                        </div>
-                                        <div class="product-overlay">
-                                            <div class="overlay-content">
-                                                <h2><?php echo "$".$value['Dongia'] ?> </h2>
-                                                <p>CHỗ này hiển thị mã khuyến mãi</p>
-                                                <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem Chi Tiết</a>
+                       <div class="col-sm-3">
+                            <div class="single-product">
+                                            <div class="product-f">
+                                                <a href="#"><img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" alt="Product Title" class="img-products" /></a>
+                                                <div class="actions-btn">
+                                                    <a href="#"><i style="font-size: 25px; text-align: center;" class="fa fa-shopping-cart"></i></a>
+                                                    <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" data-toggle="modal" ><i style="font-size: 25px; text-align: center;" class="fa fa-eye"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="product-dsc">
+                                                <p><a href="#"><center> <?php echo $value['tenSP'] ?> </center></a></p>
+                                                <span><center><?php echo "$".$value['Dongia'] ?></center></span>
                                             </div>
                                         </div>
-                                </div>
-                                
-                            </div>
                         </div>
+                
+                  <?php } ?>
 
-                       <?php } ?>
-                        
-                    </div><!--features_items-->
+                     </div>
+
+
+                     <a href="?action=cuahang1">
+                     <button type="button" class="btn btn-secondary btn-lg btn-block">Xem thêm nhiều sản phẩm hơn</button>
+                      </a>
 
 
 
@@ -75,12 +101,5 @@
 
 
 
- <div class="khuyenmai">
-    <div class="col-sm-12">
-           <h2>Khuyến Mãi Hấp Dẫn Lên Đến 30%</h2>
-          <center><button type="button" class="btn btn-outline-primary"><a href="?action=cuahang1">Mua Ngay</a></button> </center>
-    </div>
-
- </div>
-
+ 
  <!-- <?php// require_once('./views/sanphammoinhat/sanphammoinhat.php');  ?>  -->

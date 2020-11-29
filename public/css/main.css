@@ -363,10 +363,14 @@ div.features_items h2 a{
 
 div.khuyenmai{
   background-color: rgba(0, 0, 0, 0.62);
-  height: 500px;
+  height: 300px;
+  margin-top: 350px;
+  padding: 30px;
+  border: 10px dotted orange;  
 }
 .khuyenmai h2{
-  padding-top: 200px;
+  padding-top: 100px;
+
 }
 
 div.spnb{
@@ -441,6 +445,69 @@ div.panel-default div.panel-heading h4.panel-title a:hover{
   color:red;
   font-size: 15px;
 }
+
+
+div.single-product {
+  margin-top: 20px;
+}
+
+div.actions-btnn span{
+  font-size: 20px;
+  font-weight: bold; 
+  background-color: gray;
+  height: 50;
+  color:white;
+}
+
+
+.actions-btnn > a {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #333333;
+    display: inline-block;
+    font-size: 18px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 4px;
+    width: 35px;
+}
+.actions-btnn {
+  margin: auto;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transform: scale(2);
+    transition: all 0.4s ease 0s;
+}
+.actions-btnn > a:hover {
+    background: #fe5858 none repeat scroll 0 0;
+    color: #fff;
+}
+.single-product:hover .actions-btnn {
+    opacity: 1;
+    transform: scale(1);
+}
+.wrapper > button,.single-product:hover .actions-btnn {
+    transition: all 0.3s ease 0s;
+}
+
+
+.btn-outline-warning{
+  background-color: orange;
+}
+
+.btn-secondary{
+  background-color: orange;
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+#textid{
+  color: red;
+  font-size: 13px;
+}
+
+
 
 
 
@@ -2125,7 +2192,6 @@ h2.title {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
-  text-align: center;
 }
 
 

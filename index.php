@@ -45,10 +45,15 @@
             $index->dangxuat();
             break;
 
-        case 'taikhoan':    //CHƯA LÀM
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
-            $index->list();
+        case 'taikhoan':
+            require_once('controller/dangnhap_controller.php');
+            $index = new dangnhap_dangky_controller();
+            $index->taikhoan();
+            break;
+        case 'suataikhoan':    //đang làm
+            require_once('controller/dangnhap_controller.php');
+            $index = new dangnhap_dangky_controller();
+            $index->suataikhoan();
             break;
     
 
@@ -61,13 +66,63 @@
             $index = new chitietmathang();
             $index->chitiet_hang();
             break;
+
+
+/*
+//giỏ hàngg
             
         case 'giohang':   //đâng làm
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
-            $index->list();
+            require_once('controller/giohang_controller.php');
+            $index = new giohang_controller();
+            $index->list_cart();
             break;
 
+        case 'xoagiohang_all':
+            require_once('controller/giohang_controller.php');
+            $index = new giohang_controller();
+            $index->deleteall_cart();
+            break;
+
+        case 'xoagiohang':
+            require_once('controller/giohang_controller.php');
+            $index = new giohang_controller();
+            $index->delete_cart();
+            break;
+*/
+         
+        case 'giohang':   //đâng làm
+        $act = isset($_GET['act'])? $_GET['act'] : 'list';
+            require_once('controller/giohang_controller.php');
+            $index = new giohang_controller();
+
+            switch ($act) {
+                case 'list':
+                    $index->list_giohang();
+                    break;
+                case 'add_giohang':
+                    $index->add_giohang();
+                    break;
+                case 'update_giohang':
+                    $index->update_giohang();
+                    break;
+                case 'update_giohang_tru':
+                    $index->update_giohang_tru();
+                    break;
+                case 'xoagiohang_all':
+                    $index->deleteall_cart();
+                    break;
+                case 'xoagiohang':
+                    $index->delete_cart();
+                    break;
+                
+                default:
+                    $index->list_giohang();
+                    break;
+            }
+
+
+
+            break;
 
 
 
