@@ -66,7 +66,7 @@
                 $email = filter_input(INPUT_POST, 'email_gopy');
                 $noidung = filter_input(INPUT_POST, 'noidung_gopy');
 
-                $this->chitietmathang_controller->them_gopy($id, $email, $noidung);
+                $this->chitietmathang_controller->them_gopy($idSP, $email, $noidung);
             }
 
 

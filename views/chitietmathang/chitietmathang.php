@@ -185,7 +185,7 @@
                                     <h3>Góp ý :</h3>
                                 </div>
                                 <div class="custom-input">
-                                    <form action="?action=gopy&id=<?php echo $data_chitiet['idSP'] ?>" method="POST">
+                                    <form action="?action=gopy&id=<?php echo $data_chitiet['idSP'];?>" method="POST">
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="input-mail">
@@ -200,7 +200,7 @@
                                             </div>
                                             <div class="col-xs-12">
                                                 <div class="submit-text">
-                                                <input   type="submit" name="submit">
+                                                <input type="submit" name="submit">
                                                 </div>
                                             </div>
                                         </div>
