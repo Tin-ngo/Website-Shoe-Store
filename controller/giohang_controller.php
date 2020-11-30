@@ -132,6 +132,8 @@
         function deleteall_cart()       // okie
         {
             unset($_SESSION['sanpham']);
+            unset($_SESSION['thanhtien']);  // thêm  để hủy sesion
+            unset($_SESSION['tongtien']);      // thêm  để hủy sesion
             header('Location: ?action=giohang&act=list_giohang');
         }
 

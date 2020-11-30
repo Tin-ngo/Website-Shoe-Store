@@ -1,7 +1,7 @@
 <div class="recommended_items"><!--recommended_items-->
    <div class="container spnb">
                         <h2 class="title text-left" id="makm">SẢN PHẨM LIÊN QUAN
-                            <a href="#" class="pull-right" id="textid">Xem tất cả >></a>
+                            <a href="?action=cuahang1" class="pull-right" id="textid">Xem tất cả >></a>
                         </h2>
    
                         
@@ -13,7 +13,6 @@
                                 <div class="item active"> 
 <?php foreach ($data_sanphamlienquan as $value) { ?>
                                 
-                                    
                                      <div class="col-sm-3">
                             <div class="single-product">
                                             <div class="product-f">
@@ -51,7 +50,7 @@
 <div class="container container2">
 
         <button type="button" class="btn btn-primary btn-lg btn-block">
-        <a href="?action=cuahang">XEM NHIỀU SẢN PHẨM HƠN</a>
+        <a href="?action=cuahang1">XEM NHIỀU SẢN PHẨM HƠN</a>
         </button>
 
     </div>

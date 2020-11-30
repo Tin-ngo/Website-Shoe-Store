@@ -7,7 +7,7 @@
       <div style="background-color: #e5e5e5; padding: 10px 50px 10px; color:gray;">
 
         <form action="?action=them_sanpham" method="POST" enctype="multipart/form-data">
-      	<table border="0" cellpadding="10">
+      	<table border="0" cellpadding="10" >
           <tr>
                <td>idLoaiSP:</td>
                <td>
@@ -51,14 +51,20 @@
            </tr>
             <tr>
                <td>Ngày nhập:</td>
-               <td><input type="date" value="" name="ngaynhap"></td>
+               <td><input type="date" value="" name="ngaynhap"></td> <!--<?php $today = date("d/m/Y"); echo $today; ?> -->
            </tr>
            <tr>
                <td>mô tả:</td>
-               <td><input type="text" value="" name="mota"></td>
+               <td style="width: 150%;">
+                 <form action="_posteddata.php" method="post">
+                      <textarea  name="mota" cols="" rows=""></textarea>
+                     
+           <!--          <input name="ok" type="submit" value="Ok" /> -->
+                </form>
+              </td>
            </tr>
            <tr>
-           	<td colspan="2"><button  style="width: 100px; background-color: darkgray;" type="submit">Submit</button></td>
+           	<td colspan="2" style="padding-bottom: 90px; padding-top: 20px;"><button style="width: 100px; background-color: darkgray;" type="submit">Lưu</button></td>
            </tr>
 
         </table>
@@ -69,3 +75,8 @@
 </div>
 
 </div>
+  <script type="text/javascript" >
+    
+                       CKEDITOR.replace( 'mota' );
+        
+                       </script>

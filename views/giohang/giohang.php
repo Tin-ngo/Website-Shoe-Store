@@ -36,6 +36,7 @@
 					</thead>
 					<tbody>
 					<?php	if(isset($_SESSION['sanpham'])){
+						$_SESSION['tongtien'] = 0;
 					   foreach ($_SESSION['sanpham'] as $value) { ?>
 						<tr>
 							<td class="cart_product">
@@ -69,19 +70,47 @@
 
 		 					</td>
 							<td class="cart_total">
-								<p class="cart_total_price"><?php echo $value['thanhtien']; ?></p>
+								<p class="cart_total_price"><?php $_SESSION['tongtien'] += $value['thanhtien']; echo $value['thanhtien']; ?></p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href="?action=giohang&act=xoagiohang&id=<?= $value['idSP'] ?>"><i class="fa fa-times"></i></a>
 							</td>
+							
 						</tr>
              <?php } }?>
-             
+
+                         <tr>
+                         	<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td style="font-size: 20px; color:orange; font-weight: bold; padding: 10px;">
+								Tổng Tiền: <?php 
+								if(isset($_SESSION['tongtien'])){
+								echo $_SESSION['tongtien'];
+							}else{
+								echo "";
+							}
+								?>
+							</td>
+							<td>
+							</td>
+                         </tr>
+
 						
 					</tbody>
 				</table>
-
-				<a href="?action=giohang&act=xoagiohang_all" class="pull-right" style="padding: 30px; padding-bottom: 100px;">Xóa giỏ hàng</a>
+                
+				<a href="?action=giohang&act=xoagiohang_all" class="pull-right" style="padding: 30px; padding-bottom: 100px;">
+				    Hủy giỏ hàng <i class="fa fa-times"></i>
+				</a>
+				<a href="?action=thanhtoan&a=<?php foreach ($_SESSION['sanpham'] as $value) { echo $value['Dongia'].'&b=';}?>" class="pull-right" style="padding: 30px; padding-bottom: 100px;">
+				    Xác Nhận Giỏ Hàng <i class="fa fa-check"></i>
+			    </a>
 
 
 			</div>

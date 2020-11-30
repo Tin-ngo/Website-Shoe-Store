@@ -20,7 +20,7 @@
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="#">Home</a></li>
-				  <li class="active">Giỏ Hàng Của Bạn</li>
+				  <li class="active">Thanh toán</li>
 				</ol>
 			</div>
 		</div>
@@ -38,14 +38,24 @@
 					</div>
 					<div class="custom-input">
 						<form action="?act=checkout&xuli=save" method="post">
-							<input type="text" name="NguoiNhan" placeholder="Người nhận" required value="Tên khách hàng đặt đây"/>
-							<input type="email" name="Email" placeholder="Địa chỉ Email.." required  value="Địa chỉ gmail đạt đây"/>
-							<input type="text" name="SDT" placeholder="Số điện thoại.." required pattern="[0-9]+" minlength="10"  value="SDT đặt đây"/>
-							<input type="text" name="DiaChi" placeholder="Đại chỉ giao hàng" required  value="Địa chỉ kh đặt đây"/>
+							<input type="text" name="NguoiNhan" placeholder="Người nhận" required value="<?php echo $data_user['ho'].' '.$data_user['ten']; ?>"/>
+							<input type="email" name="Email" placeholder="Địa chỉ Email.." required  value="<?php echo $data_user['email']; ?>"/>
+							<input type="text" name="SDT" placeholder="Số điện thoại.." required pattern="[0-9]+" minlength="10"  value="<?php echo $data_user['sodienthoai']; ?>"/>
+							<input type="text" name="DiaChi" placeholder="Đại chỉ giao hàng" required  value="<?php echo $data_user['diachi']; ?>"/>
 							</br>
 							<div class="submit-text">
 								<!--  <button type="submit">Thanh toán</button>  -->
-								<a href="?action=hoanthanhdonhang">Thanh toán</a>
+								<a href="?action=hoanthanhdonhang&idUser=<?php echo $data_user['idUser'];?>&idSP=<?php echo $data_sanpham['idSP'] ?>&tongtien=<?php 
+										if($_SESSION['giatriKM'] != 0){
+								         	$_SESSION['tongtien_KM'] = ( $_SESSION['tongtien'] * $data_sanpham['giatriKM'] ) / 100 ;
+									        echo $_SESSION['tongtien_KM'] ;
+									    }
+									    else{
+									    	echo $_SESSION['tongtien'];
+									    }
+									     ?>">    <!-- lấy dữ liệu từ đường dẫn để thêm đơn hàng vào database -->
+									 Thanh toán
+									</a>
 							</div>
 						</form>
 					</div>
@@ -67,27 +77,38 @@
 							<tbody>
 								
 								<tr>
-									<th></th>
-									<td> VNĐ</td>
+									<th><?php foreach ($_SESSION['sanpham'] as $value) { ?>
+										    <?php echo $value['tenSP'].'<br>'; ?>
+										<?php } ?>
+									</th>
+									<td>
+										<?php echo $_SESSION['tongtien'].'<br>'; ?>
+									</td>
 								</tr>
 						
 						<tr>
-							<th>Giảm Giá</th>
-							<td>0%</td>
-						</tr>
-						<tr>
-							<th>Vận Chuyển</th>
-							<td>15,000 VNĐ</td>
+							<th>Giảm Giá</th>  <!-- lấy a trên địa chỉ rồi inner join với bảng khuyễn mã để lấy giá trị khuyến mãi -->
+							<td><?php $_SESSION['giatriKM'] = $data_sanpham['giatriKM']; echo $_SESSION['giatriKM'].'%'; ?></td>
 						</tr>
 						<tr>
 							<th>Vat</th>
-							<td>0</td>
+							<td>0 VNĐ</td>
 						</tr>
 							</tbody>
 							<tfoot>
 								<tr>
 									<th>Tổng</th>
-									<td> VNĐ</td>
+									<td>
+										<?php 
+										if($_SESSION['giatriKM'] != 0){
+								         	$_SESSION['tongtien_KM'] = ( $_SESSION['tongtien'] * $data_sanpham['giatriKM'] ) / 100 ;
+									        echo $_SESSION['tongtien_KM'] ;
+									    }
+									    else{
+									    	echo $_SESSION['tongtien'];
+									    }
+									     ?> VNĐ
+							       </td>
 								</tr>
 							</tfoot>
 						</table>

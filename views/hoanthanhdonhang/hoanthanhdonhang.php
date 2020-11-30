@@ -36,7 +36,10 @@
 			<div class="col-xs-12 text-center">
 				<div class="complete-title">
 					<p>Cảm ơn bạn. Đơn đặt hàng của bạn đã được nhận; Đã nhận được đơn đặt hàng của bạn.</p>
-					<p>Vui Lòng Chờ Xét Duyệt</p>
+					<p>
+						Vui Lòng Chờ Xét Duyệt
+                        <a href="?action=huy_session" style="color:red;font-weight: bold;">&emsp;Về trang chủ</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -57,9 +60,16 @@
 							<tbody>
 								
 										<tr>
-											<th>Chỗ này đặt ten sp</th>
-											<td>Chỗ này đặt thành tiền VNĐ</td>
+											<th><?php foreach ($_SESSION['sanpham'] as $value) { ?>
+										               <?php echo $value['tenSP'].'<br>'; ?>
+										       <?php } ?></th>
+											<td><?php echo $_SESSION['tongtien'] ?></td>
 										</tr>
+
+								<tr>
+									<th>Khuyến mãi</th>
+									<td><?php echo $_SESSION['giatriKM'].'%'; ?></td>
+								</tr>
 								
 								<tr>
 									<th>VAT</th>
@@ -69,7 +79,17 @@
 							<tfoot>
 								<tr>
 									<th>Tổng tiền</th>
-									<td>Chỗ này đặt tổng tiển VNĐ</td>
+									<td>
+										<?php
+										if($_SESSION['giatriKM'] != 0){
+								         	$_SESSION['tongtien_KM'] = ( $_SESSION['tongtien'] * $_SESSION['giatriKM'] ) / 100 ;
+									        echo $_SESSION['tongtien_KM'] ;
+									    }
+									    else{
+									    	echo $_SESSION['tongtien'];
+									    }
+									    ?>
+									</td>
 								</tr>
 							</tfoot>
 						</table>
@@ -83,21 +103,30 @@
 					</div>
 					<div class="por-dse clearfix">
 						<ul>
-							<li><span>Tên KH<strong>:</strong></span> chỗ này hiển thị tên khách hàng</li>
-							<li><span>Email<strong>:</strong></span>  chỗ này hiển thị EMAIL khách hàng</li>
-							<li><span>Số ĐT<strong>:</strong></span>  chỗ này hiển thị SDT khách hàng</li>
+							<li><span>Tên KH<strong>:</strong></span><?php echo $data_user['ten']; ?></li>
+							<li><span>Email<strong>:</strong></span>  <?php echo $data_user['email']; ?> </li>
+							<li><span>Số ĐT<strong>:</strong></span>  <?php echo $data_user['sodienthoai']; ?> </li>
 						</ul>
 					</div>
 				</div>
 				<div class="order-address bill padding60">
 					<div class="log-title">
-						<h3><strong>ĐỊA CHỈ THANH TOÁN</strong></h3>
+						<h3><strong>ĐỊA CHỈ LIÊN HỆ</strong></h3>
 					</div>
-					<p>Phone: Hiển thị số dt khash hàng</p>
-					<p>Email: Hiển thị email khách hàng</p>
+					<p>Phone:  <?php echo $data_user['sodienthoai']; ?></p>
+					<p>Email:  <?php echo $data_user['email']; ?></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 <!-- order-complete content section end -->
+
+
+
+
+
+<!-- Tất cả bao gồm có session['giatriKM']     session['sanpham'] : cái này kiểu mảng chạy foeach
+	session['tongtien_KM']   và   session['tongtien']      session['thanhtien']
+	  session[tendangnhap]    session['matkhau']           session['admin']
+ 	    -->

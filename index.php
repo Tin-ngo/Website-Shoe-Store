@@ -148,24 +148,35 @@
             $index = new showcuahang();
             $index->list();
             break;
-        case 'quenmatkhau':
+        case 'quenmatkhau':  // chưa làm
             require_once('controller/cuahang_controller.php');
             $index = new showcuahang();
             $index->list();
             break;
-        case 'thanhtoan':
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
+        case 'thanhtoan':  
+            require_once('controller/thanhtoan_controller.php');
+            $index = new showthanhtoan();
             $index->list();
             break;
         case 'hoanthanhdonhang':
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
+            require_once('controller/hoanthanhdonhang_controller.php');
+            $index = new hoanthanhdonhang();
             $index->list();
             break;
 
+        case 'huy_session':
+            require_once('controller/hoanthanhdonhang_controller.php');
+            $index = new hoanthanhdonhang();
+            $index->huy_session();
+            break;
+
+
+
+
         default:
-            # code...
+            require_once('controller/home_controller.php');
+            $index = new showhome();
+            $index->list();
             break;
 
 
