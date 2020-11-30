@@ -101,7 +101,7 @@
 									<td>
 										<?php 
 										if($_SESSION['giatriKM'] != 0){
-								         	$_SESSION['tongtien_KM'] = ( $_SESSION['tongtien'] * $data_sanpham['giatriKM'] ) / 100 ;
+								         	$_SESSION['tongtien_KM'] = ( $_SESSION['tongtien'] - ($_SESSION['tongtien'] * ($data_sanpham['giatriKM'] )) / 100 );
 									        echo $_SESSION['tongtien_KM'] ;
 									    }
 									    else{
