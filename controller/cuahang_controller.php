@@ -60,9 +60,22 @@
             
                  }
 
+             if(isset($_POST['a'])&& isset($_POST['b'])){
+                $a = $_POST['a'];
+                $b = $_POST['b'];
+
+                $data_sanphamcuahang = $this->cuahang_controller->chonsanpham_gia($a, $b);
+
+            }else{
+                $a = null;
+                $b = null;
+            
+                 }
+           
 
 
 
+           
 
         	require_once('views/index.php');
         }
@@ -81,20 +94,36 @@
             }else{
                 $data_sanphamcuahang = $this->cuahang_controller->sanpham_cuahang();
             }
+
+             if(isset($_POST['a'])&& isset($_POST['b'])){
+                $a = $_POST['a'];
+                $b = $_POST['b'];
+
+                $data_sanphamcuahang = $this->cuahang_controller->chonsanpham_gia($a, $b);
+
+            }else{
+                $a = null;
+                $b = null;
+            
+                 }
+
+
             require_once('views/index.php');
         }
 
 
+
+//       public function gia()
+//        {
+  //          $a = filter_input(INPUT_POST, 'a');
+ //           $b = filter_input(INPUT_POST, 'b');
+
+  //          $data_sanphamcuahang = $this->cuahang_controller->chonsanpham_gia($a, $b);
+
+  //      }
+
+
          
-
-
-
-
-
-        //lựa chọn sản phẩm theo màu, size
-
-   
-
 
 
     }

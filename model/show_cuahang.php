@@ -117,7 +117,7 @@
                return $data;
           }
  
-          function chonsanpham_size($id)    //chưa làm tới
+          function chonsanpham_size($id)
           {
             $query = "SELECT * FROM sanpham WHERE idsize = '$id' ";
 
@@ -130,6 +130,28 @@
                 }
                return $data;
           }
+
+
+
+
+
+          function chonsanpham_gia($a, $b)    //đang làm
+          {
+            $query = "SELECT * FROM sanpham WHERE  Dongia > $a AND Dongia < $b ";
+
+            $result = $this->conn->query($query);
+
+               $data = array();
+
+               while ($row = $result->fetch_assoc()) {
+                   $data[] = $row;
+                }
+               return $data;
+          }
+
+
+
+
 
 /*   Phân trang
         public function get_all_product(){

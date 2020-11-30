@@ -72,7 +72,7 @@
                                             </div>
                                             <div class="product-dsc">
                                                 <p><a href="#"><center> <?php echo $value['tenSP'] ?> </center></a></p>
-                                                <span><center><?php echo "$".$value['Dongia'] ?></center></span>
+                                                <span><center><?php echo $value['Dongia'].".000 vnd" ?></center></span>
                                             </div>
                                         </div>
                         </div>

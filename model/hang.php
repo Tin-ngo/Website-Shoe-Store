@@ -80,7 +80,7 @@
           //hiển thị sản phẩm liên quan
            function sanphamlienquan($id)
            {
-            $query = " SELECT * FROM sanpham WHERE idLoaiSP = '$id'";
+            $query = " SELECT * FROM sanpham WHERE idLoaiSP = '$id' limit 0,4";
             $result = $this->conn->query($query);
 
             $data = array();
@@ -90,6 +90,36 @@
             }
 
             return $data;
+           }
+
+
+
+           //GÓp ý
+
+           function them_gopy($email, $noidung)
+           {
+            $query = "INSERT INTO gopy(email, noidung) VALUES ('$email', '$noidung') " ;
+            $result = $this->conn->query($query);
+
+            if($result == true){
+                header('location: ?action=chitietmathang');
+            }
+            else{
+                header('location: ?action=trangchu');
+            }
+           }
+
+           function xem_gopy()
+           {
+            $query = "SELECT * FROM gopy";
+           $result = $this->conn->query($query);
+
+               $data = array();
+
+               while ($row = $result->fetch_assoc()) {
+                   $data[] = $row;
+                }
+               return $data;
            }
 
 

@@ -36,7 +36,9 @@
             $data_sanphamlienquan = $this->chitietmathang_controller->sanphamlienquan($idLoaiSP);
 
 
-        	require_once('views/index.php');
+        	$xem_gopy = $this->chitietmathang_controller->xem_gopy();
+
+                require_once('views/index.php');
         }
 
 
@@ -48,16 +50,24 @@
 
 
 //chưa đụng tới
-        public function list_theoid()
-        {
+  //      public function list_theoid()
+   //     {
+//
+       // 	$data_loaisanpham = $this->home_controller->loaisanpham();
+//
+   //     	$idLoaiSP = $_GET['id'] ? $_GET['id'] : '1';
+    //        $data_sanphamcuahang = $this->home_controller->sanpham_cuahangtheoid($idLoaiSP);
 
-        	$data_loaisanpham = $this->home_controller->loaisanpham();
+      //      }
 
-        	$idLoaiSP = $_GET['id'] ? $_GET['id'] : '1';
-            $data_sanphamcuahang = $this->home_controller->sanpham_cuahangtheoid($idLoaiSP);
+            public function gopy()
+            {  
+                $email = filter_input(INPUT_POST, 'email_gopy');
+                $noidung = filter_input(INPUT_POST, 'noidung_gopy');
 
-            require_once('views/index.php');
-        }
+                $this->chitietmathang_controller->them_gopy($email, $noidung);
+            }
+
 
 
 

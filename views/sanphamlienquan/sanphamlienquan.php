@@ -5,81 +5,44 @@
                         </h2>
    
                         
-                        <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+                        <div id="recommended-item-carousel">
 
 
                             <div class="carousel-inner">
 
                                 <div class="item active"> 
-
-                                <?php foreach ($data_sanphamlienquan as $value) { ?>
+<?php foreach ($data_sanphamlienquan as $value) { ?>
+                                
                                     
-                                    <div class="col-sm-4">
-                                        <div class="product-image-wrapper">
-                                            <div class="single-products">
-                                                <div class="productinfo text-center">
-                                                    <img src="images/home/recommend1.jpg" alt="" />
-                                                    <h2><?php echo $value['Dongia']?></h2>
-                                                    <p></p>
-                                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                     <div class="col-sm-3">
+                            <div class="single-product">
+                                            <div class="product-f">
+                                                <a href="#"><img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" alt="Product Title" class="img-products" /></a>
+                                                <div class="actions-btn">
+                                                    <a href="#">
+                                                        <center><i style="font-size: 30px;" class="fa fa-shopping-cart"></i></center>
+                                                    </a>
+                                                    <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" data-toggle="modal" >
+                                                        <center><i style="font-size: 20px;" class="fa fa-eye"></i></center>
+                                                    </a>
                                                 </div>
-                                                
+                                            </div>
+                                            <div class="product-dsc">
+                                                <p><a href="#"><center> <?php echo $value['tenSP'] ?> </center></a></p>
+                                                <span><center><?php echo $value['Dongia'].".000 vnd" ?></center></span>
                                             </div>
                                         </div>
-                                    </div>
+                        </div>
 
-                                <?php  } ?>
+                         <?php  } ?>      
                                    
-
-
-
-                    <!-- class item để chạy sldie -->
-
-
-
-                                <div class="item">  
-
-                                     <?php foreach ($data_sanphamlienquan as $value) { ?>
-
-                                    <div class="col-sm-4">
-                                        <div class="product-image-wrapper">
-                                            <div class="single-products">
-                                                <div class="productinfo text-center">
-                                                    <img src="images/home/recommend1.jpg" alt="" />
-                                                    <h2>$56</h2>
-                                                    <p></p>
-                                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                <?php  } ?>
-
-
-                                    
-                                </div>
-
-
-
-
-
                             </div>
 
 
                             <!-- 2 mũi tên trong slide -->
 
 
-                             <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
-                              </a>
-                              <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-                                <i class="fa fa-angle-right"></i>
-                              </a>  
-
-
-                        </div>
+                        </div> 
                     </div><!--/recommended_items-->
 
 

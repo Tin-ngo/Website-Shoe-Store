@@ -146,21 +146,53 @@
                                     <!-- /comments -->
                                 </div>
                                 <hr />
+
+
+
+
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                Email:
+                                            </td>
+                                            <td>
+                                                Nội dung góp ý:
+                                            </td>
+                                        </tr>
+                                        <?php foreach ($xem_gopy as $value) { ?>
+                                            
+                                        <tr>
+                                            <td>
+                                               <?php echo $value['email']; ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $value['noidung'];?>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                    </table>
+                                </div>
+
+
+
+
+
                                 <div class="your-rating log-title">
                                     <h3>Góp ý :</h3>
                                 </div>
                                 <div class="custom-input">
-                                    <form action="" method="post">
+                                    <form action="?action=gopy" method="POST">
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="input-mail">
                                                     <span>Nhập email của bạn:</span>
-                                                    <input  type="text" name="subject">
+                                                    <input  type="text" name="email_gopy">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12">
                                                 <div class="custom-mess">
-                                                <textarea  name="contents" placeholder="Nội dung góp ý"></textarea>
+                                                <textarea  name="noidung_gopy" placeholder="Nội dung góp ý"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12">

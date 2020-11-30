@@ -81,25 +81,45 @@
 
                  </div>
                </div>
-               <div class="dropdown" style="float:right;">
+        
+             <div class="dropdown" style="float:right;">
                 <button class="dropbtn">Giá</button>
-                 <div class="dropdown-content" style="padding: 5px;">
 
-                 <input type="radio" id="age1" name="age" value="30">
-                 <label for="age1">100.000 - 300.000 vnd</label><br>
-                 <input type="radio" id="age2" name="age" value="60">
-                 <label for="age2">300.000 - 500.000 vnd</label><br>  
-                 <input type="radio" id="age3" name="age" value="100">
-                 <label for="age3">500.000 - 700.000 vnd</label><br>
-                 <input type="radio" id="age3" name="age" value="100">
-                 <label for="age3">700.000 - 1000.000vnd</label><br>
-                 <input type="radio" id="age3" name="age" value="100">
-                 <label for="age3">1000.000 vnd trở lên</label><br>
+        <form method="POST" action="?action=cuahang1">
+                 <div class="dropdown-content" style="padding: 5px;">
+         
+                 <label>Chọn giá bắt đầu: </label>
+                 <select name="a">
+                   <option value="100">100.000 vnd</option>
+                   <option value="200">200.000 vnd</option>
+                   <option value="300">300.000 vnd</option>
+                   <option value="400">400.000 vnd</option>
+                   <option value="500">500.000 vnd</option>
+                 </select>
+
+                 <br>
+                 <br>
+
+                <label>Chọn giá Kết thúc: </label>
+                 <select name="b">
+                   <option value="600">600.000 vnd</option>
+                   <option value="700">700.000 vnd</option>
+                   <option value="800">800.000 vnd</option>
+                   <option value="900">900.000 vnd</option>
+                   <option value="1000">1.000.000 vnd</option>
+                 </select>
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                  <center>
                  <input type="submit" value="Tìm Kiếm">
                  </center>
-
+        
                  </div>
+        </form>
                </div>
 
         </div>
@@ -132,13 +152,17 @@
                                             <div class="product-f">
                                                 <a href="#"><img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" alt="Product Title" class="img-products" /></a>
                                                 <div class="actions-btn">
-                                                    <a href="#"><i style="font-size: 25px; text-align: center;" class="fa fa-shopping-cart"></i></a>
-                                                    <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" data-toggle="modal" ><i style="font-size: 25px; text-align: center;" class="fa fa-eye"></i></a>
+                                                    <a href="#">
+                                                        <center><i style="font-size: 30px;" class="fa fa-shopping-cart"></i></center>
+                                                    </a>
+                                                    <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" data-toggle="modal" >
+                                                        <center><i style="font-size: 20px;" class="fa fa-eye"></i></center>
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="product-dsc">
                                                 <p><a href="#"><center> <?php echo $value['tenSP'] ?> </center></a></p>
-                                                <span><center><?php echo "$".$value['Dongia'] ?></center></span>
+                                                <span><center><?php echo $value['Dongia'].".000 vnd" ?></center></span>
                                             </div>
                                         </div>
                         </div>

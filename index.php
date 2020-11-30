@@ -22,7 +22,6 @@
             $index = new showcuahang();
             $index->list1();
             break;
-        
 
      
          
@@ -65,6 +64,12 @@
             require_once('controller/chitietmathang_controller.php');
             $index = new chitietmathang();
             $index->chitiet_hang();
+            break;
+
+        case 'gopy':
+            require_once('controller/chitietmathang_controller.php');
+            $index = new chitietmathang();
+            $index->gopy();
             break;
 
 
