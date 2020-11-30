@@ -56,7 +56,7 @@
                     <div class="features_items"><!--features_items-->
                        
                         <h2 class="title text-left" id="makm">SẢN PHẨM NỔI BẬT
-                            <a href="?action=cuahang" class="pull-right" id="textid">Xem tất cả >></a>
+                            <a href="?action=cuahang1" class="pull-right" id="textid">Xem tất cả >></a>
                         </h2>
                    
                    <?php foreach ($data_sanphamtrangchu as $value) {  ?>
@@ -66,7 +66,7 @@
                                             <div class="product-f">
                                                 <a href="#"><img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" alt="Product Title" class="img-products" /></a>
                                                 <div class="actions-btn">
-                                                    <a href="#"><i style="font-size: 25px; text-align: center;" class="fa fa-shopping-cart"></i></a>
+                                                    <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>"><i style="font-size: 25px; text-align: center;" class="fa fa-shopping-cart"></i></a>
                                                     <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" data-toggle="modal" ><i style="font-size: 25px; text-align: center;" class="fa fa-eye"></i></a>
                                                 </div>
                                             </div>

@@ -96,9 +96,9 @@
 
            //GÓp ý
 
-           function them_gopy($email, $noidung)
+           function them_gopy($idSP, $email, $noidung)
            {
-            $query = "INSERT INTO gopy(email, noidung) VALUES ('$email', '$noidung') " ;
+            $query = "INSERT INTO gopy(idSP, email, noidung) VALUES ('$idSP', '$email', '$noidung')" ;
             $result = $this->conn->query($query);
 
             if($result == true){

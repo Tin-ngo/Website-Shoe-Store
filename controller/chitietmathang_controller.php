@@ -62,10 +62,11 @@
 
             public function gopy()
             {  
+                $idSP = isset($_GET['id'])? $_GET['id'] : '1';
                 $email = filter_input(INPUT_POST, 'email_gopy');
                 $noidung = filter_input(INPUT_POST, 'noidung_gopy');
 
-                $this->chitietmathang_controller->them_gopy($email, $noidung);
+                $this->chitietmathang_controller->them_gopy($id, $email, $noidung);
             }
 
 

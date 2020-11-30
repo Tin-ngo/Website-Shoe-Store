@@ -147,12 +147,12 @@
                         
 <?php foreach ($data_sanphamcuahang as $value) { ?>
 
-<div class="col-sm-3">
+                <div class="col-sm-3">
                             <div class="single-product">
                                             <div class="product-f">
                                                 <a href="#"><img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" alt="Product Title" class="img-products" /></a>
                                                 <div class="actions-btn">
-                                                    <a href="#">
+                                                    <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>">
                                                         <center><i style="font-size: 30px;" class="fa fa-shopping-cart"></i></center>
                                                     </a>
                                                     <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" data-toggle="modal" >

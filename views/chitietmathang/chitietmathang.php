@@ -160,9 +160,11 @@
                                                 Nội dung góp ý:
                                             </td>
                                         </tr>
+
                                         <?php foreach ($xem_gopy as $value) { ?>
-                                            
+                                             <?php if($data_chitiet['idSP'] == $value['idSP']) { ?>
                                         <tr>
+
                                             <td>
                                                <?php echo $value['email']; ?>
                                             </td>
@@ -170,6 +172,7 @@
                                                 <?php echo $value['noidung'];?>
                                             </td>
                                         </tr>
+                                    <?php }  ?>
                                     <?php } ?>
                                     </table>
                                 </div>
@@ -182,7 +185,7 @@
                                     <h3>Góp ý :</h3>
                                 </div>
                                 <div class="custom-input">
-                                    <form action="?action=gopy" method="POST">
+                                    <form action="?action=gopy&id=<?php echo $data_chitiet['idSP'] ?>" method="POST">
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="input-mail">
