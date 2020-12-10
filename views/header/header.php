@@ -63,9 +63,9 @@
                                     <!-- <a class="aacount" href="#"><center><span>Đăng nhập</span></center></a>-->
                                      <ul>
                                         <?php  if(isset($_SESSION['tendangnhap'])){ ?>
-                                        <li><b>Chào <?=$_SESSION['tendangnhap']?></b></li>
-                                        <li><a href="?action=taikhoan&id=<?php echo $_SESSION['tendangnhap']; ?>">Tài khoản</a></li>
-                                        <li><a href="?action=dangxuat">Đăng xuất</a></li>
+                                          <li></li>
+                                        <li><a class="aacount" href="?action=taikhoan&id=<?php echo $_SESSION['tendangnhap']; ?>"><span>Tài khoản</span></a></li>
+                                        <li><a class="aacount" href="?action=dangxuat" onclick="TBdangxuat()"><span>Đăng xuất</span></a></li>
                                     
                                         <?php if($_SESSION['admin'] == true){ ?>
                                         <li><a href="admin/?action=trangchu">Trang quản lý</a></li>
@@ -137,3 +137,10 @@
 <!-- end header bottom -->
     	
  <!-- /header -->
+
+
+ <script>
+   function TBdangxuat() {
+       alert("Bạn muốn đăng xuất?");
+}
+ </script>

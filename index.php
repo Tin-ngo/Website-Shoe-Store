@@ -149,9 +149,14 @@
             $index->list();
             break;
         case 'quenmatkhau':  // chưa làm
-            require_once('controller/cuahang_controller.php');
-            $index = new showcuahang();
+            require_once('controller/quenmatkhau_controller.php');
+            $index = new quenmk();
             $index->list();
+            break;
+        case 'laymatkhau_submit':  // chưa làm
+            require_once('controller/quenmatkhau_controller.php');
+            $index = new quenmk();
+            $index->laymk();
             break;
         case 'thanhtoan':  
             require_once('controller/thanhtoan_controller.php');

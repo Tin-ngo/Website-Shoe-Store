@@ -42,14 +42,11 @@
          {
          	if(isset($_SESSION['tendangnhap'])){
          		unset($_SESSION['tendangnhap']);
-         		echo "<script language='javascript'>alert('Đăng xuất thành công');";
-			    echo "location.href='?action=trangchu';</script>";
+                unset($_SESSION['matkhau']);
+         		echo "<script language='javascript'></script>";   //alert('Đăng xuất thành công');
+			    echo "<script language='javascript'>location.href='?action=trangchu';</script>";
          	}
-         	if (isset($_SESSION['matkhau'])) {
-         		unset($_SESSION['matkhau']);
-         		echo "<script language='javascript'>alert('Đăng xuất thành công');";
-			    echo "location.href='?action=trangchu';</script>";
-         	}
+         
             
          }
 

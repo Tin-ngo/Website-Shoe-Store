@@ -56,8 +56,8 @@
             
             $_SESSION['tendangnhap']=$tendangnhap;
             $_SESSION['matkhau']=$matkhau;
-            echo "<script language='javascript'>alert('Dang nhap thanh cong');";
-			echo "location.href='?action=trangchu';</script>";
+  //          echo "<script language='javascript'>alert('Dang nhap thanh cong');";
+			echo "<script language='javascript'>location.href='?action=trangchu';</script>";
             }
             else
             {

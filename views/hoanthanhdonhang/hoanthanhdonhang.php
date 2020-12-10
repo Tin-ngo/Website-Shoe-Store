@@ -63,7 +63,7 @@
 											<th><?php foreach ($_SESSION['sanpham'] as $value) { ?>
 										               <?php echo $value['tenSP'].'<br>'; ?>
 										       <?php } ?></th>
-											<td><?php echo $_SESSION['tongtien'] ?></td>
+											<td><?php echo $_SESSION['tongtien'] ?>.000 VND</td>
 										</tr>
 
 								<tr>
@@ -83,7 +83,7 @@
 										<?php
 										if($_SESSION['giatriKM'] != 0){
 								         	$_SESSION['tongtien_KM'] = ( $_SESSION['tongtien'] - ($_SESSION['tongtien'] * ($_SESSION['giatriKM'] )) / 100 );
-									        echo $_SESSION['tongtien_KM'] ;
+									        echo $_SESSION['tongtien_KM'].'.000 VND' ;
 									    }
 									    else{
 									    	echo $_SESSION['tongtien'];

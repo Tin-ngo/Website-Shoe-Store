@@ -78,7 +78,7 @@
                                 <div class="ratting floatright">
                                     
                                 </div>
-                                <h5><?php echo $data_chitiet['Dongia']; ?> VNĐ</h5>
+                                <h5><?php echo $data_chitiet['Dongia']; ?>.000 VNĐ</h5>
                              
                                     <p>Mô tả: <?php echo $data_chitiet['mota']; ?></p>
                             

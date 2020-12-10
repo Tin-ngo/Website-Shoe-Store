@@ -51,6 +51,10 @@
             require_once('dangnhap/quenmk.php');
             # code...
             break;
+        case 'laymatkhau_submit':
+            require_once('dangnhap/quenmk.php');
+            # code...
+            break;
         case 'thanhtoan':
             require_once('thanhtoan/thanhtoan.php');
             # code...

@@ -60,7 +60,7 @@
             
                  }
 
-             if(isset($_POST['a'])&& isset($_POST['b'])){
+             if(isset($_POST['a']) && isset($_POST['b'])){
                 $a = $_POST['a'];
                 $b = $_POST['b'];
 
@@ -71,6 +71,22 @@
                 $b = null;
             
                  }
+            
+
+            // chọn sản phẩm có khuyến mãi
+            if(isset($_GET['gtkm'])){
+                $gtkm = $_GET['gtkm'];
+
+                  $data_sanphamcuahang = $this->cuahang_controller->chonsanpham_km($gtkm);
+
+            }else{
+                $gtkm = null;
+            
+                 }
+
+
+
+
            
 
 

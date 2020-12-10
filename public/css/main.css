@@ -206,13 +206,17 @@ div.cuahang{
 .dropdown22:hover .dropdown-content22 {
   display: block;
 }
+li a.account{
+  text-align: center;
+}
 a.aacount span{
-  font-size: 10px;
+  font-size: 13px;
   margin-left: -30px;
 }
-a.aacount:hover{
-  font-size: 20px;
-  text-decoration: underline;
+a.aacount span:hover{
+  font-weight: bold;
+  color:red;
+  text-underline-position: none;
   color:red;
 }
 .hd_kh{
@@ -505,6 +509,11 @@ div.actions-btnn span{
 #textid{
   color: red;
   font-size: 13px;
+}
+
+
+div.onee legend.dangkythanhvien{
+  color:gray;
 }
 
 

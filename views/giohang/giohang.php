@@ -47,7 +47,7 @@
 								<p> </p> 
 							</td>
 							<td class="cart_price">
-								<p><?= $value['Dongia'] ?></p>
+								<p><?= $value['Dongia'] ?>.000 VND</p>
 							</td>
 							<td class="cart_quantity">
 
@@ -70,7 +70,7 @@
 
 		 					</td>
 							<td class="cart_total">
-								<p class="cart_total_price"><?php $_SESSION['tongtien'] += $value['thanhtien']; echo $value['thanhtien']; ?></p>
+								<p class="cart_total_price"><?php $_SESSION['tongtien'] += $value['thanhtien']; echo $value['thanhtien'].'.000 VND'; ?></p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href="?action=giohang&act=xoagiohang&id=<?= $value['idSP'] ?>"><i class="fa fa-times"></i></a>
@@ -91,7 +91,7 @@
 							<td style="font-size: 20px; color:orange; font-weight: bold; padding: 10px;">
 								Tổng Tiền: <?php 
 								if(isset($_SESSION['tongtien'])){
-								echo $_SESSION['tongtien'];
+								echo $_SESSION['tongtien'].'.000 VND';
 							}else{
 								echo "";
 							}

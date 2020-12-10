@@ -30,7 +30,7 @@
 <div class="khuyenmai">
     <div class="col-sm-12">
            <h2>Khuyến Mãi Hấp Dẫn Lên Đến 30%</h2>
-          <center><button type="button" class="btn btn-outline-warning"><a href="?action=cuahang1">Mua Ngay</a></button> </center>
+          <center><button type="button" class="btn btn-outline-warning"><a href="?action=cuahang&gtkm=30">Mua Ngay</a></button> </center>
     </div>
 
  </div>
@@ -66,7 +66,7 @@
                                             <div class="product-f">
                                                 <a href="#"><img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" alt="Product Title" class="img-products" /></a>
                                                 <div class="actions-btn">
-                                                    <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>"><i style="font-size: 25px; text-align: center;" class="fa fa-shopping-cart"></i></a>
+                                                    <a href="?action=giohang&act=add_giohang&id=<?= $value['idSP'] ?>"><i style="font-size: 25px; text-align: center;" class="fa fa-shopping-cart"></i></a>
                                                     <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" data-toggle="modal" ><i style="font-size: 25px; text-align: center;" class="fa fa-eye"></i></a>
                                                 </div>
                                             </div>

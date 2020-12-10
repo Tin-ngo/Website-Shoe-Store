@@ -87,7 +87,8 @@
                                    </fieldset> 
                                   </form> 
                                    <div class="text-center">
-                                    <a data-toggle="tab" href="#popular" class="tk">Đăng ký tài khoản?</a>
+                                    <a data-toggle="tab" href="#popular" class="tk">Đăng ký tài khoản? </a>
+                                    
                                     <a href="?action=quenmatkhau" class="tk">Quên mật khẩu?</a>
 
                                     </div>
@@ -137,8 +138,12 @@
 
                          <div class="roww"> 
                           <div class="onee" style="background-color: lightgray;"> 
-                           <legend><a>
-                            <i class="glyphicon glyphicon-globe"></i></a> Đăng ký thành viên!
+                           <legend class="dangkythanhvien"><a>
+                            <br>
+                            <i class="glyphicon glyphicon-globe"></i></a>
+                             Đăng ký thành viên!
+                             <br>
+                             <br>
                            </legend> 
 
                            <form action="?action=dangky_xl" method="POST" class="form" role="form"> 
@@ -192,7 +197,7 @@
                            <div class="text-center">
                             <br>
                             <span> Bạn đã có tài khoản? </span>
-                            <a class="dn" data-toggle="tab" href="#arrival" >Đăng nhập</a> </div>
+                            <a class="dn" data-toggle="tab" href="#arrival"style="color:gray;">Đăng nhập</a> </div>
                           </div> 
                           </div> 
                          </div>

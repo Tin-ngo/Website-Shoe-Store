@@ -151,6 +151,23 @@
 
 
 
+          function chonsanpham_KM($gtkm)
+          {
+            $query = " SELECT * FROM khuyenmai INNER JOIN sanpham ON khuyenmai.idKM = sanpham.idKM WHERE giatriKM = '$gtkm' ";
+
+
+            $result = $this->conn->query($query);
+
+               $data = array();
+
+               while ($row = $result->fetch_assoc()) {
+                   $data[] = $row;
+                }
+               return $data;
+          }
+
+
+
 
 
 /*   Phân trang

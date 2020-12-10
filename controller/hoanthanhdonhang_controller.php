@@ -35,6 +35,8 @@
 
            $this->hoanthanhdonhang_controller->gui_donhang_choadmin($idUser, $idSP, $tongtien);
 
+
+
         	require_once('views/index.php');
         }
 
@@ -49,6 +51,9 @@
                 echo "location.href='?action=trangchu';</script>";
         }
     }
+
+
+     
 
 
     }

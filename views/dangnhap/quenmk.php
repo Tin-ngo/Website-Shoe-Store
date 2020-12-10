@@ -1,3 +1,4 @@
+
 <div class="tab-products single-products section-padding extra-padding-top">
     <div class="container">
 
@@ -15,6 +16,14 @@
             </div>
         </div>
 
+
+<center>
+  <span class="pull-right" style="font-size: 20px; color: blue;">
+ <?php if(isset($mk['matkhau'])){      ?>
+   <?php  echo 'Mật khẩu của bạn là: '.$mk['matkhau']; ?>
+  <?php   }else{    echo "";    }   ?>
+</span>
+</center>
 
 
         <div class="text-center tab-content">
@@ -36,17 +45,11 @@
                            </a> Hãy nhập thông tin của bạn
                            </legend> 
                            <!--     <form action="http://hocwebgiare.com" method="post" class="form" role="form"> -->
-                           <form action="dangkysubmit.php" method="POST" class="form" role="form"> 
-  
-   
 
-                            <!--  <input class="form-control" name="youremail" placeholder="Email" type="email">   -->
-                             <input class="form-control" type="text" name="" placeholder="Nhập Email của bạn">
+                           <form action="?action=laymatkhau_submit" method="POST" class="form" role="form"> 
 
-
-   
-
-    
+                              <!--  <input class="form-control" name="youremail" placeholder="Email" type="email">   -->
+                             <input class="form-control" type="text" name="email_laymk" placeholder="Nhập Email của bạn">
 
                            <!--  <button class="btn btn-lg btn-primary btn-block" type="submit"> Đăng ký</button>  -->
 
@@ -70,8 +73,6 @@
                         </div>
 
 
-
-      
                                   
                        
                             </div>
@@ -89,4 +90,5 @@
                                 </div>
                             </div>
                         </div>
+
                         
