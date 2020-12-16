@@ -76,10 +76,10 @@
           </li>
           <li>
             <a href="#" style="margin-right: 30px;">
-          	<img class="anhuser" src="public_admin/image/author.jpg" alt="">
+          	<img class="anhuser" src="public_admin/image/author.jpg" alt="">&emsp;
             <?php
             if(isset($_SESSION['tendangnhap'])){
-              echo "Xin chào ".$_SESSION['tendangnhap'];;
+              echo "Xin chào ". $_SESSION['tendangnhap'];
             }else{
               echo "Xin Chào ...";
             }
@@ -88,8 +88,9 @@
             </a>
             
           </li>
+          
         </ul>
-
+<!--
         <ul class="nav navbar-nav navbar-right" style="padding-right: 30px;">
           <li class="nav2">
 
@@ -99,6 +100,7 @@
             <a href="#"><i class="fa fa-envelope nav1"></i></a>
           </li>
         </ul>
+-->
       </div>
     </nav>
 

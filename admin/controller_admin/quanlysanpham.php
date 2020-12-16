@@ -27,16 +27,26 @@
             }
             require_once('views_admin/index.php');
 
-
-
     	}
+
+
+
+
+         function them_giaodien()
+         {
+            $data_km = $this->sanpham_model->khuyenmai();
+
+            require_once('views_admin/index.php');
+         }
+
+
 
     	 public function details()  // hàm hiển thị chi tiết thông tin của một sản phẩm được chọn bởi $id
         {
             $id = isset($_GET['id']) ? $_GET['id'] : '1';
             $data = $this->sanpham_model->find($id);
             $data_mau = $this->sanpham_model->xem_mau($id);
-             $data_size = $this->sanpham_model->xem_size($id);
+            $data_size = $this->sanpham_model->xem_size($id);
             require_once('views_admin/index.php');
         } 
 
@@ -76,9 +86,11 @@
              
              $mota =filter_input(INPUT_POST, 'mota');
 
+             $soluong =filter_input(INPUT_POST, 'soluong');
+
             
 
-            $this->sanpham_model->update($idSP, $idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota);
+            $this->sanpham_model->update($idSP, $idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota, $soluong);
 
          }
 
@@ -110,12 +122,39 @@
 
              $ngaynhap =filter_input(INPUT_POST, 'ngaynhap');
              $mota =filter_input(INPUT_POST, 'mota');
+              $soluong =filter_input(INPUT_POST, 'soluong');
 
-            $this->sanpham_model->insert($idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota);
+
+            $this->sanpham_model->insert($idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota, $soluong);
          }
 
 
-         public function xoasanpham()                          //dang
+
+
+         // thêm mà nếu trùng tên, màu, size sản phẩm thì cộng thêm vào số lượng
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         public function xoasanpham()    
          {
             $id = isset($_GET['id']) ? $_GET['id'] : '1';
 

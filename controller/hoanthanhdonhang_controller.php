@@ -32,8 +32,9 @@
            $idUser = isset($_GET['idUser']) ? $_GET['idUser'] : '0';
            $idSP = isset($_GET['idSP']) ? $_GET['idSP'] : '0';
            $tongtien = isset($_GET['tongtien']) ? $_GET['tongtien'] : '0';
+           $tongtien_gui = $_SESSION['tongtien'] - $tongtien;
 
-           $this->hoanthanhdonhang_controller->gui_donhang_choadmin($idUser, $idSP, $tongtien);
+           $this->hoanthanhdonhang_controller->gui_donhang_choadmin($idUser, $idSP, $tongtien_gui);
 
 
 

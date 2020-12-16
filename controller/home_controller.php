@@ -8,7 +8,7 @@
      */
     class showhome
     {
-    	var $banner_controller;
+    	var $home_controller;
     	
     	function __construct()
     	{
@@ -22,6 +22,9 @@
             $data_loaisanpham = $this->home_controller->loaisanpham();
 
             $data_sanphamtrangchu = $this->home_controller->sanpham_trangchu();
+
+            $data_layout = $this->home_controller->layout();
+        
 
 
         	require_once('views/index.php');

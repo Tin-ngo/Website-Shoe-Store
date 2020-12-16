@@ -80,7 +80,7 @@
                                 </div>
                                 <h5><?php echo $data_chitiet['Dongia']; ?>.000 VNĐ</h5>
                              
-                                    <p>Mô tả: <?php echo $data_chitiet['mota']; ?></p>
+                                    <p><?php echo $data_chitiet['mota']; ?></p>
                             
                                 <div class="list-btn">
                                     <a href="?action=giohang&act=add_giohang&id=<?= $data_chitiet['idSP'] ?>">Thêm vào giỏ</a>
@@ -121,6 +121,10 @@
                                             <li>
                                                 <span>Kích cỡ</span>
                                                 <div><?php echo $size['size']; ?></div>
+                                            </li>
+                                            <li>
+                                                <span>Số lượng còn trong kho</span>
+                                                <div><?php echo $size['soluong']; ?></div>
                                             </li>
                                             <li>
                                                 <span>Ngày nhập</span>

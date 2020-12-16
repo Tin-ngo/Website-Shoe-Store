@@ -1,3 +1,20 @@
+<?php 
+if(isset($data_layout)){
+foreach ($data_layout as $value) { ?>
+
+<?php 
+$_SESSION['time'] = $value['time'];
+$_SESSION['mail_1'] = $value['mail_1'];
+$_SESSION['mail_2'] = $value['mail_2'];
+$_SESSION['phone_1'] = $value['phone_1'];
+$_SESSION['phone_2'] = $value['phone_2'];
+$_SESSION['donvi'] = $value['donvi'];
+$_SESSION['diachi'] = $value['diachi'];
+?>
+
+  <?php }  } ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

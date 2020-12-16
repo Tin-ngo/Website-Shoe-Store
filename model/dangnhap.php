@@ -22,7 +22,7 @@
             $result = $this->conn->query($query);
 
             if($result == true){
-                echo "<script> alert('ĐÃ ĐĂNG KÝ THÀNH CÔNG, BẠN SẼ ĐẾN TRANG ĐĂNG NHẬP');";
+                echo "<script>";
                 echo "location.href='?action=dangnhap';</script>";
             }
             else{
@@ -46,11 +46,17 @@
 
             if(mysqli_num_rows($kq)>0)
             { 
-         /*   echo "Chao ban ".$d['HoTen'];*/
                 if($row['idQuyen'] == 1){
                 	$_SESSION['admin'] = true;
                 }else{
                     $_SESSION['admin'] = false;
+                }
+
+                if($row['idQuyen'] == 2)
+                {
+                    $_SESSION['banhang'] = true;
+                }else{
+                    $_SESSION['banhang'] = false;
                 }
                 
             

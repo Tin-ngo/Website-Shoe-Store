@@ -23,7 +23,8 @@
             $gioitinh =filter_input(INPUT_POST, 'gioitinh_dk');
             $sodienthoai =filter_input(INPUT_POST, 'sodienthoai_dk');
             $tendangnhap =filter_input(INPUT_POST, 'tendangnhap_dk');
-            $matkhau =filter_input(INPUT_POST, 'matkhau_dk');
+            $matkhau = filter_input(INPUT_POST, 'matkhau_dk');
+          //  $matkhau = md5("$mk");  mã hóa mật khẩu
 
             $this->dangnhap_dangky_model->dangky_model($ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau);
          }

@@ -93,11 +93,11 @@
 
             if($result == true){
 
-                echo "<script> alert('Đã xóa thành công');";
+                echo "<script> ";
                 echo "location.href='?action=khuyenmai';</script>";
 
             }else{
-                echo "<script> alert('LỖI, Chưa xóa được');";
+                echo "<script>";
                 echo "location.href='?action=khuyenmai';</script>";
             }
          }

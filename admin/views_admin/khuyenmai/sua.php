@@ -16,11 +16,11 @@
            </tr>
             <tr>
                <td>Loại Khuyến Mãi:</td>
-               <td><input type="text" name="loaiKM" value=<?php echo $data['loaiKM']; ?> ></td>
+               <td><input required type="text" name="loaiKM" value=<?php echo $data['loaiKM']; ?> ></td>
            </tr>
             <tr>
                <td>Giá trị khuyễn mãi:</td>
-               <td><input type="text" name="giatriKM" value=<?php echo $data['giatriKM']; ?>></td>
+               <td><input required type="text" name="giatriKM" value=<?php echo $data['giatriKM']; ?>></td>
            </tr>
             <tr>
                <td>Ngày bắt đầu:</td>

@@ -40,7 +40,7 @@
 					   foreach ($_SESSION['sanpham'] as $value) { ?>
 						<tr>
 							<td class="cart_product">
-								<img height='100' src="admin/public_admin/image/sanpham/<?= $value['anh1'] ?>">
+								<img height='90' width="100" src="admin/public_admin/image/sanpham/<?= $value['anh1'] ?>">
 							</td>
 							<td class="cart_description">
 								<h4><a href=""><?= $value['tenSP'] ?></a></h4>

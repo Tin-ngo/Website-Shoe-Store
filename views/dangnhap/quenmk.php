@@ -55,7 +55,6 @@
 
                                   <button class="btn btn-lg btn-primary btn-block button2" type="submit" name="submit">Lấy mật khẩu</button>
 
-                                  <button class="btn btn-lg btn-primary btn-block button2" type="reset">Làm mới</button>
 
                            </form> 
 

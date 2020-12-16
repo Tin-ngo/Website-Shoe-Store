@@ -17,7 +17,7 @@
                          </div>
                        </div>
                        <span class="kedoc">|</span>
-                       Open 24/7 : Mail: abc@gmail.com &emsp; Phone: 0123456789
+                       Open: <?php echo $_SESSION['time'] ?> &emsp; Mail:  <?php echo $_SESSION['mail_1'] ?>&emsp; Phone:(+84) <?php echo $_SESSION['phone_1'] ?>
                      </div>
 
 
@@ -33,7 +33,7 @@
                                  <?php  if(!isset($_SESSION['tendangnhap'])){ ?>
                                
                                   <i class="fa fa-plus img_user" title="Tài Khoản">
-                                    <a href="?action=dangnhap" class="dangkya">&emsp;Đăng ký &ensp; </a></i>
+                                    <a href="?action=dangnhap" class="dangkya">Đăng ký </a></i>
                                   <?php }else{
 
                                   } ?>
@@ -64,11 +64,11 @@
                                      <ul>
                                         <?php  if(isset($_SESSION['tendangnhap'])){ ?>
                                           <li></li>
-                                        <li><a class="aacount" href="?action=taikhoan&id=<?php echo $_SESSION['tendangnhap']; ?>"><span>Tài khoản</span></a></li>
+                                        <li><a class="aacount" style="margin-left: -40px;" href="?action=taikhoan&id=<?php echo $_SESSION['tendangnhap']; ?>"><span>Tài khoản</span></a></li><br>
                                         <li><a class="aacount" href="?action=dangxuat" onclick="TBdangxuat()"><span>Đăng xuất</span></a></li>
                                     
-                                        <?php if($_SESSION['admin'] == true){ ?>
-                                        <li><a href="admin/?action=trangchu">Trang quản lý</a></li>
+                                        <?php if($_SESSION['admin'] == true || $_SESSION['banhang'] == true){ ?>
+                                        <li><a class="aacount" style="margin-left: -10px;" href="admin/?action=trangchu">Trang quản lý</a></li>
                                      <?php }}else{ ?>
                                         <li><center><b class="hd_kh">Khách hàng<br><br></b></center></li>
                                         <li><a class="aacount" href="?action=dangnhap"><span>Đăng nhập</span></a></li>

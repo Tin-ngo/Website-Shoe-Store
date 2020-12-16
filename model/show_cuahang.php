@@ -30,7 +30,11 @@
 
           function sanpham_cuahang()  //đang
           {
-               $query = "SELECT * from sanpham";
+               $query = "SELECT * 
+                          from ((sanpham 
+                          INNER JOIN size ON sanpham.idsize = size.idsize)
+                          INNER JOIN color ON sanpham.idcolor = color.idcolor)";
+
                $result = $this->conn->query($query);
 
                $data = array();
@@ -43,7 +47,9 @@
 //tìm kiếm sản phẩm chung
           function timkiem_sp($timkiem_sp)
         {
-            $query = "SELECT * FROM sanpham WHERE tenSP LIKE '%$timkiem_sp%' ORDER BY idSP";
+            $query = "SELECT * from ((sanpham 
+                          INNER JOIN size ON sanpham.idsize = size.idsize)
+                          INNER JOIN color ON sanpham.idcolor = color.idcolor) WHERE tenSP LIKE '%$timkiem_sp%' ORDER BY idSP";
 
             $result = $this->conn->query($query);
 
@@ -61,7 +67,9 @@
 
            function sanpham_cuahangtheoid($idLoaiSP)  //đang
           {
-               $query = "SELECT * FROM sanpham WHERE idLoaiSP = $idLoaiSP";
+               $query = "SELECT * from ((sanpham 
+                          INNER JOIN size ON sanpham.idsize = size.idsize)
+                          INNER JOIN color ON sanpham.idcolor = color.idcolor) WHERE idLoaiSP = $idLoaiSP";
                return $this->conn->query($query);
 
           }
@@ -105,7 +113,9 @@
 
           function chonsanpham_mau($id)
           {
-            $query = "SELECT * FROM sanpham WHERE idcolor = '$id' ";
+            $query = "SELECT * from ((sanpham 
+                          INNER JOIN size ON sanpham.idsize = size.idsize)
+                          INNER JOIN color ON sanpham.idcolor = color.idcolor) WHERE color.idcolor = $id ";
 
             $result = $this->conn->query($query);
 
@@ -119,7 +129,9 @@
  
           function chonsanpham_size($id)
           {
-            $query = "SELECT * FROM sanpham WHERE idsize = '$id' ";
+            $query = "SELECT * from ((sanpham 
+                          INNER JOIN size ON sanpham.idsize = size.idsize)
+                          INNER JOIN color ON sanpham.idcolor = color.idcolor) WHERE size.idsize = $id";
 
             $result = $this->conn->query($query);
 
@@ -137,7 +149,9 @@
 
           function chonsanpham_gia($a, $b)    //đang làm
           {
-            $query = "SELECT * FROM sanpham WHERE  Dongia > $a AND Dongia < $b ";
+            $query = "SELECT * from ((sanpham 
+                          INNER JOIN size ON sanpham.idsize = size.idsize)
+                          INNER JOIN color ON sanpham.idcolor = color.idcolor) WHERE Dongia > $a AND Dongia < $b ";
 
             $result = $this->conn->query($query);
 
@@ -153,7 +167,11 @@
 
           function chonsanpham_KM($gtkm)
           {
-            $query = " SELECT * FROM khuyenmai INNER JOIN sanpham ON khuyenmai.idKM = sanpham.idKM WHERE giatriKM = '$gtkm' ";
+            $query = " SELECT * FROM (((sanpham 
+                          INNER JOIN khuyenmai ON khuyenmai.idKM = sanpham.idKM)
+                          INNER JOIN size ON sanpham.idsize = size.idsize)
+                          INNER JOIN color ON sanpham.idcolor = color.idcolor)
+                           WHERE giatriKM = '$gtkm' ";
 
 
             $result = $this->conn->query($query);

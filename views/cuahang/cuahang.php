@@ -95,6 +95,11 @@
                    <option value="300">300.000 vnd</option>
                    <option value="400">400.000 vnd</option>
                    <option value="500">500.000 vnd</option>
+                   <option value="600">600.000 vnd</option>
+                   <option value="700">700.000 vnd</option>
+                   <option value="800">800.000 vnd</option>
+                   <option value="900">900.000 vnd</option>
+                   <option value="1000">1.000.000 vnd</option>
                  </select>
 
                  <br>
@@ -102,6 +107,11 @@
 
                 <label>Chọn giá Kết thúc: </label>
                  <select name="b">
+                    <option value="100">100.000 vnd</option>
+                   <option value="200">200.000 vnd</option>
+                   <option value="300">300.000 vnd</option>
+                   <option value="400">400.000 vnd</option>
+                   <option value="500">500.000 vnd</option>
                    <option value="600">600.000 vnd</option>
                    <option value="700">700.000 vnd</option>
                    <option value="800">800.000 vnd</option>
@@ -161,7 +171,10 @@
                                                 </div>
                                             </div>
                                             <div class="product-dsc">
-                                                <p><a href="#"><center> <?php echo $value['tenSP'] ?> </center></a></p>
+                                                <p><a href="#"><center> <?php echo $value['tenSP'] ?></center></a></p>
+                                                <center>size:  <?php echo $value['size'] ?>  </center>
+                                                <center>Màu:  <?php echo $value['color'] ?>  </center>
+                                                <center>Số lượng:  <?php echo $value['soluong'] ?>  </center>
                                                 <span><center><?php echo $value['Dongia'].".000 vnd" ?></center></span>
                                             </div>
                                         </div>

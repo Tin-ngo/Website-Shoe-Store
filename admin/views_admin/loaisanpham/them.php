@@ -11,7 +11,7 @@
          
             <tr>
                <td>Tên loại sản phẩm:</td>
-               <td><input type="text" value="" name="tenLSP"></td>
+               <td><input type="text" value="" name="tenLSP" required></td>
            </tr>
             <tr>
                <td>Hình ảnh:</td>

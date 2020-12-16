@@ -45,13 +45,14 @@
 
           function getcolor($id)
           {
-              $query = "SELECT * FROM color WHERE idcolor = '$id'";
+              $query = " SELECT * FROM color INNER JOIN sanpham ON color.idcolor = sanpham.idcolor WHERE idSP = '$id'";
+
               return $this->conn->query($query)->fetch_assoc();
           }
 
           function getsize($id)
           {
-              $query = "SELECT * FROM size WHERE idsize = '$id'";
+              $query = "SELECT * FROM size INNER JOIN sanpham ON size.idsize = sanpham.idsize WHERE idSP='$id'"; 
               return $this->conn->query($query)->fetch_assoc();
           }
 

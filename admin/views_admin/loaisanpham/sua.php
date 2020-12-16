@@ -16,7 +16,7 @@
            </tr>
             <tr>
                <td>Tên loại sản phẩm:</td>
-               <td><input type="text" name="tenLSP" value=<?php echo $data['tenLSP']; ?> ></td>
+               <td><input required type="text" name="tenLSP" value=<?php echo $data['tenLSP']; ?> ></td>
            </tr>
             <tr>
                <td>Hình ảnh:</td>

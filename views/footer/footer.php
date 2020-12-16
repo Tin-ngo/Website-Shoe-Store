@@ -42,18 +42,18 @@
                                 <ul>
                                     <li>
                                         <i class="fa fa-map-marker"></i>
-                                        <p>Làng Đại học, Đà Nẵng</p>
-                                        <p>Khoa Công Nghệ Thông Tin & Truyền Thông - Đại Học Đà Nẵng</p>
+                                        <p><?php echo $_SESSION['diachi'] ?></p>
+                                        <p><?php echo $_SESSION['donvi'] ?></p>
                                     </li>
                                     <li>
                                         <i class="fa fa-phone"></i>
-                                        <p>(+84) 383425354</p>
-                                        <p>(+84) 129883287</p>
+                                        <p><?php echo '(+84) '.$_SESSION['phone_1']; ?></p>
+                                        <p><?php echo '(+84) '.$_SESSION['phone_2']; ?></p>
                                     </li>
                                     <li>
                                         <i class="fa fa-envelope"></i>
-                                        <p>19it4@gmail.com</p>
-                                        <p>vku@vku.udn.vn</p>
+                                        <p><?php echo $_SESSION['mail_1'] ?></p>
+                                        <p><?php echo $_SESSION['mail_2'] ?></p>
                                     </li>
                                 </ul>
                             </div>

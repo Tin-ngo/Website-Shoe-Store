@@ -146,12 +146,12 @@
                              <br>
                            </legend> 
 
-                           <form action="?action=dangky_xl" method="POST" class="form" role="form"> 
+                           <form action="?action=dangky_xl" method="POST" class="form" role="form" onsubmit="return validate()"> 
                         
                           <div class="col-sm-4">
-                            <input class="form-control" type="text" name="ho_dk" placeholder="Họ">
+                            <input class="form-control" type="text" name="ho_dk" placeholder="Họ" required>
 
-                            <input class="form-control" type="text" name="ten_dk" placeholder="Tên">
+                            <input class="form-control" type="text" name="ten_dk" placeholder="Tên" required>
                               <div class="pull-left" style="color:gray;font-size: 15px;">
                               Giới tính:
                             <input type="radio" name="gioitinh_dk" value="nam" checked> Nam
@@ -163,23 +163,23 @@
                           <div class="col-sm-4">
 
 
-                             <input class="form-control" type="text" name="diachi_dk" placeholder="địa chỉ">
-                             <input class="form-control" type="text" name="email_dk" placeholder="Email">
+                             <input class="form-control" type="text" name="diachi_dk" placeholder="địa chỉ" required>
+                             <input class="form-control" type="text" name="email_dk" placeholder="Email" required>
 
-                           <input class="form-control" type="text" name="sdt_dk" placeholder="Số điện thoại">
+                           <input class="form-control" type="text" name="sdt_dk" placeholder="Số điện thoại" required>
                            
                           </div>
 
                           <div class="col-sm-4">
 
                             <!--  <input class="form-control" name="youremail" placeholder="Email" type="email">   -->
-                             <input class="form-control" type="text" name="tendangnhap_dk" placeholder="Tên đăng nhập">
+                             <input class="form-control" type="text" name="tendangnhap_dk" placeholder="Tên đăng nhập" required>
 
                             <!-- <input class="form-control" name="password" placeholder="Mật khẩu" type="password">   -->
-                            <input class="form-control" type="password" name="matkhau_dk" placeholder="Mật khẩu">
+                            <input id="mk1" class="form-control" type="password" name="matkhau_dk" placeholder="Mật khẩu" required>
 
                             <!--  <input class="form-control" name="retypepassword" placeholder="Nhập lại mật khẩu" type="password">  --> 
-                            <input class="form-control" type="password" name="" placeholder="Nhập lại mật khẩu">
+                            <input id="mk2" class="form-control" type="password" name="" placeholder="Nhập lại mật khẩu" required>
                           </div>
    
 
@@ -189,7 +189,7 @@
 
                                   <button class="btn btn-lg btn-primary btn-block button2" type="submit" name="submit">Đăng ký</button>
 
-                                  <button class="btn btn-lg btn-primary btn-block button2" type="reset">Làm mới</button>
+                           <!--        <button class="btn btn-lg btn-primary btn-block button2" type="reset">Làm mới</button>   -->
 
                            </form> 
 
@@ -228,3 +228,17 @@
 
 
 </section>
+
+<script>
+    function validate() {
+      var n1 = document.getElementById("mk1");
+      var n2 = document.getElementById("mk2");
+      if(n1.value != "" && n2.value != "") {
+        if(n1.value == n2.value) {
+          return true;
+        }
+      }
+      alert("Mật khẩu không khớp với nhau. Hãy nhập lại Mật khẩu!");
+      return false;
+    }
+</script>

@@ -11,11 +11,11 @@
         
             <tr>
                <td>Loại Khuyến mãi:</td>
-               <td><input type="text" value="" name="loaiKM"></td>
+               <td><input type="text" value="" name="loaiKM" required></td>
            </tr>
             <tr>
                <td>Giá trị Khuyến mãi (%):</td>
-               <td><input type="text" value="" name="giatriKM"></td>
+               <td><input type="text" value="" name="giatriKM" required></td>
            </tr>
             <tr>
                <td>Ngày bắt đầu:</td>

@@ -3,7 +3,7 @@
 <div class="container-fluid" id="noidung">
 
 
-      <h1>TRANG CHỦ</h1>
+      <h1>THỐNG KÊ</h1>
       <br>
      <div class="col-sm-4">
           <div class="div1">
@@ -14,7 +14,7 @@
                      {
                        $sum_user +=1;
                         }
-                        echo "Tổng tài khoản hiện có là: ". $sum_user;
+                        echo "Tổng tài khoản là: "."<br><span style='color:orange;'> $sum_user</span>";
                       ?>
           </div>
      </div>
@@ -27,7 +27,7 @@
                      {
                        $sum_sanpham +=1;
                         }
-                        echo "Tổng sản phẩm hiện có là: ". $sum_sanpham;
+                        echo "Tổng sản phẩm là: "."<br><span style='color:orange;'>$sum_sanpham</span>";
                       ?>
           </div>
      </div>
@@ -40,7 +40,7 @@
                      {
                        $sum_loaisanpham +=1;
                         }
-                        echo "Tổng Loại sản phẩm hiện có là: ". $sum_loaisanpham;
+                        echo "Tổng Loại sản phẩm là: "."<br><span style='color:orange;'>$sum_loaisanpham</span>";
                       ?>
           </div>
      </div>
@@ -53,7 +53,7 @@
                      {
                        $sum_hoadon +=1;
                         }
-                        echo "Tổng hóa đơn hiện có là: ". $sum_hoadon;
+                        echo "Tổng hóa đơn là: "."<br><span style='color:orange;'>$sum_hoadon</span>";
                       ?>
           </div>
      </div>
@@ -66,7 +66,7 @@
                      {
                        $sum_banner +=1;
                         }
-                        echo "Tổng banner hiện có là: ". $sum_banner;
+                        echo "Tổng banner là: "."<br><span style='color:orange;'>$sum_banner</span>";
                       ?>
           </div>
      </div>
@@ -79,11 +79,88 @@
                      {
                        $sum_khuyenmai +=1;
                         }
-                        echo "Tổng các khuyến mãi hiện có là: ". $sum_khuyenmai;
+                        echo "Tổng các khuyến mãi là: "."<br><span style='color:orange;'>$sum_khuyenmai</span>";
                       ?>
           </div>
      </div>
 
-</div>
+<?php if($_SESSION['admin'] == true){ ?>
+
+     <div class="col-sm-12">
+          <a href="?action=xoalayout" class="pull-right">Reset data layout</a>
+           <button onclick="myFunction()"><a href="#sualayout">Quản lý layout</a></button>
+           <p></p>
+      </div>
+<?php }else{} ?>
+
+      <div id="myDIV" hidden>
+        
+      <div class="container">
+        <div class="col-sm-12"  style="background-color: lightgray;">
+          
+            <form action="?action=sualayout" method="POST" accept-charset="utf-8">
+           
+              <h3 style="margin: 30px;"><span id="sualayout"> Header - Footer </span></h3>
+
+<?php foreach ($data_layout as $value) {  ?>
+              <table style="margin-bottom: 70px;">
+                <tr>
+                  <td style="width: 90px;"> Time</td>
+                  <td> <input name="time" size="70" type="text" value="<?php echo $value['time'] ?>" required></td>
+                </tr>
+                <tr>
+                  <td> Mail_1</td>
+                  <td> <input name="mail_1" size="70" type="text" value="<?php echo $value['mail_1'] ?>" required></td>
+                </tr>
+                <tr>
+                  <td> Mail_2</td>
+                  <td> <input name="mail_2" size="70" type="text" value="<?php echo $value['mail_2'] ?>" required></td>
+                </tr>
+                <tr>
+                  <td> Địa chỉ</td>
+                  <td> <input name="diachi" size="70" type="text" value="<?php echo $value['diachi'] ?>" required></td>
+                </tr>
+                <tr>
+                  <td> Đơn vị</td>
+                  <td> <input name="donvi" size="70" type="text" value="<?php echo $value['donvi'] ?>" required></td>
+                </tr>
+                <tr>
+                  <td> phone_1 </td>
+                  <td>+84 <input name="phone_1" size="70" type="text" value="<?php echo $value['phone_1'] ?>" required></td>
+                </tr>
+                <tr>
+                  <td> phone_2 </td>
+                  <td>+84 <input name="phone_2" size="70" type="text" value="<?php echo $value['phone_2'] ?>" required></td>
+                </tr>
+                <tr>
+                  <td> <input size="70" style="width: 90px;" type="submit" value="Sửa"></td>
+                   <td></td>
+                </tr>
+
+              </table>
+<?php }  ?>
+            </form>
+           
+        </div>
+      </div>
+
+     </div>
+
 
 </div>
+
+
+
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>

@@ -26,10 +26,6 @@
                 $idLoaiSP = null;
             
                  }
-
-           
-            
-
             $data_loaisanpham = $this->cuahang_controller->loaisanpham();
 
              $color = $this->cuahang_controller->color();
@@ -46,9 +42,6 @@
                 $idmau = null;
             
                  }
-
-
-
 
             if(isset($_GET['idsize'])){
                 $idsize = $_GET['idsize'];
@@ -84,17 +77,9 @@
             
                  }
 
-
-
-
-           
-
-
-
-           
-
         	require_once('views/index.php');
         }
+        
 
          public function list1()
         {
@@ -126,17 +111,6 @@
 
             require_once('views/index.php');
         }
-
-
-
-//       public function gia()
-//        {
-  //          $a = filter_input(INPUT_POST, 'a');
- //           $b = filter_input(INPUT_POST, 'b');
-
-  //          $data_sanphamcuahang = $this->cuahang_controller->chonsanpham_gia($a, $b);
-
-  //      }
 
 
          

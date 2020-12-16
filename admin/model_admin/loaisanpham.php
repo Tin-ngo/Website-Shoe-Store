@@ -95,11 +95,11 @@
 
             if($result == true){
 
-                echo "<script> alert('Đã xóa loại sản phẩm thành công');";
+                echo "<script> ";
                 echo "location.href='?action=loaisanpham';</script>";
 
             }else{
-                echo "<script> alert('LỖI, Chưa xóa được loại sản phẩm');";
+                echo "<script>  ";
                 echo "location.href='?action=loaisanpham';</script>";
             }
          }

@@ -93,7 +93,7 @@
 
             if($result == true){
 
-                echo "<script> alert('Đã xóa thành công');";
+                echo "<script> ";
                 echo "location.href='?action=taikhoan';</script>";
 
             }else{

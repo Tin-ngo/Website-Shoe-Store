@@ -26,7 +26,7 @@
 
             $data_loaisanpham = $this->chitietmathang_controller->loaisanpham();
 
-            $ten_loaisanpham = $this->chitietmathang_controller->layten_loaisanpham($id);
+            
 
             $ten_color = $this->chitietmathang_controller->getcolor($id);
 
@@ -34,6 +34,8 @@
 
             $idLoaiSP = isset($_GET['idLoaiSP']) ? $_GET['idLoaiSP'] : '1';
             $data_sanphamlienquan = $this->chitietmathang_controller->sanphamlienquan($idLoaiSP);
+
+            $ten_loaisanpham = $this->chitietmathang_controller->layten_loaisanpham($idLoaiSP);
 
 
         	$xem_gopy = $this->chitietmathang_controller->xem_gopy();

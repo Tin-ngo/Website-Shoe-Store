@@ -105,6 +105,34 @@
             return $data;
         }
 
+        function all_layout()  
+        {
+            $query = "SELECT * FROM layout";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
+        function update_layout($time, $mail_1, $mail_2, $diachi, $donvi, $phone_1, $phone_2)  
+        {
+            $query = "UPDATE layout SET time='$time', mail_1='$mail_1', mail_2='$mail_2', diachi='$diachi', donvi='$donvi', phone_1='$phone_1', phone_2='$phone_2' WHERE id = '1'";
+
+            $result = $this->conn->query($query);
+
+            if($result == true){
+
+                header('Location: ?action=trangchu');
+            }
+        
+        }
+
 
     }
      

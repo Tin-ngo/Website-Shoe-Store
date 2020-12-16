@@ -2,9 +2,9 @@
 
 <div class="container-fluid" id="noidung">
       <h4>Database sanpham</h4>
-
+ <?php if($_SESSION['admin'] == true){ ?>
       <a class="pull-left themmoi" href="?action=them_sanpham_giaodien"> Thêm mới</a>
-
+<?php }else{} ?>
       <div class="search_box pull-right" style="margin-right: 50px; margin-top: 0px;">
           <form method="POST" action="?action=sanpham">
           <input type="text" placeholder="Search By Name" name="timkiem_sp">&ensp;
@@ -24,7 +24,7 @@
                   <th class="theadd">Tên sản phẩm</th>
                   <th class="theadd">Giá thành</th>
                   <th class="theadd">Loại</th>
-                  <th class="theadd">id Màu / id Size</th>
+                  <th class="theadd">Số lượng</th>
                   <th class="theadd">Hình ảnh</th>
                   <th>Hành động</th>
                </tr>
@@ -46,14 +46,18 @@
                     if($value['idLoaiSP'] == 5) echo "Giày Thời Trang"; 
                     ?>
                   </td> 
-                  <td><?= $value['idcolor']." / ".$value['idsize'] ?></td>
+                  <td><?= $value['soluong'] ?></td>
                    <td><img src="./public_admin/image/sanpham/<?php echo $value['anh1'] ?>" widh='40' height='40'></td>
                   <td>
                       <!-- để ý dấu bằng trong href -->
                       <a href="?action=xemsanpham&id=<?= $value['idSP'] ?>" type="button" class="btn btn-light">Chi tiết</a>
+                      
+      <?php if($_SESSION['admin'] == true){ ?>
                       <a href="?action=suasanpham&id=<?= $value['idSP'] ?>" type="button" class="btn  btn-light">Sửa</a>
                       <a href="?action=xoasanpham&id=<?= $value['idSP'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger"title="Xóa  ">
                         <i class="fa fa-times"></i></a>
+        <?php }else{} ?>
+
                   </td> 
               </tr>
 
@@ -61,6 +65,15 @@
              
           </tbody>
       </table>
+
+  <!--
+                       <ul class="pagination">
+                            <li class="active"><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">&raquo;</a></li>
+                        </ul>
+      -->
 
       <br>
       <br>

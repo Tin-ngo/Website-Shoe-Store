@@ -8,6 +8,24 @@
             $controller_taikhoanobj = new trangchucontroller();
              $controller_taikhoanobj->dem();
             break;
+        case 'sualayout':
+            require_once('controller_admin/home.php');
+            $controller_taikhoanobj = new trangchucontroller();
+             $controller_taikhoanobj->update_layout();
+            break;
+        case 'xoalayout':
+             unset($_SESSION['time']);
+             unset($_SESSION['mail_1']);
+             unset($_SESSION['mail_2']);
+             unset($_SESSION['phone_1']);
+             unset($_SESSION['phone_2']);
+             unset($_SESSION['diachi']);
+             unset($_SESSION['donvi']);
+             require_once('controller_admin/home.php');
+            $controller_taikhoanobj = new trangchucontroller();
+             $controller_taikhoanobj->dem();
+             break;
+
         case 'taikhoan':           // đã hiển thị được thông tin
             require_once('controller_admin/quanlytaikhoan.php');
             $controller_taikhoanobj = new nguoidungcontroller();
@@ -33,7 +51,7 @@
             $controller_taikhoanobj = new nguoidungcontroller();
             $controller_taikhoanobj->update();
             break;
-        case 'them_giaodien':
+        case 'them_giaodien':       // không sử dụng
             require_once('views_admin/index.php');
             break;
         case 'them': 
@@ -74,6 +92,8 @@
 
         case 'them_sanpham_giaodien':
             require_once('views_admin/index.php');
+            $controller_taikhoanobj = new sanphamcontroller();
+            $controller_taikhoanobj->them_giaodien();
             break;
 
         case 'them_sanpham': 

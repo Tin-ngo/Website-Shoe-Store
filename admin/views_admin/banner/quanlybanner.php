@@ -2,9 +2,9 @@
 
 <div class="container-fluid" id="noidung">
       <h4>Database banner</h4>
-
+<?php if($_SESSION['admin'] == true){ ?>
       <a class="pull-left themmoi" href="?action=thembanner_giaodien"> Thêm mới</a>
-
+<?php }else{} ?>
       <div class="search_box pull-right" style="margin-right: 50px; margin-top: 0px;">
            <form method="POST" action="?action=banner">
           <input type="text" placeholder="Search By idbanner" name="timkiem_bn">&ensp;
@@ -32,9 +32,12 @@
                   <td><img src="./public_admin/image/banner/<?php echo $row['anh'] ?>" height='50'></td>
                   <td>
                       <!-- để ý dấu bằng trong href -->
+          <?php if($_SESSION['admin'] == true){ ?>
                       <a href="?action=suabanner&id=<?= $row['idbanner'] ?>" type="button" class="btn  btn-light">Sửa</a>
                       <a href="?action=xoabanner&id=<?= $row['idbanner'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger"title="Xóa">
                         <i class="fa fa-times"></i></a>
+        <?php }else{} ?>
+        
                   </td> 
               </tr>
               <?php } ?>

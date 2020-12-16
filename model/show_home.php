@@ -54,6 +54,20 @@
           }
 
 
+          function layout()
+          {
+            $query = "SELECT * FROM layout";
+            $result = $this->conn->query($query);
+
+               $data = array();
+
+               while ($row = $result->fetch_assoc()) {
+                   $data[] = $row;
+                }
+               return $data;
+          }
+
+
 
      }
 ?>

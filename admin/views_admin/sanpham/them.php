@@ -19,39 +19,43 @@
            </tr>
             <tr>
                <td>id Khuyến mãi:</td>
-               <td><input type="text" value="" name="idKM"></td>
+               <td> <input type="text" value="" name="idKM" required> </td>
            </tr>
             <tr>
                <td>id màu:</td>
-               <td><input type="text" value="" name="idmau"></td>
+               <td><input type="text" value="" name="idmau" required></td>
            </tr>
             <tr>
                <td>id size:</td>
-               <td><input type="text" value="" name="idsize"></td>
+               <td><input type="text" value="" name="idsize" required></td>
            </tr>
             <tr>
                <td>Tên Sản Phẩm:</td>
-               <td><input type="text" value="" name="tenSP"></td>
+               <td><input type="text" value="" name="tenSP" required></td>
            </tr>
             <tr>
                <td>Đơn giá:</td>
-               <td><input type="text" value="" name="Dongia"></td>
+               <td><input type="text" value="" name="Dongia" required></td>
            </tr>
             <tr>
                <td>ảnh 1:</td>
-               <td><input type="file" value="" name="anh1"></td>
+               <td><input type="file" value="" name="anh1" required></td>
            </tr>
            <tr>
                <td>ảnh 2:</td>
-               <td><input type="file" value="" name="anh2"></td>
+               <td><input type="file" value="" name="anh2" required></td>
            </tr>
             <tr>
                <td>ảnh 3:</td>
-               <td><input type="file" value="" name="anh3"></td></td>
+               <td><input type="file" value="" name="anh3" required></td></td>
            </tr>
             <tr>
                <td>Ngày nhập:</td>
-               <td><input type="date" value="" name="ngaynhap"></td> <!--<?php $today = date("d/m/Y"); echo $today; ?> -->
+               <td><input type="date" value="" name="ngaynhap" required></td> <!--<?php $today = date("d/m/Y"); echo $today; ?> -->
+           </tr>
+           <tr>
+               <td>Số lượng nhập:</td>
+               <td><input type="text" value="" name="soluong" required></td> 
            </tr>
            <tr>
                <td>mô tả:</td>

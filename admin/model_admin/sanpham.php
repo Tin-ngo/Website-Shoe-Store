@@ -47,11 +47,11 @@
 
 
 
-
+ //đang sửa chỗ này
         function xem_mau($id)
         {
-             $query = "SELECT * FROM color WHERE idcolor=$id";
-            return $this->conn->query($query)->fetch_assoc();
+             $query = "SELECT * FROM color WHERE idcolor=$id" ;   //sai
+             return $this->conn->query($query)->fetch_assoc();
         }
         function xem_size($id)
         {
@@ -66,12 +66,12 @@
         }
 
 
-         function update($idSP, $idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota) 
+         function update($idSP, $idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota, $soluong) 
         {
             
 
      
-             $query="UPDATE sanpham SET idKM='$idKM', idLoaiSP='$idLoaiSP', idcolor='$idcolor', idsize='$idsize', tenSP='$tenSP', Dongia='$Dongia', anh1='$anh1', anh2='$anh2', anh3='$anh3', ngaynhap='$ngaynhap', mota='$mota' WHERE idSP='$idSP';";        
+             $query="UPDATE sanpham SET idKM='$idKM', idLoaiSP='$idLoaiSP', idcolor='$idcolor', idsize='$idsize', tenSP='$tenSP', Dongia='$Dongia', anh1='$anh1', anh2='$anh2', anh3='$anh3', ngaynhap='$ngaynhap', mota='$mota', soluong='$soluong' WHERE idSP='$idSP';";        
 
             $result = $this->conn->query($query);
 
@@ -83,11 +83,11 @@
 
          }
 
-         function insert($idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota) 
+         function insert($idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota, $soluong) 
          {
 
-             $query= "INSERT INTO sanpham (idKM, idLoaiSP, idcolor, idsize, tenSP, Dongia, anh1, anh2, anh3, ngaynhap, mota) 
-            VALUES ('$idKM','$idLoaiSP','$idcolor', '$idsize', '$tenSP', '$Dongia', '$anh1', '$anh2', '$anh3', '$ngaynhap', '$mota') ";
+             $query= "INSERT INTO sanpham (idKM, idLoaiSP, idcolor, idsize, tenSP, Dongia, anh1, anh2, anh3, ngaynhap, mota, soluong) 
+            VALUES ('$idKM','$idLoaiSP','$idcolor', '$idsize', '$tenSP', '$Dongia', '$anh1', '$anh2', '$anh3', '$ngaynhap', '$mota', '$soluong') ";
 
             $result = $this->conn->query($query);
 
@@ -106,13 +106,30 @@
 
             if($result == true){
 
-                echo "<script> alert('Đã xóa thành công');";
+                echo "<script> ";
                 echo "location.href='?action=sanpham';</script>";
 
             }else{
-                echo "<script> alert('LỖI, Chưa xóa được sản phẩm');";
+                echo "<script>  ";
                 echo "location.href='?action=sanpham';</script>";
             }
+         }
+
+         function khuyenmai()
+         {
+
+            $query = "SELECT * FROM khuyenmai";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+
          }
 
 
