@@ -64,6 +64,11 @@
             $controller_taikhoanobj = new nguoidungcontroller();
             $controller_taikhoanobj->xoanguoidung();
             break;
+        case 'phanquyen':
+            require_once('controller_admin/quanlytaikhoan.php');
+            $controller_taikhoanobj = new nguoidungcontroller();
+            $controller_taikhoanobj->phanquyen();
+            break;
 
 
 
@@ -159,6 +164,11 @@
             require_once('controller_admin/duyethoadon.php');
             $controller_taikhoanobj = new hoadoncontroller();
             $controller_taikhoanobj->chitiet_hoadon();
+            break;
+        case 'duyethoadon':
+            require_once('controller_admin/duyethoadon.php');
+            $controller_taikhoanobj = new hoadoncontroller();
+            $controller_taikhoanobj->duyet_hoadon();
             break;
 
         //banner

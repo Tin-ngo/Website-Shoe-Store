@@ -14,7 +14,7 @@
           </tr>
           <tr>
             <td><h4>tên khách hàng</h4></td>
-            <td><h4> &emsp;<?= $name_user['ten'];   ?>   </h4></td>
+            <td><h4> &emsp;<?= $name_user['ho'];   ?> <?= $name_user['ten'];   ?>   </h4></td>
           </tr>
           <tr>
             <td><h4>tên sản phẩm</h4></td>

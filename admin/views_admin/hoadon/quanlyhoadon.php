@@ -22,6 +22,7 @@
                   <th class="theadd">idUser</th>
                   <th class="theadd">idSP</th>
                   <th class="theadd">Tổng tiền</th>
+                  <th class="theadd">Trạng thái</th>
                   <th>Hành động</th>
                </tr>
           </thead>
@@ -35,12 +36,22 @@
                   <td><?= $value['idSP'] ?></td>
                   <td><?= $value['tongtien'] ?></td>
                   <td>
+                    <?php if($value['trangthai'] == 0){
+                            echo "Chưa Xét duyệt";
+                     }else{
+                      echo "Đã duyệt";
+                     } ?>
+                  </td>
+                  <td>
                       <!-- để ý dấu bằng trong href -->
                        <a href="?action=xemhoadon&id=<?= $value['idhoadon'] ?>" type="button" class="btn btn-light">Chi tiết</a>
 
           <?php if($_SESSION['admin'] == true){ ?>
-                      <a href="?action=xoahoadon&id=<?= $value['idhoadon'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger"title="Xóa">
-                        <i class="fa fa-times"></i></a>
+                  <?php if($value['trangthai'] == 0){ ?>
+                    <a href="?action=duyethoadon&id=<?= $value['idhoadon'] ?>&idSP=<?= $value['idSP'] ?>" type="button" class="btn btn-primary">Duyệt hóa đơn</a>
+                  <?php }else{} ?>
+                    <a href="?action=xoahoadon&id=<?= $value['idhoadon'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger" title="Xóa">
+                      <i class="fa fa-times"></i></a>
           <?php }else{} ?>
           
                   </td> 

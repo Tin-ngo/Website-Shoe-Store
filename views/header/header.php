@@ -64,7 +64,7 @@
                                      <ul>
                                         <?php  if(isset($_SESSION['tendangnhap'])){ ?>
                                           <li></li>
-                                        <li><a class="aacount" style="margin-left: -40px;" href="?action=taikhoan&id=<?php echo $_SESSION['tendangnhap']; ?>"><span>Tài khoản</span></a></li><br>
+                                        <li><a class="aacount" style="margin-left: -40px;" href="?action=taikhoan&ten=<?php echo $_SESSION['tendangnhap']; ?>"><span>Tài khoản</span></a></li><br>
                                         <li><a class="aacount" href="?action=dangxuat" onclick="TBdangxuat()"><span>Đăng xuất</span></a></li>
                                     
                                         <?php if($_SESSION['admin'] == true || $_SESSION['banhang'] == true){ ?>

@@ -72,6 +72,46 @@
             }
          }
 
+
+         //duyệt hóa đơn
+          function duyet_hoadon($id)        //đang
+         {
+            $query = "UPDATE hoadon SET trangthai = 1 WHERE idhoadon = '$id' ";
+
+            $result = $this->conn->query($query);
+
+            if($result == true){
+
+                echo "<script>";
+                echo "location.href='?action=hoadon';</script>";
+
+            }else{
+                echo "<script> ";
+                echo "location.href='?action=hoadon';</script>";
+            }
+         }
+
+// trừ số lượng sản phẩm
+          function sanpham_tru($id)     
+         {
+            $query = "UPDATE sanpham SET soluong = soluong-1 WHERE idSP = '$id'";
+            
+            $result = $this->conn->query($query);
+
+            if($result == true){
+
+                echo "<script>";
+                echo "location.href='?action=hoadon';</script>";
+
+            }else{
+                echo "<script> ";
+                echo "location.href='?action=hoadon';</script>";
+            }
+         }
+
+
+
+
          //xem chi tiết hóa đơn
 
          function user($id)

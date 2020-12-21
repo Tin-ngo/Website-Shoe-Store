@@ -102,6 +102,19 @@
             }
          }
 
+// phân quyền
+         function phanquyen($idUser, $idQuyen)
+         {
+            $query = "UPDATE user SET idQuyen='$idQuyen' WHERE idUser='$idUser';";
+
+            $result = $this->conn->query($query);
+
+            if($result == true){
+
+                header('Location: ?action=taikhoan');
+            }
+         }
+
 
 }
 

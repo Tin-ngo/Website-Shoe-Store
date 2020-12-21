@@ -76,9 +76,18 @@
 
          public function xoanguoidung()
          {
-            $id = isset($_GET['id']) ? $_GET['id'] : '1';
+            $id = isset($_GET['id']) ? $_GET['id'] : '';
 
             $this->nguoidung_model->delete($id);
+         }
+
+         public function phanquyen()
+         {
+            $id = isset($_GET['id']) ? $_GET['id'] : '';
+
+            $quyen = $_GET['quyen'];
+
+            $this->nguoidung_model->phanquyen($id, $quyen);
          }
 
 

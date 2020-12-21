@@ -21,18 +21,20 @@
             $email =filter_input(INPUT_POST, 'email_dk');
             $diachi =filter_input(INPUT_POST, 'diachi_dk');
             $gioitinh =filter_input(INPUT_POST, 'gioitinh_dk');
-            $sodienthoai =filter_input(INPUT_POST, 'sodienthoai_dk');
+            $sodienthoai =filter_input(INPUT_POST, 'sdt_dk');
+            
             $tendangnhap =filter_input(INPUT_POST, 'tendangnhap_dk');
-            $matkhau = filter_input(INPUT_POST, 'matkhau_dk');
-          //  $matkhau = md5("$mk");  mã hóa mật khẩu
-
+            $mk_dk = filter_input(INPUT_POST, 'matkhau_dk');
+            $matkhau = md5("$mk_dk");
+            
             $this->dangnhap_dangky_model->dangky_model($ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau);
          }
 
          public function dangnhap()
          {
          	$tendangnhap =filter_input(INPUT_POST, 'tendangnhap_dn');
-            $matkhau =filter_input(INPUT_POST, 'matkhau_dn');
+            $mk_dn =filter_input(INPUT_POST, 'matkhau_dn');
+            $matkhau = md5($mk_dn);
 
             $this->dangnhap_dangky_model->dangnhap_model($tendangnhap, $matkhau);
 
@@ -55,12 +57,30 @@
          {
 
             $data_loaisanpham = $this->dangnhap_dangky_model->loaisanpham();
-
-
-
             $tendangnhap = $_SESSION['tendangnhap'];
-            
             $data_taikhoan = $this->dangnhap_dangky_model->taikhoan($tendangnhap);
+
+// sửa mật khẩu
+
+            $mk_nhap = filter_input(INPUT_POST, 'matkhau');
+            $matkhau_nhap = md5($mk_nhap);
+
+            $mk_moi = filter_input(INPUT_POST, 'matkhaumoi');
+            $matkhau_moi = md5($mk_moi);
+
+            $idUser  = filter_input(INPUT_POST, 'idUser');
+
+            // chỗ nàu cho hiện m$loi       echo $data_taikhoan['ten'];
+
+            if($matkhau_nhap != $data_taikhoan['matkhau']){
+                $mess = false;
+            }else{
+                 $mess = true;
+                $this->dangnhap_dangky_model->suamk($idUser, $matkhau_moi);
+            }
+
+
+        
 
             require_once('views/index.php');
          }
@@ -79,10 +99,11 @@
 
             $idUser = filter_input(INPUT_POST, 'idUser');
 
-            $this->dangnhap_dangky_model->suataikhoan($idUser, $ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau);
+            $this->dangnhap_dangky_model->suataikhoan($idUser, $ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap);
 
             require_once('views/index.php');
          }
+
 
 
           

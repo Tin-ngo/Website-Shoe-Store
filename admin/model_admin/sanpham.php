@@ -14,10 +14,23 @@
     		$connect_obj = new ketnoi();
     		$this->conn = $connect_obj->connect;
     	}
+
+        function phantrang()
+        {
+            $query = "SELECT * FROM sanpham";
+            return $this->conn->query($query);
+        }
+        function phantrang_timkiem()
+        {
+            $query = "SELECT * FROM sanpham WHERE tenSP LIKE '%$timkiem_sp%'";
+            return $this->conn->query($query);
+        }
+
     	
-    	function all()
+    	function all($batdau, $gioihan)
     	{
-    		$query = "SELECT * FROM sanpham ORDER BY idSP";
+            
+    		$query = "SELECT * FROM sanpham LIMIT $batdau, $gioihan";
 
     		$result = $this->conn->query($query);
 
@@ -30,9 +43,9 @@
     		return $data;
     	}
 
-        function timkiem_sp($timkiem_sp)
+        function timkiem_sp($timkiem_sp, $batdau, $gioihan)
         {
-            $query = "SELECT * FROM sanpham WHERE tenSP LIKE '%$timkiem_sp%' ORDER BY idSP";
+            $query = "SELECT * FROM sanpham WHERE tenSP LIKE '%$timkiem_sp%' LIMIT $batdau, $gioihan";
 
             $result = $this->conn->query($query);
 

@@ -19,14 +19,23 @@
     	public function list()   // hàm hiển thị tất cả sản phẩm trong database 
     	{
 
+            $gioihan = 5;
+            $trang = isset($_GET['trang'])? $_GET['trang'] : '1';
+            $batdau = ($trang-1) * $gioihan;
+            $sodong = mysqli_num_rows($this->sanpham_model->phantrang());
+            $tongsotrang = $sodong/$gioihan;
+
+
             if(isset($_POST['timkiem_sp'])){
                 $timkiem_sp = $_POST['timkiem_sp'];
-                $data = $this->sanpham_model->timkiem_sp($timkiem_sp);
+                $data = $this->sanpham_model->timkiem_sp($timkiem_sp,$batdau, $gioihan);
             }else{
-                $data = $this->sanpham_model->all();
+                $data = $this->sanpham_model->all($batdau, $gioihan);
             }
-            require_once('views_admin/index.php');
 
+
+
+            require_once('views_admin/index.php');
     	}
 
 
@@ -160,13 +169,6 @@
 
             $this->sanpham_model->delete($id);
          }
-
-
-
-
-
-
-
 
 
 

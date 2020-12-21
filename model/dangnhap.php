@@ -100,20 +100,28 @@
 
 
 
-         function suataikhoan($idUser, $ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap, $matkhau)
+         function suataikhoan($idUser, $ho, $ten, $email, $diachi, $gioitinh, $sodienthoai, $tendangnhap)
         {
             
 
      
-             $query="UPDATE user SET ho='$ho',ten='$ten',email='$email', diachi='$diachi', gioitinh='$gioitinh', sodienthoai='$sodienthoai', tendangnhap='$tendangnhap', matkhau='$matkhau' WHERE idUser='$idUser';";        
+             $query="UPDATE user SET ho='$ho',ten='$ten',email='$email', diachi='$diachi', gioitinh='$gioitinh', sodienthoai='$sodienthoai', tendangnhap='$tendangnhap' WHERE idUser='$idUser';";        
 
             $result = $this->conn->query($query);
 
             if($result == true){
-
                 header('Location: ?action=taikhoan');
             }
         
+
+         }
+
+
+         function suamk($idUser, $matkhau_moi)
+         {
+            $query="UPDATE user SET matkhau='$matkhau_moi' WHERE idUser='$idUser' ";  //loi thay doi het cac mk 12345      
+
+            $result = $this->conn->query($query);
 
          }
 

@@ -66,6 +66,18 @@
           </tbody>
       </table>
 
+      <?php 
+      if(!isset($timkiem_sp)){
+
+         $tong = ceil($tongsotrang);
+
+       for($i = 1; $i <= $tong; $i++){
+          echo '<a href="?action=sanpham&trang='.$i.'">'.$i.'</a> | ';
+        }
+      }
+
+      ?>
+
   <!--
                        <ul class="pagination">
                             <li class="active"><a href="">1</a></li>

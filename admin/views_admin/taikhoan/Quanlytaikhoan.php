@@ -25,7 +25,7 @@
                   <th class="theadd">Họ</th>
                   <th class="theadd">Tên</th>
                   <th class="theadd">SDT</th>
-                  <th class="theadd">Email</th>
+                  <th class="theadd">Email / Quyền</th>
                   <th class="theadd">Giới tính</th>
                   <th class="theadd">Địa chỉ</th>
                   <th>Hành động</th>
@@ -38,7 +38,20 @@
                   <td><?= $row['ho']?></td>
                   <td><?= $row['ten'] ?></td>
                   <td><?= $row['sodienthoai'] ?></td>
-                  <td><?= $row['email'] ?></td>
+                  <td>
+                    <?= $row['email'] ?>
+                    <br>
+                    <?php if($row['idQuyen'] == 1){
+                              echo "admin";
+                            }
+                            if($row['idQuyen'] == 2){
+                              echo "Người Bán Hàng";
+                            }
+                            if($row['idQuyen'] == 0){
+                              echo "Khách hàng";
+                            }
+                     ?>
+                  </td>
                   <td><?= $row['gioitinh'] ?></td>
                   <td><?= $row['diachi'] ?></td>
                   <td>
@@ -49,6 +62,9 @@
                       <a href="?action=edit&id=<?= $row['idUser'] ?>" type="button" class="btn  btn-light">Sửa</a>
                       <a href="?action=xoanguoidung&id=<?= $row['idUser'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger"title="Xóa người dùng">
                         <i class="fa fa-user-times"></i></a>
+                        <br>
+                        <!-- phân quyền -->
+                        <div style="font-size: 13px;"><a href="?action=phanquyen&id=<?= $row['idUser'] ?>&quyen=0">Khách hàng</a>&emsp;<a href="?action=phanquyen&id=<?= $row['idUser'] ?>&quyen=2">Người bán hàng</a></div>
       <?php }else{} ?>
       
                   </td> 

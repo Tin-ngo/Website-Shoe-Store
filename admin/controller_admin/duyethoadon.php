@@ -57,6 +57,20 @@
             
          }
 
+         public function duyet_hoadon()
+         {
+            $id = $_GET['id'];
+
+            $this->hoadon_model->duyet_hoadon($id);
+
+            $idSP = $_GET['idSP'];
+
+            $this->hoadon_model->sanpham_tru($idSP);
+
+            require_once('views_admin/index.php');
+            
+         }
+
 
 
 

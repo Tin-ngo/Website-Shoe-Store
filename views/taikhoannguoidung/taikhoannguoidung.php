@@ -73,10 +73,12 @@
 															<option value="Khác"> Khác</option>
 														</select>
 													</div>
-													<input type="text" name="sodienthoai" placeholder="Số điện thoại.." pattern="[0-9]+" minlength="10" value="<?php echo $data_taikhoan['sodienthoai'] ?>"  required/>
+													<input type="text" name="sodienthoai" placeholder="Số điện thoại.." pattern="[0-9]+" minlength="9" value="<?php echo $data_taikhoan['sodienthoai'] ?>"  required/>
 													
 													<input type="text" name="tendangnhap" placeholder="Tên đăng nhập.." value="<?php echo $data_taikhoan['tendangnhap'] ?>"  required/>
-													<input type="text" name="matkhau" placeholder="Mật khẩu.." pattern="[0-9]+" minlength="10" value="<?php echo $data_taikhoan['matkhau'] ?>"  required/>
+					<!--							<input type="text" name="matkhau" placeholder="Mật khẩu.." pattern="[0-9]+" 
+					                                 minlength="5" value="<?php echo $data_taikhoan['matkhau'] ?>"  required/>
+					                             -->
 													<div class="submit-text">
 													<button type="submit">Lưu</button>
 													</div>
@@ -85,7 +87,11 @@
 										</div>
 									</div>
 							</li>
-				<!--			<li class="panel">
+
+<!-- đổi mật khẩu -->
+
+
+				           <li class="panel">
 								<div class="account-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapse4">
 									<label>
 										<input type="radio" value="forever" name="rememberme" />
@@ -95,10 +101,13 @@
 								<div id="collapse4" class="panel-collapse collapse">
 									<div class="single-log-info">
 										<div class="custom-input">
-											<form action="?act=taikhoan&xuli=update" method="post">
-												<input type="password" placeholder="Mật khẩu hiện tại .. " name="MatKhau" minlength="6" required />
-												<input type="password" placeholder="Mật khẩu mới .. " name="MatKhauMoi" />
-												<input type="password" placeholder="Xác nhận lại mật khẩu .." name="MatKhauXN" />
+											<form action="#" method="post" onsubmit="return validate()">
+												<input type="hidden" name="idUser" value="<?php echo $data_taikhoan['idUser'] ?>">
+												<?php $matkhau_md5 = $data_taikhoan['matkhau']; ?>
+										        <input id="matkhauchinh" type="text" value="<?php echo $matkhau_md5; ?>">
+												<input id="mk_ht" type="password" placeholder="Mật khẩu hiện tại .. " name="matkhau" minlength="5">
+												<input id="mk" type="password" placeholder="Mật khẩu mới .. " name="matkhaumoi" />
+												<input id="nhaplai_mk" type="password" placeholder="Xác nhận lại mật khẩu .." name="xacnhanmatkhau" >
 												<div class="submit-text text-left">
 													<button type="submit_pw" value="submit form">Lưu</button>
 												</div>
@@ -107,7 +116,10 @@
 									</div>
 								</div>
 							</li>
-						-->
+						
+<!-- end đổi mật khẩu -->	
+
+
 						</ul>
 					</div>
 				</div>
@@ -116,3 +128,37 @@
 	</div>
 </section>
 <!-- my account content section end -->
+
+
+<script>
+function validate() {
+
+/*var mkchinh = document.getElementById("matkhauchinh").value; */
+var p =document.getElementById("mk_ht").value;
+var p1 = document.getElementById("mk").value;
+var p2 = document.getElementById("nhaplai_mk").value;
+
+/*
+if(mkchinh != p ){
+	alert("Bạn đã nhập sai mật khẩu");
+	return false;
+}
+*/
+  
+if(p1 == "") {
+alert("Vui lòng nhập mật khẩu!");
+return false;
+}
+if(p2 == "") {
+alert("Vui lòng xác minh mật khẩu!");
+return false;
+}
+
+if(p1 != p2){
+	alert("Mật Khẩu Nhập Lại Không Đúng");
+	return false;
+} 
+  
+return true;
+}
+</script>
