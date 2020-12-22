@@ -102,12 +102,6 @@
             $query = "INSERT INTO gopy(idSP, email, noidung) VALUES ('$idSP', '$email', '$noidung')" ;
             $result = $this->conn->query($query);
 
-            if($result == true){
-                header('location: ?action=chitietmathang');
-            }
-            else{
-                header('location: ?action=trangchu');
-            }
            }
 
            function xem_gopy()

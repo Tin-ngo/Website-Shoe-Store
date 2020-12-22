@@ -104,7 +104,7 @@
 											<form action="#" method="post" onsubmit="return validate()">
 												<input type="hidden" name="idUser" value="<?php echo $data_taikhoan['idUser'] ?>">
 												<?php $matkhau_md5 = $data_taikhoan['matkhau']; ?>
-										        <input id="matkhauchinh" type="text" value="<?php echo $matkhau_md5; ?>">
+										        <input id="matkhauchinh" type="hidden" value="<?php echo $matkhau_md5; ?>">
 												<input id="mk_ht" type="password" placeholder="Mật khẩu hiện tại .. " name="matkhau" minlength="5">
 												<input id="mk" type="password" placeholder="Mật khẩu mới .. " name="matkhaumoi" />
 												<input id="nhaplai_mk" type="password" placeholder="Xác nhận lại mật khẩu .." name="xacnhanmatkhau" >

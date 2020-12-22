@@ -60,7 +60,7 @@
 
 
 //đang làm
-        case 'chitietmathang':   //đnag làm
+        case 'chitietmathang':   
             require_once('controller/chitietmathang_controller.php');
             $index = new chitietmathang();
             $index->chitiet_hang();

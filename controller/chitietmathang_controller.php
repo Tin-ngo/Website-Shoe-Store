@@ -20,7 +20,7 @@
         public function chitiet_hang()
         {
             
-            $id = isset($_GET['id']) ? $_GET['id'] : '2';
+            $id = isset($_GET['id']) ? $_GET['id'] : '1';
 
             $data_chitiet = $this->chitietmathang_controller->details_hang($id);
 
@@ -45,30 +45,17 @@
 
 
 
-        // sản phẩm liên quan, ý tưởng là phân theo loại sản phẩm
-
-
-
-
-
-//chưa đụng tới
-  //      public function list_theoid()
-   //     {
-//
-       // 	$data_loaisanpham = $this->home_controller->loaisanpham();
-//
-   //     	$idLoaiSP = $_GET['id'] ? $_GET['id'] : '1';
-    //        $data_sanphamcuahang = $this->home_controller->sanpham_cuahangtheoid($idLoaiSP);
-
-      //      }
-
             public function gopy()
             {  
-                $idSP = isset($_GET['id'])? $_GET['id'] : '1';
+                $idSP = $_GET['id'];
                 $email = filter_input(INPUT_POST, 'email_gopy');
                 $noidung = filter_input(INPUT_POST, 'noidung_gopy');
 
+
                 $this->chitietmathang_controller->them_gopy($idSP, $email, $noidung);
+
+                echo "<script language='javascript'>location.href='?action=chitietmathang&id=".$idSP."';</script>";
+
             }
 
 
