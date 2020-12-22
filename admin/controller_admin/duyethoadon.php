@@ -49,7 +49,9 @@
 
             $data = $this->hoadon_model->find($id);
 
-            $name_user = $this->hoadon_model->user($id);
+            $idUser = isset($_GET['idUser']) ? $_GET['idUser'] : '1';
+
+            $name_user = $this->hoadon_model->user($idUser);
 
             $name_sanpham = $this->hoadon_model->sanpham($id);
 

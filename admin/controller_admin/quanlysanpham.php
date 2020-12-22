@@ -45,6 +45,12 @@
          {
             $data_km = $this->sanpham_model->khuyenmai();
 
+            $data_mau = $this->sanpham_model->mau();
+
+            $data_size = $this->sanpham_model->size();
+
+            $data_lsp = $this->sanpham_model->loaisp();
+
             require_once('views_admin/index.php');
          }
 
@@ -52,10 +58,22 @@
 
     	 public function details()  // hàm hiển thị chi tiết thông tin của một sản phẩm được chọn bởi $id
         {
+
+             $data_km = $this->sanpham_model->khuyenmai();
+
+            $data_mau = $this->sanpham_model->mau();
+
+            $data_size = $this->sanpham_model->size();
+
+            $data_lsp = $this->sanpham_model->loaisp();
+
+
+
+
             $id = isset($_GET['id']) ? $_GET['id'] : '1';
             $data = $this->sanpham_model->find($id);
-            $data_mau = $this->sanpham_model->xem_mau($id);
-            $data_size = $this->sanpham_model->xem_size($id);
+            $data_mau_chon = $this->sanpham_model->xem_mau($id);
+            $data_size_chon = $this->sanpham_model->xem_size($id);
             require_once('views_admin/index.php');
         } 
 

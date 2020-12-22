@@ -44,7 +44,7 @@
 
              $hinhanh = $_FILES['hinhanh']['name'];
              $hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
-             move_uploaded_file($hinhanh_tmp, './public_admin/image/loaisanpham'.$hinhanh);
+             move_uploaded_file($hinhanh_tmp, './public_admin/image/loaisanpham/'.$hinhanh);
 
             $this->loaisanpham_model->update($idLoaiSP, $tenLSP, $hinhanh);
 
@@ -57,7 +57,7 @@
 
              $hinhanh = $_FILES['hinhanh']['name'];
              $hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
-             move_uploaded_file($hinhanh_tmp, './public_admin/image/loaisanpham'.$hinhanh);
+             move_uploaded_file($hinhanh_tmp, './public_admin/image/loaisanpham/'.$hinhanh);
 
             $this->loaisanpham_model->insert($tenLSP, $hinhanh);
          }

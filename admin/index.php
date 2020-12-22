@@ -51,9 +51,7 @@
             $controller_taikhoanobj = new nguoidungcontroller();
             $controller_taikhoanobj->update();
             break;
-        case 'them_giaodien':       // không sử dụng
-            require_once('views_admin/index.php');
-            break;
+        
         case 'them': 
             require_once('controller_admin/quanlytaikhoan.php');
             $controller_taikhoanobj = new nguoidungcontroller();
@@ -96,7 +94,7 @@
             break;
 
         case 'them_sanpham_giaodien':
-            require_once('views_admin/index.php');
+            require_once('controller_admin/quanlysanpham.php');
             $controller_taikhoanobj = new sanphamcontroller();
             $controller_taikhoanobj->them_giaodien();
             break;

@@ -145,6 +145,58 @@
 
          }
 
+         function mau()
+         {
+
+            $query = "SELECT * FROM color";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+
+         }
+
+          function size()
+         {
+
+            $query = "SELECT * FROM size";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+
+         }
+
+         function loaisp()
+         {
+
+            $query = "SELECT * FROM loaisanpham";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+
+         }
+
+
 
 
 

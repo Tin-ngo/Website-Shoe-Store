@@ -9,7 +9,7 @@
         <form method="POST" action="?action=khuyenmai">
           <input type="text" placeholder="Search By loại KM" name="timkiem_km">&ensp;
           <button type="submit"><i class="fa fa-search"></i></button>
-          <a href="?action=khuyenmai" style="font-size: 15px;">All >> </a>
+          <a href="?action=khuyenmai" style="font-size: 15px;">All</a>
         </form>
       </div>
 

@@ -9,7 +9,7 @@
            <form method="POST" action="?action=banner">
           <input type="text" placeholder="Search By idbanner" name="timkiem_bn">&ensp;
           <button type="submit"><i class="fa fa-search"></i></button>
-          <a href="?action=banner" style="font-size: 15px;">All >> </a>
+          <a href="?action=banner" style="font-size: 15px;">All</a>
         </form>
       </div>
 

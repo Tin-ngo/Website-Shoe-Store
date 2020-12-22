@@ -7,7 +7,7 @@
           <form method="POST" action="?action=hoadon">
           <input type="text" placeholder="Search By idUser" name="timkiem_hd">&ensp;
           <button type="submit"><i class="fa fa-search"></i></button>
-          <a href="?action=hoadon" style="font-size: 15px;">All >> </a>
+          <a href="?action=hoadon" style="font-size: 15px;">All</a>
         </form>
       </div>
 
@@ -44,7 +44,7 @@
                   </td>
                   <td>
                       <!-- để ý dấu bằng trong href -->
-                       <a href="?action=xemhoadon&id=<?= $value['idhoadon'] ?>" type="button" class="btn btn-light">Chi tiết</a>
+                       <a href="?action=xemhoadon&id=<?= $value['idhoadon'] ?>&idUser=<?= $value['idUser'] ?>" type="button" class="btn btn-light">Chi tiết</a>
 
           <?php if($_SESSION['admin'] == true){ ?>
                   <?php if($value['trangthai'] == 0){ ?>

@@ -7,37 +7,45 @@
       <div style="background-color: #e5e5e5; padding: 10px 50px 10px; color:gray;">
         <form action="?action=suasanpham_xl" method="post" enctype="multipart/form-data" >  <!-- model_admin/sua_xl.php -->
       	<table border="0" cellpadding="10">
-          <tr>
-               <td style="width: 150px;">idSP: </td>
-               <td>
-                <input disabled type="text" name="idSP" value=<?php echo $data['idSP']; ?>>
-                <input type="hidden" name="idSP" value=<?php echo $data['idSP']; ?> >
-              </td>
-           </tr>
-
-             <tr>
-               <td>id Khuyến mãi:</td>
-               <td><input type="text" value="<?php echo $data['idKM'];?>" name="idKM" required></td>
-           </tr>
-
-
            <tr>
                <td>idLoaiSP:</td>
-               <td>
-                <input type="radio" value="1" name="idLoaiSP" checked>Giày công sở<br>
-                <input type="radio" value="2" name="idLoaiSP">Giày học sinh<br>
-                <input type="radio" value="3" name="idLoaiSP">Giày da bò<br>
-                <input type="radio" value="4" name="idLoaiSP">Giày thời trang<br>
-               </td>
+                <td>
+                   <select name="idLoaiSP">
+                     <?php foreach ($data_lsp as $value) {?>
+                       <?php echo "<option value='".$value['idLoaiSP']."'>".$value['tenLSP']."</option>"; ?>
+                     <?php } ?>
+                 </select>
+              </td>
            </tr>
-            
             <tr>
-               <td>id màu:;</td>
-               <td><input type="text" value="<?php echo $data['idcolor'];?>" name="idmau" required></td>
+               <td>Loại Khuyến mãi:</td>
+               <td>
+                   <select name="idKM">
+                     <?php foreach ($data_km as $value) {?>
+                       <?php echo "<option value='".$value['idKM']."'>".$value['loaiKM']."</option>"; ?>
+                     <?php } ?>
+                 </select>
+              </td>
+           </tr>
+            <tr>
+               <td>id màu:</td>
+               <td>
+                   <select name="idmau">
+                     <?php foreach ($data_mau as $value) {?>
+                       <?php echo "<option value='".$value['idcolor']."'>".$value['color']."</option>"; ?>
+                     <?php } ?>
+                 </select>
+              </td>
            </tr>
             <tr>
                <td>id size:</td>
-               <td><input type="text" name="idsize" value="<?php echo $data['idsize'];?>" required></td>
+               <td>
+                   <select name="idsize">
+                     <?php foreach ($data_size as $value) {?>
+                       <?php echo "<option value='".$value['idsize']."'>".$value['size']."</option>"; ?>
+                     <?php } ?>
+                 </select>
+              </td>
            </tr>
             <tr>
                <td>Tên Sản Phẩm:</td>

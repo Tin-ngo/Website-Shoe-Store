@@ -73,29 +73,10 @@
             break;
 
 
-/*
 //giỏ hàngg
             
-        case 'giohang':   //đâng làm
-            require_once('controller/giohang_controller.php');
-            $index = new giohang_controller();
-            $index->list_cart();
-            break;
-
-        case 'xoagiohang_all':
-            require_once('controller/giohang_controller.php');
-            $index = new giohang_controller();
-            $index->deleteall_cart();
-            break;
-
-        case 'xoagiohang':
-            require_once('controller/giohang_controller.php');
-            $index = new giohang_controller();
-            $index->delete_cart();
-            break;
-*/
          
-        case 'giohang':   //đâng làm
+        case 'giohang':
         $act = isset($_GET['act'])? $_GET['act'] : 'list';
             require_once('controller/giohang_controller.php');
             $index = new giohang_controller();
@@ -124,9 +105,6 @@
                     $index->list_giohang();
                     break;
             }
-
-
-
             break;
 
 
@@ -148,12 +126,12 @@
             $index = new showcuahang();
             $index->list();
             break;
-        case 'quenmatkhau':  // chưa làm
+        case 'quenmatkhau': 
             require_once('controller/quenmatkhau_controller.php');
             $index = new quenmk();
             $index->list();
             break;
-        case 'laymatkhau_submit':  // chưa làm
+        case 'laymatkhau_submit':
             require_once('controller/quenmatkhau_controller.php');
             $index = new quenmk();
             $index->laymk();

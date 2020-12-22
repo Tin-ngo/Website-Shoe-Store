@@ -18,11 +18,10 @@
             <td><h4> 
                    
                    <?php 
-                    if($data['idLoaiSP'] == 1) echo "Giày Thể Thao"; 
-                    if($data['idLoaiSP'] == 2) echo "Giày Công Sở"; 
-                    if($data['idLoaiSP'] == 3) echo "Giày Học Sinh"; 
-                    if($data['idLoaiSP'] == 4) echo "Giày Da Bò"; 
-                    if($data['idLoaiSP'] == 5) echo "Giày Thời Trang"; 
+                    if($data['idLoaiSP'] == 1) echo "Giày Công Sở"; 
+                    if($data['idLoaiSP'] == 2) echo "Giày Học Sinh"; 
+                    if($data['idLoaiSP'] == 3) echo "Giày Da Bò"; 
+                    if($data['idLoaiSP'] == 4) echo "Giày Thời Trang"; 
                     ?>
                </h4></td>
           </tr>

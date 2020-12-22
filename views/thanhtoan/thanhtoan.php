@@ -51,9 +51,10 @@
 									        echo $_SESSION['tongtien_KM'] ;
 									    }
 									    else{
-									    	echo $_SESSION['tongtien'];
+									    	echo "0";
 									    }
-									     ?>">    <!-- lấy dữ liệu từ đường dẫn để thêm đơn hàng vào database -->
+									     ?>"> <!-- lấy dữ liệu từ đường dẫn để thêm đơn hàng vào database -->
+									     
 									 Thanh toán
 									</a>
 							</div>
@@ -82,7 +83,7 @@
 										<?php } ?>
 									</th>
 									<td>
-										<?php echo $_SESSION['tongtien'].'<br>'; ?>
+										<?php echo $_SESSION['tongtien'].'.000 vnd<br>'; ?>
 									</td>
 								</tr>
 						
@@ -107,7 +108,7 @@
 									    else{
 									    	echo $_SESSION['tongtien'];
 									    }
-									     ?> VNĐ
+									     ?>.000 VNĐ
 							       </td>
 								</tr>
 							</tfoot>

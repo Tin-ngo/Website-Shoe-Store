@@ -9,7 +9,7 @@
           <form method="POST" action="?action=loaisanpham">
           <input type="text" placeholder="Search By Name" name="timkiem_lsp">&ensp;
           <button type="submit"><i class="fa fa-search"></i></button>
-          <a href="?action=loaisanpham" style="font-size: 15px;">All >> </a>
+          <a href="?action=loaisanpham" style="font-size: 15px;">All</a>
         </form>
       </div>
 
@@ -33,7 +33,7 @@
               <tr>
                   <td scope="row"><?= $value['idLoaiSP'] ?></td>
                  <td><?= $value['tenLSP'] ?></td>
-                  <td><img src="./public_admin/image/loaisanpham<?= $value['hinhanh'] ?>"  height='90' ></td>
+                  <td><img src="./public_admin/image/loaisanpham/<?= $value['hinhanh'] ?>"  height='90' ></td>
                   <td>
                       <!-- để ý dấu bằng trong href -->
                       <a href="?action=xemloaisanpham&id=<?= $value['idLoaiSP'] ?>" type="button" class="btn btn-light">Chi tiết</a>

@@ -50,34 +50,30 @@
                <div class="dropdown" style="float:left;">
                  <button class="dropbtn">Màu</button>
                  <div class="dropdown-content" style="left:0;">
-                 <table>
-             <?php foreach ($color as $value) {   ?>
-  
-                     <tr>
-                        <td>
-                            <a href="?action=cuahang&idmau=<?= $value['idcolor'] ?>" class="acolor"><?php echo $value['color']; ?></a>
-                        </td>
-                     </tr>
 
-             <?php } ?>   
-                 </table>
+                 <div class="container" style="background-color: white; width: 500px;">
+                  <?php foreach ($color as $value) {   ?>
+                    <div class="col-sm-2">
+                        <a href="?action=cuahang&idmau=<?= $value['idcolor'] ?>" class="acolor">
+                            <?php echo $value['color']; ?></a>
+                    </div>
+                   <?php } ?>
+                </div>
+
                  </div>
                </div>
                 <div class="dropdown" style="margin-left: 9px;">
                  <button class="dropbtn">Size</button>
                  <div class="dropdown-content" style="left:-50px;">
 
-                 <table>
-             <?php foreach ($size as $value) {   ?>
-  
-                     <tr>
-                        <td>
-                            <a href="?action=cuahang&idsize=<?= $value['idsize'] ?>" class="acolor"><?php echo $value['size']; ?></a>
-                        </td>
-                     </tr>
-
-             <?php } ?>   
-                 </table>
+                  <div class="container" style="background-color: white; width: 250px;">
+                  <?php foreach ($size as $value) {   ?>
+                    <div class="col-sm-2">
+                        <a href="?action=cuahang&idsize=<?= $value['idsize'] ?>" class="acolor">
+                            <?php echo $value['size']; ?></a>
+                    </div>
+                   <?php } ?>
+                </div>
 
                  </div>
                </div>

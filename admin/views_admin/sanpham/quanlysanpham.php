@@ -9,7 +9,7 @@
           <form method="POST" action="?action=sanpham">
           <input type="text" placeholder="Search By Name" name="timkiem_sp">&ensp;
           <button type="submit"><i class="fa fa-search"></i></button>
-          <a href="?action=sanpham" style="font-size: 15px;">All >> </a>
+          <a href="?action=sanpham" style="font-size: 15px;">All </a>
         </form>
       </div>
 
@@ -39,11 +39,10 @@
                   <td><?= $value['Dongia'] ?></td>
                   <td>
                     <?php 
-                    if($value['idLoaiSP'] == 1) echo "Giày Thể Thao"; 
-                    if($value['idLoaiSP'] == 2) echo "Giày Công Sở"; 
-                    if($value['idLoaiSP'] == 3) echo "Giày Học Sinh"; 
-                    if($value['idLoaiSP'] == 4) echo "Giày Da Bò"; 
-                    if($value['idLoaiSP'] == 5) echo "Giày Thời Trang"; 
+                    if($value['idLoaiSP'] == 1) echo "Giày Công Sở"; 
+                    if($value['idLoaiSP'] == 2) echo "Giày Học Sinh"; 
+                    if($value['idLoaiSP'] == 3) echo "Giày Da Bò"; 
+                    if($value['idLoaiSP'] == 4) echo "Giày Thời Trang"; 
                     ?>
                   </td> 
                   <td><?= $value['soluong'] ?></td>

@@ -9,7 +9,7 @@
         <form method="POST" action="?action=taikhoan">
           <input type="text" placeholder="Search By Name" name="timkiem">&ensp;
           <button type="submit"><i class="fa fa-search"></i></button>
-          <a href="?action=taikhoan" style="font-size: 15px;">All >> </a>
+          <a href="?action=taikhoan" style="font-size: 15px;">All</a>
         </form>
 
       </div>

@@ -32,11 +32,15 @@
          public function laymk()
         {
 
-        	 $data_loaisanpham = $this->quenmk_controller->loaisanpham();
+        	$data_loaisanpham = $this->quenmk_controller->loaisanpham();
 
             $email = filter_input(INPUT_POST, 'email_laymk');
             
             $mk = $this->quenmk_controller->laymatkhau($email);
+
+            if($mk){
+                $ketqua = true;
+            }
 
 
         	require_once('views/index.php');
