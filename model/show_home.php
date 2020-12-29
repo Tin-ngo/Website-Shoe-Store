@@ -16,7 +16,7 @@
 
      	function banner()  //ok
           {
-               $query = "SELECT * from banner limit 0,3";
+               $query = "SELECT * from banner";
                $result = $this->conn->query($query);
 
                $data = array();

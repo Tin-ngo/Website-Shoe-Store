@@ -57,6 +57,12 @@
                         <i class="fa fa-times"></i></a>
         <?php }else{} ?>
 
+        <?php if( $value['soluong'] < 10 ) {  ?>
+        
+        <a class="soluong" href="?action=them_soluong_giaodien&soluong=<?php echo $value['soluong']?>&idSP=<?php echo $value['idSP']?>"><br>Số lượng nhỏ hơn 10<br></a>
+
+      <?php } ?>
+
                   </td> 
               </tr>
 
@@ -64,7 +70,7 @@
              
           </tbody>
       </table>
-
+<span style="font-size: 20px;">
       <?php 
       if(!isset($timkiem_sp)){
 
@@ -76,7 +82,7 @@
       }
 
       ?>
-
+</span>
   <!--
                        <ul class="pagination">
                             <li class="active"><a href="">1</a></li>
@@ -94,6 +100,18 @@
 </div>
 
 </div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 
 
 

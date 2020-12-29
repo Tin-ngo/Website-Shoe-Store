@@ -87,7 +87,7 @@
 <?php if($_SESSION['admin'] == true){ ?>
 
      <div class="col-sm-12">
-          <a href="?action=xoalayout" class="pull-right">Reset data layout</a>
+  <!--        <a href="?action=xoalayout" class="pull-right">Reset data layout</a>    -->
            <button onclick="myFunction()"><a href="#sualayout">Quản lý layout</a></button>
            <p></p>
       </div>

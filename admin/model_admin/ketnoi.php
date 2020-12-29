@@ -16,7 +16,7 @@
 
     		//tạo kết nối với cơ sở dữ liệu
     		$this->connect = new mysqli($host,$username,$password,$dbname);
-    		$this->connect->set_charset('utf8');
+    		$this->connect->set_charset('utf8');   //gửi dữ liệu với utf 8
 
     		//kiểm tra kết nối
     		if ($this->connect->connect_error) {

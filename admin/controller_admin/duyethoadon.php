@@ -66,8 +66,9 @@
             $this->hoadon_model->duyet_hoadon($id);
 
             $idSP = $_GET['idSP'];
+            $sotru = $_GET['soluongmua'];
 
-            $this->hoadon_model->sanpham_tru($idSP);
+            $this->hoadon_model->sanpham_tru($idSP, $sotru);
 
             require_once('views_admin/index.php');
             

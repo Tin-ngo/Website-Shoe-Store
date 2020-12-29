@@ -99,11 +99,24 @@
             $controller_taikhoanobj->them_giaodien();
             break;
 
+        case 'them_soluong_giaodien':
+            require_once('controller_admin/quanlysanpham.php');
+            $controller_taikhoanobj = new sanphamcontroller();
+            $controller_taikhoanobj->them_soluong_giaodien();
+            break;
+
         case 'them_sanpham': 
             require_once('controller_admin/quanlysanpham.php');
             $controller_taikhoanobj = new sanphamcontroller();
             $controller_taikhoanobj->them();
             break;
+
+        case 'them_soluong':
+            require_once('controller_admin/quanlysanpham.php');
+            $controller_taikhoanobj = new sanphamcontroller();
+            $controller_taikhoanobj->them_soluong();
+            break;
+
         case 'xoasanpham':
             require_once('controller_admin/quanlysanpham.php');
             $controller_taikhoanobj = new sanphamcontroller();

@@ -1,4 +1,5 @@
 <?php
+session_set_cookie_params(5);
     session_start();
     $act = isset($_GET['action']) ? $_GET['action'] : "trangchu";
   

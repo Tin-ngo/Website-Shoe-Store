@@ -26,6 +26,22 @@
             return $this->conn->query($query);
         }
 
+        function all_them()
+        {
+            
+            $query = "SELECT * FROM sanpham; ";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
     	
     	function all($batdau, $gioihan)
     	{
@@ -60,21 +76,14 @@
 
 
 
- //đang sửa chỗ này
-        function xem_mau($id)
-        {
-             $query = "SELECT * FROM color WHERE idcolor=$id" ;   //sai
-             return $this->conn->query($query)->fetch_assoc();
-        }
-        function xem_size($id)
-        {
-             $query = "SELECT * FROM size WHERE idsize=$id";
-            return $this->conn->query($query)->fetch_assoc();
-        }
+ 
 
     	function find($id)
         {
-            $query = "SELECT * FROM sanpham WHERE idSP=$id";
+            $query = "SELECT * FROM sanpham 
+            INNER JOIN color ON sanpham.idcolor = color.idcolor 
+            INNER JOIN size ON sanpham.idsize = size.idsize
+            WHERE idSP=$id";
             return $this->conn->query($query)->fetch_assoc();
         }
 
@@ -99,8 +108,24 @@
          function insert($idKM, $idLoaiSP, $idcolor, $idsize, $tenSP, $Dongia, $anh1, $anh2, $anh3, $ngaynhap, $mota, $soluong) 
          {
 
-             $query= "INSERT INTO sanpham (idKM, idLoaiSP, idcolor, idsize, tenSP, Dongia, anh1, anh2, anh3, ngaynhap, mota, soluong) 
+            $query= "INSERT INTO sanpham (idKM, idLoaiSP, idcolor, idsize, tenSP, Dongia, anh1, anh2, anh3, ngaynhap, mota, soluong) 
             VALUES ('$idKM','$idLoaiSP','$idcolor', '$idsize', '$tenSP', '$Dongia', '$anh1', '$anh2', '$anh3', '$ngaynhap', '$mota', '$soluong') ";
+
+            $result = $this->conn->query($query);
+
+            if($result == true){
+                header('location: ?action=sanpham');
+            }
+            else{
+                header('location: ?action=them_sanpham_giaodien');
+            }
+         }
+
+// nếu thêm vào một sản phẩm đã có thì cộng vào số lượng
+         function insert_trung($idSP, $soluong_them) 
+         {
+
+            $query= "UPDATE sanpham SET soluong = '$soluong_them' WHERE idSP = '$idSP' ";
 
             $result = $this->conn->query($query);
 
@@ -194,6 +219,22 @@
 
             return $data;
 
+         }
+
+
+
+         public function them_soluong($idSP, $soluong_them)
+         {
+             $query= "UPDATE sanpham SET soluong = '$soluong_them' WHERE idSP = '$idSP' ";
+
+            $result = $this->conn->query($query);
+
+            if($result == true){
+                header('location: ?action=sanpham');
+            }
+            else{
+                header('location: ?action=sanpham');
+            }
          }
 
 

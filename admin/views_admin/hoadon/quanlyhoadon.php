@@ -22,6 +22,7 @@
                   <th class="theadd">idUser</th>
                   <th class="theadd">idSP</th>
                   <th class="theadd">Tổng tiền</th>
+                  <th class="theadd">Số lượng mua</th>
                   <th class="theadd">Trạng thái</th>
                   <th>Hành động</th>
                </tr>
@@ -35,6 +36,7 @@
                  <td><?= $value['idUser'] ?>  </td>
                   <td><?= $value['idSP'] ?></td>
                   <td><?= $value['tongtien'] ?></td>
+                  <td><?= $value['soluongmua'] ?></td>
                   <td>
                     <?php if($value['trangthai'] == 0){
                             echo "Chưa Xét duyệt";
@@ -48,7 +50,7 @@
 
           <?php if($_SESSION['admin'] == true){ ?>
                   <?php if($value['trangthai'] == 0){ ?>
-                    <a href="?action=duyethoadon&id=<?= $value['idhoadon'] ?>&idSP=<?= $value['idSP'] ?>" type="button" class="btn btn-primary">Duyệt hóa đơn</a>
+                    <a href="?action=duyethoadon&id=<?= $value['idhoadon'] ?>&idSP=<?= $value['idSP'] ?>&soluongmua=<?php echo $value['soluongmua'] ?>" type="button" class="btn btn-primary">Duyệt hóa đơn</a>
                   <?php }else{} ?>
                     <a href="?action=xoahoadon&id=<?= $value['idhoadon'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger" title="Xóa">
                       <i class="fa fa-times"></i></a>

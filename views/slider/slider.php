@@ -8,14 +8,10 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#slider-carousel" data-slide-to="1"></li>
-                            <li data-target="#slider-carousel" data-slide-to="2"></li>
-                        </ol>
+                        
                         
                         <div class="carousel-inner">
-                            <?php foreach ($data_banner as $value) {  ?>
+                            <?php $tong_banner=0; foreach ($data_banner as $value) {  ?>
                                 
                             <!-- php dưới đây để hiển thị bình thouwfng được slider với active -->
                             <div class="item <?php if($value['idbanner'] == 1) echo('active') ?>"> 
@@ -41,7 +37,8 @@
                                 </div>
                             </div>
 
-                        <?php }  ?>
+
+                        <?php $tong_banner +=1; }  ?>
                            
                             
                             
@@ -54,6 +51,16 @@
                         <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
                             <i class="fa fa-angle-right muiten"></i>
                         </a>
+
+
+                        <ol class="carousel-indicators">
+                            <?php for ($i=0; $i < $tong_banner ; $i++) {  ?>
+                            <li data-target="#slider-carousel" data-slide-to="0"></li>
+                          <?php  } ?>
+                        </ol>
+
+
+
                     </div>
                     
                 </div>

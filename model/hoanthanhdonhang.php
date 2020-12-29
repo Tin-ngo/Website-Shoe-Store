@@ -37,9 +37,9 @@
 
 
 
-          function gui_donhang_choadmin($idUser, $idSP, $tongtien)
+          function gui_donhang_choadmin($idUser, $idSP, $tongtien, $soluongmua)
           {
-            $query = "INSERT INTO hoadon (idUser, idSP, tongtien) VALUES ('$idUser', '$idSP', '$tongtien')";
+            $query = "INSERT INTO hoadon (idUser, idSP, tongtien, soluongmua) VALUES ('$idUser', '$idSP', '$tongtien', '$soluongmua')";
             $result = $this->conn->query($query);
           }
 

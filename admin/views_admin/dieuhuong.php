@@ -43,6 +43,9 @@
         case 'them_sanpham_giaodien':
             require_once('sanpham/them.php');
             break;
+        case 'them_soluong_giaodien':
+            require_once('sanpham/them_soluong.php');
+            break;
 
 
     // loại sản phẩm

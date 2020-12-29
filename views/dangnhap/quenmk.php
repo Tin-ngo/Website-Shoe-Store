@@ -62,7 +62,7 @@
 <center>
   <span class="pull-right" style="font-size: 15px; color: blue; margin-top: -250px;">
          <?php if(isset($ketqua)){ 
-                   echo 'Đúng email, bạn hãy dăng nhập với mk mới là: 12345 <br> Lưu ý: bạn nên đổi mật khẩu để tăng bảo mật cho tài khoản! ';
+                   echo 'Có tồn tại email, bạn hãy dăng nhập với mk mới là: 12345 <br> Lưu ý: bạn nên đổi mật khẩu để tăng bảo mật cho tài khoản! ';
                }else{  echo "";    }  
          ?>
 </span>

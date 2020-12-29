@@ -77,12 +77,20 @@
 
                  </div>
                </div>
-        
-             <div class="dropdown" style="float:right;">
-                <button class="dropbtn">Giá</button>
+
+
+
+             <!-- giá -->
+             <br>
+             <br>
+             
+
+        </div>
+<center><h4>Chọn giá</h4></center>
+            <div style="">
 
         <form method="POST" action="?action=cuahang1">
-                 <div class="dropdown-content" style="padding: 5px;">
+                 <div class="" style="padding: 5px;">
          
                  <label>Chọn giá bắt đầu: </label>
                  <select name="a">
@@ -117,24 +125,19 @@
                 
                 <br>
                 <br>
-                <br>
-                <br>
-                <br>
                  <center>
                  <input type="submit" value="Tìm Kiếm">
                  </center>
         
                  </div>
         </form>
-               </div>
+  </div>
+<!-- giá -->
+</div>
 
-        </div>
+<br>
+<br>
 
-                    </div>
-
-
-            <br>
-            <br>
 
                     
    </div>  <!-- div thứ 3 -->
@@ -170,7 +173,7 @@
                                                 <p><a href="#"><center> <?php echo $value['tenSP'] ?></center></a></p>
                                                 <center>size:  <?php echo $value['size'] ?>  </center>
                                                 <center>Màu:  <?php echo $value['color'] ?>  </center>
-                                                <center>Số lượng:  <?php echo $value['soluong'] ?>  </center>
+                                                <center>SL trong kho:  <?php echo $value['soluong'] ?>  </center>
                                                 <span><center><?php echo $value['Dongia'].".000 vnd" ?></center></span>
                                             </div>
                                         </div>

@@ -35,11 +35,11 @@
           </tr>
           <tr>
             <td><h4>Màu </h4></td>
-            <td><h4><?= $data_mau['color'];   ?>  </h4></td>
+            <td><h4><?= $data['color'];   ?>  </h4></td>
           </tr>
           <tr>
             <td><h4>Size </h4></td>
-            <td><h4> <?= $data_size['size'];   ?>  </h4></td>
+            <td><h4> <?=  $data['size'];   ?>  </h4></td>
           </tr>
           <tr>
             <td><h4>Ngày nhập </h4></td>

@@ -37,26 +37,14 @@
 						<h3><strong>Chi tiết hóa đơn</strong></h3>
 					</div>
 					<div class="custom-input">
-						<form action="?act=checkout&xuli=save" method="post">
+						<form action="?action=hoanthanhdonhang" method="post">
 							<input type="text" name="NguoiNhan" placeholder="Người nhận" required value="<?php echo $data_user['ho'].' '.$data_user['ten']; ?>"/>
 							<input type="email" name="Email" placeholder="Địa chỉ Email.." required  value="<?php echo $data_user['email']; ?>"/>
 							<input type="text" name="SDT" placeholder="Số điện thoại.." required pattern="[0-9]+" minlength="10"  value="<?php echo $data_user['sodienthoai']; ?>"/>
 							<input type="text" name="DiaChi" placeholder="Đại chỉ giao hàng" required  value="<?php echo $data_user['diachi']; ?>"/>
-							</br>
+							<br>
 							<div class="submit-text">
-								<!--  <button type="submit">Thanh toán</button>  -->
-								<a href="?action=hoanthanhdonhang&idUser=<?php echo $data_user['idUser'];?>&idSP=<?php echo $data_sanpham['idSP'] ?>&tongtien=<?php 
-										if($_SESSION['giatriKM'] != 0){
-								         	$_SESSION['tongtien_KM'] = ( $_SESSION['tongtien'] * $data_sanpham['giatriKM'] ) / 100 ;
-									        echo $_SESSION['tongtien_KM'] ;
-									    }
-									    else{
-									    	echo "0";
-									    }
-									     ?>"> <!-- lấy dữ liệu từ đường dẫn để thêm đơn hàng vào database -->
-									     
-									 Thanh toán
-									</a>
+								 <button type="submit">Thanh toán</button>
 							</div>
 						</form>
 					</div>
@@ -78,8 +66,9 @@
 							<tbody>
 								
 								<tr>
-									<th><?php foreach ($_SESSION['sanpham'] as $value) { ?>
-										    <?php echo $value['tenSP'].'<br>'; ?>
+									<th><?php foreach ($_SESSION['sanpham'] as $key=>$value) { ?>
+										    <?php echo $value['tenSP']; ?>
+										    <?php echo "SL: ".$value['soluong'].'<br>'; ?>
 										<?php } ?>
 									</th>
 									<td>

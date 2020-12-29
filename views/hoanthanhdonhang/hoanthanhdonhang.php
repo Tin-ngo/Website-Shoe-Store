@@ -86,7 +86,7 @@
 									        echo $_SESSION['tongtien_KM'].'.000 VND' ;
 									    }
 									    else{
-									    	echo $_SESSION['tongtien'];
+									    	echo $_SESSION['tongtien'].'.000 VND';
 									    }
 									    ?>
 									</td>

@@ -91,10 +91,11 @@
             }
          }
 
-// trừ số lượng sản phẩm
-          function sanpham_tru($id)     
+
+
+          function sanpham_tru($id, $sotru)     
          {
-            $query = "UPDATE sanpham SET soluong = soluong-1 WHERE idSP = '$id'";
+            $query = "UPDATE sanpham SET soluong = soluong - '$sotru' WHERE idSP = '$id'";
             
             $result = $this->conn->query($query);
 
