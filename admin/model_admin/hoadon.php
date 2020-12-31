@@ -17,7 +17,7 @@
     	
     	function all()
     	{
-    		$query = "SELECT * FROM hoadon ORDER BY idhoadon";
+    		$query = "SELECT * FROM hoadon ORDER BY trangthai";
 
     		$result = $this->conn->query($query);
 

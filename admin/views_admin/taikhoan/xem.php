@@ -42,7 +42,10 @@
           </tr>
           <tr>
             <td><h4>Chức vụ </h4></td>
-            <td><h4> &emsp;<?php if( $data['idQuyen'] == 0) echo "admin";  else echo "khách hàng"; ?>  </h4></td>
+            <td><h4> &emsp;<?php if( $data['idQuyen'] == 1) echo "admin";  
+                                  if($data['idQuyen'] == 0) echo "khách hàng";
+                                  if($data['idQuyen'] == 2) echo "Người bán hàng"
+                                   ?>  </h4></td>
           </tr>
         </table>
 

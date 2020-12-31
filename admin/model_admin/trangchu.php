@@ -75,6 +75,21 @@
             return $data;
         }
 
+        function all_hoadon_day($ngaymua)  
+        {
+            $query = "SELECT * FROM hoadon WHERE ngaymua LIKE '%$ngaymua%' ORDER BY idhoadon";
+
+            $result = $this->conn->query($query);
+
+            $data = array();
+
+            while ($row = $result->fetch_assoc()) {
+               $data[] = $row;
+            }
+
+            return $data;
+        }
+
         function all_banner()  
         {
             $query = "SELECT * FROM banner ORDER BY idbanner";

@@ -39,7 +39,9 @@
            $tongtien = $value['Dongia'] * $value['soluong'];
            $soluongmua = $value['soluong'];
 
-           $this->hoanthanhdonhang_controller->gui_donhang_choadmin($idUser, $idSP, $tongtien, $soluongmua);
+           $ngaymua = date("Y-m-d");
+
+           $this->hoanthanhdonhang_controller->gui_donhang_choadmin($idUser, $idSP, $tongtien, $soluongmua, $ngaymua);
 
          }
 

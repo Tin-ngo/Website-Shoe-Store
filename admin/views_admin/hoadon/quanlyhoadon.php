@@ -22,6 +22,7 @@
                   <th class="theadd">idUser</th>
                   <th class="theadd">idSP</th>
                   <th class="theadd">Tổng tiền</th>
+                  <th class="theadd">Ngày mua</th>
                   <th class="theadd">Số lượng mua</th>
                   <th class="theadd">Trạng thái</th>
                   <th>Hành động</th>
@@ -35,7 +36,8 @@
                   <td scope="row"><?= $value['idhoadon'] ?></td>
                  <td><?= $value['idUser'] ?>  </td>
                   <td><?= $value['idSP'] ?></td>
-                  <td><?= $value['tongtien'] ?></td>
+                  <td><?= $value['tongtien'] ?>.000 VND</td>
+                  <td><?= $value['ngaymua']?></td>
                   <td><?= $value['soluongmua'] ?></td>
                   <td>
                     <?php if($value['trangthai'] == 0){

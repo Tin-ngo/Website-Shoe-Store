@@ -31,7 +31,7 @@
           </tr>
           <tr>
             <td><h4>Đơn Giá </h4></td>
-            <td><h4> <?= $data['Dongia'];   ?>  </h4></td>
+            <td><h4> <?= $data['Dongia'];   ?>.000 VND  </h4></td>
           </tr>
           <tr>
             <td><h4>Màu </h4></td>

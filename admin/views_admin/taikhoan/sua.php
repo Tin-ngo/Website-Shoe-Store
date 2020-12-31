@@ -47,7 +47,7 @@
            </tr>
            <tr>
                <td>mật khẩu:</td>
-               <td><input required type="password" name="matkhau" value=<?php echo $data['matkhau']; ?>></td>
+               <td><input required disabled type="password" name="matkhau" value=<?php echo $data['matkhau']; ?>></td>
            </tr>
            <tr>
            	<td colspan="2"><button  style="width: 100px; background-color: darkgray;" type="submit">Sửa</button></td>

@@ -28,7 +28,6 @@
                 $data_chitietSP[$i] = $this->giohang_controller->chitiet_sp($i);
             }
 
-
 //chwua cần tới, để đếm tổng tất cả sản phẩm trong giỏ hàng
             $count = 0;
         if (isset($_SESSION['sanpham'])) {
@@ -38,10 +37,6 @@
         }
         require_once('views/index.php');
     }
-
-
-
-
 
 
 
@@ -63,7 +58,7 @@
             $arr['tenSP'] = $data['tenSP'];
             $arr['Dongia'] = $data['Dongia'];
             $arr['soluong'] = 1;
-            $arr['soluong_kho'] = $data['soluong'];//
+            $arr['soluong_kho'] = $data['soluong']-1;//
             $arr['thanhtien'] = $data['Dongia'];
             $arr['anh1'] = $data['anh1'];
             $_SESSION['sanpham'][$id] = $arr;

@@ -5,6 +5,40 @@
 
       <h1>THỐNG KÊ</h1>
       <br>
+      <div class="col-sm-4">
+          <div class="div1">
+            Doanh thu Hôm nay<br>
+            - Có <?php $dem1 = 0; $tongthu1=0; foreach ($thongke_hoadon_ngay as $key => $value) { 
+              $dem1++; 
+              $tongthu1 += $value['tongtien'];
+              } ?>
+            <span style="color: orange"><?php echo $dem1;?></span> hóa đơn<br>
+            - Tổng thu<span style="color: orange"> <?php echo $tongthu1.'.000 VND'; ?> </span>          
+          
+          </div>
+     </div>
+     <div class="col-sm-4">
+          <div class="div1">
+            Doanh thu Tháng này<br>
+           - Có <?php $dem1 = 0; $tongthu1=0; foreach ($thongke_hoadon_thang as $key => $value) { 
+              $dem1++; 
+              $tongthu1 += $value['tongtien'];
+              } ?>
+            <span style="color: orange"><?php echo $dem1;?></span> hóa đơn<br>
+            - Tổng thu <span style="color: orange"><?php echo $tongthu1.'.000 VND'; ?></span>
+          </div>
+     </div>
+     <div class="col-sm-4">
+          <div class="div1">
+              Doanh thu Năm này<br>
+           - Có <?php $dem1 = 0; $tongthu1=0; foreach ($thongke_hoadon_nam as $key => $value) { 
+              $dem1++; 
+              $tongthu1 += $value['tongtien'];
+              } ?>
+            <span style="color: orange"><?php echo $dem1;?></span> hóa đơn<br>
+            - Tổng thu <span style="color: orange"><?php echo $tongthu1.'.000 VND'; ?></span>
+          </div>
+     </div>
      <div class="col-sm-4">
           <div class="div1">
                <?php
@@ -88,7 +122,7 @@
 
      <div class="col-sm-12">
   <!--        <a href="?action=xoalayout" class="pull-right">Reset data layout</a>    -->
-           <button onclick="myFunction()"><a href="#sualayout">Quản lý layout</a></button>
+           <button onclick="myFunction()"><a href="#sualayout">Chỉnh sửa thông tin cửa hàng</a></button>
            <p></p>
       </div>
 <?php }else{} ?>

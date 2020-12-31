@@ -25,6 +25,13 @@
     		$data_loaisanpham = $this->trangchu_model->all_loaisanpham();
 
     		$data_hoadon = $this->trangchu_model->all_hoadon();
+            
+            $ngay = date("Y-m-d");
+            $thongke_hoadon_ngay = $this->trangchu_model->all_hoadon_day($ngay);
+            $thang = date("Y-m");
+            $thongke_hoadon_thang = $this->trangchu_model->all_hoadon_day($thang);
+            $nam = date("Y");
+            $thongke_hoadon_nam = $this->trangchu_model->all_hoadon_day($nam);
 
     		$data_banner = $this->trangchu_model->all_banner();
 

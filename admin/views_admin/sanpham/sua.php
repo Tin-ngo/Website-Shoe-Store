@@ -53,7 +53,7 @@
            </tr>
             <tr>
                <td>Đơn giá:</td>
-               <td><input type="text" value="<?php echo $data['Dongia'];?>" name="Dongia" required></td>
+               <td><input type="text" value="<?php echo $data['Dongia'];?>" name="Dongia" required> .000 VND</td>
            </tr>
             <tr>
                <td>ảnh 1:</td>

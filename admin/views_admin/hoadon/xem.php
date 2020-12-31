@@ -22,7 +22,11 @@
           </tr>
           <tr>
             <td><h4>Tổng tiền </h4></td>
-            <td><h4> &emsp;<?= $data['tongtien'];   ?>  </h4></td>
+            <td><h4> &emsp;<?= $data['tongtien'];   ?>.000 VND  </h4></td>
+          </tr>
+          <tr>
+            <td><h4>Ngày mua </h4></td>
+            <td><h4> &emsp;<?= $data['ngaymua'];   ?></h4></td>
           </tr>
           
           

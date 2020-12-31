@@ -36,7 +36,7 @@
               <tr>
                   <td scope="row"><?= $value['idSP'] ?></td>
                  <td><?= $value['tenSP'] ?></td>
-                  <td><?= $value['Dongia'] ?></td>
+                  <td><?= $value['Dongia'] ?>.000 VND</td>
                   <td>
                     <?php 
                     if($value['idLoaiSP'] == 1) echo "Giày Công Sở"; 
