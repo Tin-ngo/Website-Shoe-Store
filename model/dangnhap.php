@@ -62,6 +62,8 @@
             
             $_SESSION['tendangnhap']=$tendangnhap;
             $_SESSION['matkhau']=$matkhau;
+
+            $_SESSION['thoigian_bd']= time();         // dùng để làm giới hạn thời gian session
   //          echo "<script language='javascript'>alert('Dang nhap thanh cong');";
 			echo "<script language='javascript'>location.href='?action=trangchu';</script>";
             }

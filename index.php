@@ -1,5 +1,5 @@
 <?php
-session_set_cookie_params(5);
+//  session_set_cookie_params(5);
     session_start();
     $act = isset($_GET['action']) ? $_GET['action'] : "trangchu";
   
@@ -166,5 +166,24 @@ session_set_cookie_params(5);
 
 
 
+    }
+
+
+  //  echo $_SESSION['thoigian_bd'];
+ //   echo "<br>";
+ //   echo $_SESSION['thoigian_bd'] - time();
+
+// Thiết lập thời gian là một ngày để hủy các SESSION, dòng 66 model->dangnhap.php
+    if(isset($_SESSION['tendangnhap'])){
+        if(time() - $_SESSION['thoigian_bd'] >86400 ){     //1 tiếng có 60x60 =3600 giây, 24 tiếng có 3600x24=86400
+        unset($_SESSION['banhang']);
+        unset($_SESSION['tendangnhap']);
+        unset($_SESSION['matkhau']);
+        unset($_SESSION['thoigian_bd']);
+        // hủy session giỏ hàng
+        nset($_SESSION['sanpham']);
+        unset($_SESSION['thanhtien']);
+        unset($_SESSION['tongtien']);
+    }
     }
 ?>

@@ -19,6 +19,14 @@ echo "Ngày mai<br>";
 $d=strtotime("tomorrow");
 echo date("Y-m-d h:i:sa", $d) . "<br>";
 
+echo "Hôm qua<br>";
+$d=strtotime("yesterday");
+echo date("Y-m-d h:i:sa", $d) . "<br>";
+
+echo "2 hôm trước<br>";
+$d=strtotime("-2 day");
+echo date("Y-m-d", $d) . "<br>";
+
 echo "<br>Tuần sau<br>";
 $d=strtotime("+1 week");
 echo date("Y-m-d h:i:sa", $d) . "<br>";
@@ -26,7 +34,42 @@ echo date("Y-m-d h:i:sa", $d) . "<br>";
 echo "<br> 3 tháng sau<br>";
 $d=strtotime("+3 Months");
 echo date("Y-m-d h:i:sa", $d) . "<br>";
+
+echo "<br>Ví dụ <br>";
+echo time();
+
+echo "<br>";
+echo date("d", strtotime("-2 day")) - date("d");
 ?>
+
 
 </body>
 </html>
+
+<!--
+	<form action="?action=trangchu" method="POST">
+            Doanh thu 
+            <select name="ngay" style="font-size: 15px;">
+              <option value="<?php echo date("Y-m-d");?>">Hôm nay</option>
+              <option value="<?php echo date("Y-m-d", strtotime("-2 day"));?>">
+                <?php echo date("d", strtotime("-2 day")); ?>
+              </option>
+               <option value="<?php echo date("Y-m-d", strtotime("-3 day"));?>">
+                <?php echo date("d", strtotime("-3 day")); ?>
+              </option>
+               <option value="<?php echo date("Y-m-d", strtotime("-4 day"));?>">
+                <?php echo date("d", strtotime("-4 day")); ?>
+              </option>
+               <option value="<?php echo date("Y-m-d", strtotime("-5 day"));?>">
+                <?php echo date("d", strtotime("-5 day")); ?>
+              </option>
+               <option value="<?php echo date("Y-m-d", strtotime("-6 day"));?>">
+                <?php echo date("d", strtotime("-6 day")); ?>
+              </option>
+              <option value="<?php echo date("Y-m-d", strtotime("-7 day"));?>">
+                <?php echo date("d", strtotime("-7 day")); ?>
+              </option>
+            </select>
+            <button type="submit" style="font-size: 15px;">Gửi</button>          
+        </form>  
+        -->
