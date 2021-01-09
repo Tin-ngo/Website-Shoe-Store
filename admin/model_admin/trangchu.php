@@ -77,7 +77,7 @@
 
         function all_hoadon_day($ngaymua)  
         {
-            $query = "SELECT * FROM hoadon WHERE ngaymua LIKE '%$ngaymua%' ORDER BY idhoadon";
+            $query = "SELECT * FROM hoadon WHERE ngaymua LIKE '%$ngaymua%' && trangthai='1' ORDER BY idhoadon";
 
             $result = $this->conn->query($query);
 

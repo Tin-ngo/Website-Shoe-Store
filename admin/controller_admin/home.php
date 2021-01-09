@@ -26,11 +26,20 @@
 
     		$data_hoadon = $this->trangchu_model->all_hoadon();
             
+            if (isset($_POST['ngay_gui'])) {
+                $ngay=filter_input(INPUT_POST, 'ngay_gui');
+                $loai_ngay = filter_input(INPUT_POST, 'ngay_gui');
+            }else{
             $ngay = date("Y-m-d");
-            $thongke_hoadon_ngay = $this->trangchu_model->all_hoadon_day($ngay);
+            $loai_ngay="Hôm nay";
+        }
             $thang = date("Y-m");
-            $thongke_hoadon_thang = $this->trangchu_model->all_hoadon_day($thang);
             $nam = date("Y");
+
+            $thongke_hoadon_ngay = $this->trangchu_model->all_hoadon_day($ngay);
+            
+            $thongke_hoadon_thang = $this->trangchu_model->all_hoadon_day($thang);
+            
             $thongke_hoadon_nam = $this->trangchu_model->all_hoadon_day($nam);
 
     		$data_banner = $this->trangchu_model->all_banner();

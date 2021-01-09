@@ -4,10 +4,14 @@
 
 
       <h1>THỐNG KÊ</h1>
+      <form action="?action=trangchu" method="POST">
+            <input type="date" name="ngay_gui">
+            <input type="submit" value="Gửi">
+      </form>
       <br>
       <div class="col-sm-4">
           <div class="div1">
-            Doanh thu Hôm nay<br>
+            Doanh thu <?php echo $loai_ngay; ?><br>
             - Có <?php $dem1 = 0; $tongthu1=0; foreach ($thongke_hoadon_ngay as $key => $value) { 
               $dem1++; 
               $tongthu1 += $value['tongtien'];

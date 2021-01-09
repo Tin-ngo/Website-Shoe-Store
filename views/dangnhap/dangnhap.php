@@ -52,7 +52,7 @@
 
 
                                      <!--  <input name="first_name" placeholder="Username" class="form-control" type="text"> -->
-                                       <td><input type="text" name="tendangnhap_dn" class="form-control"></td> 
+                                       <td><input type="text" name="tendangnhap_dn" class="form-control" required></td> 
 
 
 
@@ -66,7 +66,7 @@
 
 
                                          <!-- <input name="email" placeholder="Password" class="form-control" type="text"> -->
-                                      <td><input type="password" name="matkhau_dn" class="form-control"></td>
+                                      <td><input type="password" name="matkhau_dn" class="form-control" required></td>
 
 
 

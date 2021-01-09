@@ -47,6 +47,26 @@ echo date("d", strtotime("-2 day")) - date("d");
 </html>
 
 <!--
+
+
+
+   <div class="col-sm-4">
+          <div class="div1">
+            Doanh thu Hôm nay<br>
+            - Có <?php $dem1 = 0; $tongthu1=0; foreach ($thongke_hoadon_ngay as $key => $value) { 
+              $dem1++; 
+              $tongthu1 += $value['tongtien'];
+              } ?>
+            <span style="color: orange"><?php echo $dem1;?></span> hóa đơn<br>
+            - Tổng thu<span style="color: orange"> <?php echo $tongthu1.'.000 VND'; ?> </span>          
+          
+          </div>
+     </div>
+
+
+
+
+     
 	<form action="?action=trangchu" method="POST">
             Doanh thu 
             <select name="ngay" style="font-size: 15px;">
