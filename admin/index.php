@@ -51,7 +51,9 @@
             $controller_taikhoanobj = new nguoidungcontroller();
             $controller_taikhoanobj->update();
             break;
-        
+        case 'them_giaodien':
+            require_once('views_admin/index.php');
+            break;
         case 'them': 
             require_once('controller_admin/quanlytaikhoan.php');
             $controller_taikhoanobj = new nguoidungcontroller();

@@ -7,6 +7,7 @@
       <div style="background-color: #e5e5e5; padding: 10px 50px 10px; color:gray;">
         <form action="?action=suasanpham_xl" method="post" enctype="multipart/form-data" >  <!-- model_admin/sua_xl.php -->
       	<table border="0" cellpadding="10">
+          <input type="hidden" value="<?php echo $data['idSP'];?>" name="idSP">
            <tr>
                <td>idLoaiSP:</td>
                 <td>

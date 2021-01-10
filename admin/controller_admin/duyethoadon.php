@@ -53,7 +53,9 @@
 
             $name_user = $this->hoadon_model->user($idUser);
 
-            $name_sanpham = $this->hoadon_model->sanpham($id);
+            $idSP = isset($_GET['idSP']) ? $_GET['idSP'] : '1';
+
+            $name_sanpham = $this->hoadon_model->sanpham($idSP);
 
             require_once('views_admin/index.php');
             

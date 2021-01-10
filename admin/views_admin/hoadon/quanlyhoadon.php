@@ -48,7 +48,7 @@
                   </td>
                   <td>
                       <!-- để ý dấu bằng trong href -->
-                       <a href="?action=xemhoadon&id=<?= $value['idhoadon'] ?>&idUser=<?= $value['idUser'] ?>" type="button" class="btn btn-light">Chi tiết</a>
+                       <a href="?action=xemhoadon&id=<?= $value['idhoadon'] ?>&idSP=<?= $value['idSP'] ?>&idUser=<?= $value['idUser'] ?>" type="button" class="btn btn-light">Chi tiết</a>
 
           <?php if($_SESSION['admin'] == true){ ?>
                   <?php if($value['trangthai'] == 0){ ?>

@@ -46,7 +46,7 @@
     	function all($batdau, $gioihan)
     	{
             
-    		$query = "SELECT * FROM sanpham LIMIT $batdau, $gioihan";
+    		$query = "SELECT * FROM sanpham ORDER BY soluong LIMIT $batdau, $gioihan";
 
     		$result = $this->conn->query($query);
 
@@ -101,7 +101,6 @@
 
                 header('Location: ?action=sanpham');
             }
-        
 
          }
 

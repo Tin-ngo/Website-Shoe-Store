@@ -194,7 +194,7 @@
                                             <div class="col-sm-6">
                                                 <div class="input-mail">
                                                     <span>Nhập email của bạn:</span>
-                                                    <input  type="text" name="email_gopy">
+                                                    <input  type="email" name="email_gopy">
                                                     <input type="hidden" name="idSP" value="<?php echo $data_chitiet['idSP'];?>">
                                                 </div>
                                             </div>

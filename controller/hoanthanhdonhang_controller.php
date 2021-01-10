@@ -34,7 +34,7 @@
    //      $tongtien = isset($_GET['tongtien']) ? $_GET['tongtien'] : $_GET['tongtien_KM'];
            foreach ($_SESSION['sanpham'] as $key => $value) {
               
-           $idUser = '1';
+           $idUser = isset($_GET['idUser']) ? $_GET['idUser'] : '1';
            $idSP = $value['idSP'];
            $tongtien = $value['Dongia'] * $value['soluong'];
            $soluongmua = $value['soluong'];

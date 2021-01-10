@@ -37,7 +37,7 @@
 						<h3><strong>Chi tiết hóa đơn</strong></h3>
 					</div>
 					<div class="custom-input">
-						<form action="?action=hoanthanhdonhang" method="post">
+						<form action="?action=hoanthanhdonhang&idUser=<?php echo $data_user['idUser']; ?>" method="post">
 							<input type="text" name="NguoiNhan" placeholder="Người nhận" required value="<?php echo $data_user['ho'].' '.$data_user['ten']; ?>"/>
 							<input type="email" name="Email" placeholder="Địa chỉ Email.." required  value="<?php echo $data_user['email']; ?>"/>
 							<input type="text" name="SDT" placeholder="Số điện thoại.." required pattern="[0-9]+" minlength="10"  value="<?php echo $data_user['sodienthoai']; ?>"/>
