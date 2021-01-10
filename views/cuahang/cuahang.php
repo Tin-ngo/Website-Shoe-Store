@@ -178,11 +178,12 @@
                                                 <span>
                                                   <center>
                                                     <?php if($value['giatriKM'] != 0){
-                                                      echo " <strike><i>".$value['Dongia']."</i></strike> ";
+                                                      echo " <strike><i>".$value['Dongia'].".000 vnd</i></strike><br> ";
                                                       echo " <i class='fa fa-arrow-right'></i> ";
-                                                          echo $value['Dongia'] - ($value['Dongia']*$value['giatriKM']/100);
+                                                      echo $value['Dongia'] - ($value['Dongia']*$value['giatriKM']/100).".000 vnd";
                                                           }else{
-                                                            echo $value['Dongia'];
+                                                            echo "<br>";
+                                                            echo $value['Dongia'].".000 vnd";
                                                           }
                                                      ?>
                                                   </center>

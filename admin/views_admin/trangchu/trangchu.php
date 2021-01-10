@@ -127,7 +127,7 @@
      <div class="col-sm-12">
   <!--        <a href="?action=xoalayout" class="pull-right">Reset data layout</a>    -->
            <button onclick="myFunction()"><a href="#sualayout">Chỉnh sửa thông tin cửa hàng</a></button>
-           <p></p>
+           <p><br><br></p>
       </div>
 <?php }else{} ?>
 
