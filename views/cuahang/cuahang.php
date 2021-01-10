@@ -47,7 +47,7 @@
         <div class="chongia">
             <div class="chongia2">
 
-               <div class="dropdown" style="float:left;">
+               <div class="dropdown" style="float:left; margin-left: 20px; margin-right: 30px;">
                  <button class="dropbtn">Màu</button>
                  <div class="dropdown-content" style="left:0;">
 
@@ -162,7 +162,7 @@
                                                 <a href="#"><img src="admin/public_admin/image/sanpham/<?php echo $value['anh1'] ?>" alt="Product Title" class="img-products" /></a>
                                                 <div class="actions-btn">
                                                     <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>">
-                                                        <center><i style="font-size: 30px;" class="fa fa-shopping-cart"></i></center>
+                                                        <center><i style="font-size: 30px;color:black;" class="fa fa-shopping-cart"></i></center>
                                                     </a>
                                                     <a href="?action=chitietmathang&id=<?= $value['idSP'] ?>&idLoaiSP=<?= $value['idLoaiSP'] ?>" data-toggle="modal" >
                                                         <center><i style="font-size: 20px;" class="fa fa-eye"></i></center>
@@ -174,7 +174,22 @@
                                                 <center>size:  <?php echo $value['size'] ?>  </center>
                                                 <center>Màu:  <?php echo $value['color'] ?>  </center>
                                                 <center>SL trong kho:  <?php echo $value['soluong'] ?>  </center>
-                                                <span><center><?php echo $value['Dongia'].".000 vnd" ?></center></span>
+                                                <center>Khuyến mãi:  <?php echo "<b class='km_km'>".$value['giatriKM']."%</b>" ?>  </center>
+                                                <span>
+                                                  <center>
+                                                    <?php if($value['giatriKM'] != 0){
+                                                      echo " <strike><i>".$value['Dongia']."</i></strike> ";
+                                                      echo " <i class='fa fa-arrow-right'></i> ";
+                                                          echo $value['Dongia'] - ($value['Dongia']*$value['giatriKM']/100);
+                                                          }else{
+                                                            echo $value['Dongia'];
+                                                          }
+                                                     ?>
+                                                  </center>
+                                                </span>
+
+
+
                                             </div>
                                         </div>
                         </div>
@@ -203,3 +218,12 @@
 <br>
 <br>
 <br>
+<style>
+  b.km_km{
+    color: red;
+  }
+  strike i{
+    color: black;
+    font-weight: normal;
+  }
+</style>

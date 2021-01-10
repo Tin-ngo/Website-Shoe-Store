@@ -5,7 +5,7 @@
 
 
 
-                  <div class="col-sm-6">
+                  <div class="col-sm-6" style="color: gray;">
                        <div class="dropdown" style="float:left;">
                          <button class="dropbtnn">Dịch Vụ Khách Hàng
                           <i class="fa fa-caret-down"></i>
@@ -68,7 +68,9 @@
                                         <li><a class="aacount" href="?action=dangxuat" onclick="TBdangxuat()"><span>Đăng xuất</span></a></li>
                                     
                                         <?php if($_SESSION['admin'] == true || $_SESSION['banhang'] == true){ ?>
-                                        <li><a class="aacount" style="margin-left: -10px;" href="admin/?action=trangchu">Trang quản lý</a></li>
+                                        <li>
+                                          <a class="aacount"  href="admin/?action=trangchu"><span>Trang quản lý</span></a>
+                                        </li>
                                      <?php }}else{ ?>
                                         <li><center><b class="hd_kh">Khách hàng<br><br></b></center></li>
                                         <li><a class="aacount" href="?action=dangnhap"><span>Đăng nhập</span></a></li>

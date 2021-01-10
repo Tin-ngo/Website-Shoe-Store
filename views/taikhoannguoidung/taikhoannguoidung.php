@@ -53,7 +53,7 @@
 											
 											<div class="custom-input">
 												<form action="?action=suataikhoan" method="POST">
-													<input type="text" name="" placeholder="idUser:  <?php echo $data_taikhoan['idUser'] ?>" value="<?php echo $data_taikhoan['idUser'] ?>" disabled required>
+													
 													<input type="hidden" name="idUser" value="<?php echo $data_taikhoan['idUser'] ?>" required>
 													<div class="row">
 														<div class="col-md-6">
