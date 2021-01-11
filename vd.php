@@ -40,7 +40,29 @@ echo time();
 
 echo "<br>";
 echo date("d", strtotime("-2 day")) - date("d");
+
+echo "<br><br>";
+
+
 ?>
+<!--
+<form action="vd.php" method="POST">
+<input type='text' name='ngay_gui' value='<?php echo time(); ?>'>
+<input type="submit" name="">
+</form>
+-->
+<form action="vd.php" method="POST">
+<input type='date' name='ngay_gui'>
+<input type="submit" name="">
+</form>
+
+<?php 
+ $giatri = filter_input(INPUT_POST, 'ngay_gui');
+ $gg = date_create("$giatri");
+ $ngay = date_format($gg, 'm');
+ echo $ngay;
+?>
+
 
 
 </body>

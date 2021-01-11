@@ -29,12 +29,25 @@
             if (isset($_POST['ngay_gui'])) {
                 $ngay=filter_input(INPUT_POST, 'ngay_gui');
                 $loai_ngay = filter_input(INPUT_POST, 'ngay_gui');
+
+                $thang_nhan = date_create("$ngay");
+                $thang = date_format($thang_nhan, 'Y-m');
+                $loai_thang = date_format($thang_nhan, 'Y-m');
+
+                 $nam_nhan = date_create("$ngay");
+                $nam = date_format($nam_nhan, 'Y');
+                $loai_nam = date_format($nam_nhan, 'Y');
             }else{
             $ngay = date("Y-m-d");
             $loai_ngay="Hôm nay";
-        }
+
             $thang = date("Y-m");
+            $loai_thang="này";
+
             $nam = date("Y");
+            $loai_nam="này";
+        }
+            
 
             $thongke_hoadon_ngay = $this->trangchu_model->all_hoadon_day($ngay);
             

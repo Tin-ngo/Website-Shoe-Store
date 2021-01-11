@@ -23,7 +23,7 @@
      </div>
      <div class="col-sm-4">
           <div class="div1">
-            Doanh thu Tháng này<br>
+            Doanh thu Tháng <?php echo $loai_thang; ?><br>
            - Có <?php $dem1 = 0; $tongthu1=0; foreach ($thongke_hoadon_thang as $key => $value) { 
               $dem1++; 
               $tongthu1 += $value['tongtien'];
@@ -34,7 +34,7 @@
      </div>
      <div class="col-sm-4">
           <div class="div1">
-              Doanh thu Năm này<br>
+              Doanh thu Năm <?php echo $loai_nam; ?><br>
            - Có <?php $dem1 = 0; $tongthu1=0; foreach ($thongke_hoadon_nam as $key => $value) { 
               $dem1++; 
               $tongthu1 += $value['tongtien'];
