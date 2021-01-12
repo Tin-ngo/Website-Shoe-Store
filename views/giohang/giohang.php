@@ -25,7 +25,7 @@
 			<div class="table-responsive cart_info">
 
 <!-- &a=?php foreach ($_SESSION['sanpham'] as $value) { echo $value['Dongia'].'&b=';}?> -->
-		<form action="?action=thanhtoan" method="POST">
+		<form action="?action=thanhtoan&a=<?php foreach ($_SESSION['sanpham'] as $value) { echo $value['Dongia'].'&b=';}?>" method="POST">
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
@@ -58,7 +58,12 @@
 
                                 
                                 <div class="cart_quantity_button">
+                                	<?php
+                                	if($value['soluong_kho'] >0 ){ ?>
 									<a class="cart_quantity_up" href="?action=giohang&act=update_giohang&id=<?= $value['idSP'] ?>"> + </a>
+								<?php }else{ ?>
+                                     <a class="cart_quantity_up" href="" onclick="TB_hethang()"> + </a>
+									<?php } ?>
                                       <input class="cart_quantity_input" size="2" type="text" name="soluong" value="<?php echo $value['soluong']; ?>">
                                      <a class="cart_quantity_down" href="?action=giohang&act=update_giohang_tru&id=<?= $value['idSP'] ?>"> - </a>
 
@@ -68,7 +73,13 @@
 
 		 					</td>
 		 					<td style="width: 150px; text-align: center;font-weight: bold;font-size: 20px;color: orange;">
-		 							<?php echo $value['soluong_kho']; ?>
+		 							<?php 
+		 							if($value['soluong_kho'] < 0){
+		 								echo "Lỗi";
+		 							}else{
+		 							echo $value['soluong_kho']; 
+		 						}
+		 							?>
 		 					</td>
 
 
@@ -123,6 +134,15 @@
 			</div>
 		</div>
 	</section> <!--/#cart_items-->
+
+
+
+
+<script>
+   function TB_hethang() {
+       alert("Sản phẩm trong kho đã hết!");
+}
+ </script>
 
 
     

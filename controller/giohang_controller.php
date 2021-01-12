@@ -84,8 +84,15 @@
     function update_giohang()
     {
         $arr = $_SESSION['sanpham'][$_GET['id']];
+
+        if($arr['soluong_kho'] <= 0 ){
+            $arr['soluong'] = $arr['soluong'];
+            $arr['soluong_kho'] = $arr['soluong_kho'];
+        }else{
         $arr['soluong'] = $arr['soluong'] + 1;
          $arr['soluong_kho'] = $arr['soluong_kho'] - 1;//
+     }
+
         $arr['thanhtien'] = $arr['soluong'] * $arr["Dongia"];
         $_SESSION['sanpham'][$_GET['id']] = $arr;
         header('Location:?action=giohang&act=list_giohang');
